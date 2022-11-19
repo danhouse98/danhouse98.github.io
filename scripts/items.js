@@ -51,7 +51,7 @@ $(document).ready(function () {
                 $.each(this, function(key, dungeonList){
                     var bossCounter = 0;
                     dungeonID = dungeonCounter.toString();
-                    var bossTableHTML = "<div class= 'dungeon' id= 'dungeon" + dungeonID + "'>" + data.dungeon_name;
+                    var bossTableHTML = "<div class= 'dungeon' id= 'dungeon" + dungeonID + "'>" + dungeonList.dungeon_name;
                 
                     //boss list
                     $.each(this, function (key2, bossList) {
