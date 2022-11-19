@@ -71,7 +71,7 @@ $(document).ready(function () {
                         //item List
                         $.each(bossList.drops, function (key3, itemList) {
                             
-                            bossSlotID = "#" + dungeonID + "." + bossID + "." + itemList.slot;
+                            bossSlotID = dungeonID + "." + bossID + "." + itemList.slot;
                             
                             var elem = document.getElementById(bossSlotID);
 
