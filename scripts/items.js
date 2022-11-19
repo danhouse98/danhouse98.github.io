@@ -52,20 +52,21 @@ $(document).ready(function () {
                     var bossCounter = 0;
                     dungeonID = dungeonCounter.toString();
                     var bossTableHTML = "<div class= 'dungeon' id= 'dungeon" + dungeonID + "'>" + dungeonList.dungeon_name;
-                
+                    $('#dungeonList').append(bossTableHTML);
+
                     //boss list
                     $.each(dungeonList.bosses, function (key2, bossList) {
                         bossID = bossCounter.toString();
 
-                        bossTableHTML += "<div class='boss'><table><caption>" + bossList.name + "</caption><tr><th>Head</th><th>Shoulder</th><th>Chest</th><th>Wrist</th><th>Hands</th><th>Waist</th><th>Legs</th><th>Feet</th><th>Neck</th><th>Back</th><th>Rings</th><th>Weapon</th><th>Trinket</th></tr><tr>";
+                        bossTableHTML = "<div class='boss'><table><caption>" + bossList.name + "</caption><tr><th>Head</th><th>Shoulder</th><th>Chest</th><th>Wrist</th><th>Hands</th><th>Waist</th><th>Legs</th><th>Feet</th><th>Neck</th><th>Back</th><th>Rings</th><th>Weapon</th><th>Trinket</th></tr><tr>";
 
                         for (var k = 0; k < slots.length; k++) {
                             bossSlotID = dungeonID + "." + bossID + "." + slots[k];
                             bossTableHTML += "<tr id='" + bossSlotID + "'></tr>";
                         }   
 
-                        bossTableHTML += "</tr></table></div>";
-                        $('#dungeonList').append(bossTableHTML);
+                        bossTableHTML += "</tr></table></div><br>";
+                        
 
                         //item List
                         $.each(bossList.drops, function (key3, itemList) {
@@ -85,7 +86,9 @@ $(document).ready(function () {
 
                         bossCounter++;
                     });
-
+                    
+                    bossTableHTML = "</div>";
+                    $("#dungeonList").append(bossTableHTML);
                     dungeonCounter++;
                 });  
             });
