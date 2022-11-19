@@ -41,51 +41,51 @@ $(document).ready(function () {
             //TODO rename id tag
             $("dungeonList").html("");
             //TODO rename id tag
+            //dungeon List
+            var dungeonCounter = 0;
             $.each(data, function () {
                 var dungeonID = "";
                 var bossID = "";
                 var bossSlotID = "";
-                var dungeonCounter = 0;
-
-                //dungeon list
-                $.each(this, function (key, dungeonList) {
-                    var bossCounter = 0;
-                    dungeonID = dungeonCounter.toString();
-                    var bossTableHTML = "<div class= 'dungeon' id= 'dungeon" + dungeonID + "'>" + dungeonList.dungeon_name;
-
-                    //boss list
-                    $.each(dungeonList.bosses, function (key2, bossList) {
-                        bossID = bossCounter.toString();
-
-                        bossTableHTML+ "<div class='boss'><table><caption>" + bossList.name + "</caption><tr><th>Head</th><th>Shoulder</th><th>Chest</th><th>Wrist</th><th>Hands</th><th>Waist</th><th>Legs</th><th>Feet</th><th>Neck</th><th>Back</th><th>Rings</th><th>Weapon</th><th>Trinket</th></tr><tr>";
-
-                        for (var k = 0; k < slots.length; k++) {
-                            bossSlotID = dungeonID + "." + bossID + "." + slots[k];
-                            bossTableHTML += "<tr id='" + bossSlotID + "'></tr>";
-                        }   
-
-                        bossTableHTML += "</tr></table></div>";
-                        $('#dungeonList').append(bossTableHTML);
+                var bossCounter = 0;
+                dungeonID = dungeonCounter.toString();
+                var bossTableHTML = "<div class= 'dungeon' id= 'dungeon" + dungeonID + "'>" + this.dungeon_name;
 
 
-                        //item list
-                        $.each(bossList.drops, function (key3, itemList) {
-                            bossSlotID = "#" + dungeonID + "." + bossID + "." + itemList.slot;
+                //boss list
+                $.each(this, function (key, bossList) {
+                    bossID = bossCounter.toString();
 
-                            $(bossSlotID).append(
-                                '<a id="' + itemList.id + '" href="https://www.wowhead.com/item=' + itemList.id +
-                                ' data-wh-icon-added="true" class="q3" data-wh-rename-link="false">' +
-                                '<span class="iconmedium" data-env="live" data-tree="live" data-game="wow" data-type="item">' +
-                                '<ins style="background-image: url(&quot;' + itemList.imglink + '&quot;);"></ins><del></del></span></a>'
-                            );
+                    bossTableHTML+ "<div class='boss'><table><caption>" + bossList.name + "</caption><tr><th>Head</th><th>Shoulder</th><th>Chest</th><th>Wrist</th><th>Hands</th><th>Waist</th><th>Legs</th><th>Feet</th><th>Neck</th><th>Back</th><th>Rings</th><th>Weapon</th><th>Trinket</th></tr><tr>";
 
-                        });
+                    for (var k = 0; k < slots.length; k++) {
+                        bossSlotID = dungeonID + "." + bossID + "." + slots[k];
+                        bossTableHTML += "<tr id='" + bossSlotID + "'></tr>";
+                    }   
+
+                    bossTableHTML += "</tr></table></div>";
+                    $('#dungeonList').append(bossTableHTML);
+
+                    //item List
+                    $.each(bossList.bosses, function (key2, itemList) {
                         
-                        bossTableHTML
-                        bossCounter++;
-                        dungeonCounter++;
+                        bossSlotID = "#" + dungeonID + "." + bossID + "." + itemList.slot;
+
+                        $(bossSlotID).append(
+                            '<a id="' + itemList.id + '" href="https://www.wowhead.com/item=' + itemList.id +
+                            ' data-wh-icon-added="true" class="q3" data-wh-rename-link="false">' +
+                            '<span class="iconmedium" data-env="live" data-tree="live" data-game="wow" data-type="item">' +
+                            '<ins style="background-image: url(&quot;' + itemList.imglink + '&quot;);"></ins><del></del></span></a>'
+                        );
+                        
+                        
+                        
                     });
+                    
+                    bossCounter++;
                 });
+                
+                dungeonCounter++;
             });
         }
     });
