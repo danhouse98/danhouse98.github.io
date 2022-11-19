@@ -57,7 +57,7 @@ $(document).ready(function () {
                             var bossTableHTML = "<div class= 'dungeon'><div class=''boss'><table><tr><th>Head</th><th>Shoulder</th><th>Chest</th><th>Wrist</th><th>Hands</th><th>Waist</th><th>Legs</th><th>Feet</th><th>Neck</th><th>Back</th><th>Rings</th><th>Weapon</th><th>Trinket</th></tr><tr>";
 
                             for (var k = 0; k < slots.length; k++) {
-                                bossSlotID += dungeonID + "." + bossID + "." + slots[k];
+                                bossSlotID = dungeonID + "." + bossID + "." + slots[k];
                                 bossTableHTML += "<tr id='" + bossSlotID + "'></tr>";
                             }
 
@@ -70,8 +70,8 @@ $(document).ready(function () {
                                 //build wowhead links
                                 //TODO implement dynamic id values to append to the correct td element
                                 $(bossSlotID).append(
-                                    '<a id="' + data.dungeon[i].bosses[j].drops[k].id + '" href="https://www.wowhead.com/item="' + data.dungeon[i].bosses[j].drops[k].id +
-                                    '" data-wh-icon-added="true" class="q3" data-wh-rename-link="false">' +
+                                    '<a id="' + data.dungeon[i].bosses[j].drops[k].id + '" href="https://www.wowhead.com/item=' + data.dungeon[i].bosses[j].drops[k].id +
+                                    ' data-wh-icon-added="true" class="q3" data-wh-rename-link="false">' +
                                     '<span class="iconmedium" data-env="live" data-tree="live" data-game="wow" data-type="item">' +
                                     '<ins style="background-image: url(&quot;' + data.dungeon[i].bosses[j].drops[k].imglink + '&quot;);"></ins><del></del></span></a>'
                                 );
