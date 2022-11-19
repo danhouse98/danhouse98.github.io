@@ -75,12 +75,10 @@ $(document).ready(function () {
                             
                             var elem = document.getElementById(bossSlotID);
 
-                            console.log(bossSlotID + " w/ ID: " + elem.id);
-
                             var itemInfo = '<a id="' + itemList.id + '" href="https://www.wowhead.com/item=' + itemList.id +
                             ' data-wh-icon-added="true" class="q3" data-wh-rename-link="false">' +
                             '<span class="iconmedium" data-env="live" data-tree="live" data-game="wow" data-type="item">' +
-                            '<ins style="background-image: url("' + itemList.imglink + '");"></ins><del></del></span></a>';
+                            '<ins style="background-image: url(&quot;https://wow.zamimg.com/images/wow/icons/medium/' + itemList.imglink + '&quot");"></ins><del></del></span></a>';
 
                             if(elem != null ){
                                 elem.insertAdjacentHTML('beforeend', itemInfo);

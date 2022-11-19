@@ -16,7 +16,7 @@
 							],
 							"slot": "feet",
 							"type": "plate",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_plate_dragondungeon_c_01_boot.jpg"
+							"imglink": "inv_plate_dragondungeon_c_01_boot.jpg"
 						},
 						{
 							"id": 193757,
@@ -27,7 +27,7 @@
 							],
 							"slot": "trinket",
 							"type": "all",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_item_dragonegg_redbroken01.jpg"
+							"imglink": "inv_item_dragonegg_redbroken01.jpg"
 						},
 						{
 							"id": 193758,
@@ -39,7 +39,7 @@
 							],
 							"slot": "hands",
 							"type": "leather",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_leather_dragondungeon_c_01_glove.jpg"
+							"imglink": "inv_leather_dragondungeon_c_01_glove.jpg"
 						},
 						{
 							"id": 193759,
@@ -51,7 +51,7 @@
 							],
 							"slot": "legs",
 							"type": "mail",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_mail_dragondungeon_c_01_pant.jpg"
+							"imglink": "inv_mail_dragondungeon_c_01_pant.jpg"
 						},
 						{
 							"id": 193761,
@@ -62,7 +62,7 @@
 							],
 							"slot": "weapon",
 							"type": "int2hstaff",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_staff_2h_dragondungeon_c_02.jpg"
+							"imglink": "inv_staff_2h_dragondungeon_c_02.jpg"
 						}
 					]
 				},
@@ -76,7 +76,7 @@
 							],
 							"slot": "trinket",
 							"type": "str",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_10_dungeonjewelry_primalist_trinket_2_fire.jpg"
+							"imglink": "inv_10_dungeonjewelry_primalist_trinket_2_fire.jpg"
 						},
 						{
 							"id": 193763,
@@ -89,7 +89,7 @@
 							],
 							"slot": "back",
 							"type": "all",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_mail_dragondungeon_c_01_cape.jpg"
+							"imglink": "inv_mail_dragondungeon_c_01_cape.jpg"
 						},
 						{
 							"id": 193764,
@@ -101,7 +101,7 @@
 							],
 							"slot": "chest",
 							"type": "leather",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_leather_dragondungeon_c_01_chest.jpg"
+							"imglink": "inv_leather_dragondungeon_c_01_chest.jpg"
 						},
 						{
 							"id": 193765,
@@ -113,7 +113,7 @@
 							],
 							"slot": "head",
 							"type": "mail",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_mail_dragondungeon_c_01_helm.jpg"
+							"imglink": "inv_mail_dragondungeon_c_01_helm.jpg"
 						},
 						{
 							"id": 193766,
@@ -124,7 +124,7 @@
 							],
 							"slot": "weapon",
 							"type": "intoffhand",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_offhand_1h_drakonid_c_01.jpg"
+							"imglink": "inv_offhand_1h_drakonid_c_01.jpg"
 						},
 						{
 							"id": 193767,
@@ -135,7 +135,7 @@
 							],
 							"slot": "weapon",
 							"type": "agi1hmace",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_mace_1h_dragondungeon_c_02.jpg"
+							"imglink": "inv_mace_1h_dragondungeon_c_02.jpg"
 						}
 					]
 				},
@@ -151,7 +151,7 @@
 							],
 							"slot": "waist",
 							"type": "cloth",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_belt_dragondungeon_c_01.jpg"
+							"imglink": "inv_belt_dragondungeon_c_01.jpg"
 						},
 						{
 							"id": 193748,
@@ -160,7 +160,7 @@
 							],
 							"slot": "trinket",
 							"type": "healer",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_10_dungeonjewelry_primalist_trinket_2_fire.jpg"
+							"imglink": "inv_10_dungeonjewelry_primalist_trinket_2_fire.jpg"
 						},
 						{
 							"id": 193750,
@@ -171,7 +171,7 @@
 							],
 							"slot": "legs",
 							"type": "cloth",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_pant_cloth_dragondungeon_c_01.jpg"
+							"imglink": "inv_pant_cloth_dragondungeon_c_01.jpg"
 						},
 						{
 							"id": 193751,
@@ -183,7 +183,7 @@
 							],
 							"slot": "head",
 							"type": "leather",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_leather_dragondungeon_c_01_helm.jpg"
+							"imglink": "inv_leather_dragondungeon_c_01_helm.jpg"
 						},
 						{
 							"id": 193752,
@@ -195,7 +195,7 @@
 							],
 							"slot": "hands",
 							"type": "mail",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_mail_dragondungeon_c_01_glove.jpg"
+							"imglink": "inv_mail_dragondungeon_c_01_glove.jpg"
 						},
 						{
 							"id": 193754,
@@ -207,7 +207,7 @@
 							],
 							"slot": "weapon",
 							"type": "shield",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_shield_1h_drakonid_c_01.jpg"
+							"imglink": "inv_shield_1h_drakonid_c_01.jpg"
 						},
 						{
 							"id": 193755,
@@ -218,7 +218,7 @@
 							],
 							"slot": "weapon",
 							"type": "agi2haxe",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_axe_2h_drakonoid_c_01.jpg"
+							"imglink": "inv_axe_2h_drakonoid_c_01.jpg"
 						},
 						{
 							"id": 193756,
@@ -229,7 +229,7 @@
 							],
 							"slot": "weapon",
 							"type": "agidagger",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_knife_1h_dragondungeon_c_02.jpg"
+							"imglink": "inv_knife_1h_dragondungeon_c_02.jpg"
 						}
 					]
 				}
@@ -251,7 +251,7 @@
 							],
 							"slot": "wrist",
 							"type": "mail",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_mail_dragondungeon_c_01_bracer.jpg"
+							"imglink": "inv_mail_dragondungeon_c_01_bracer.jpg"
 						},
 						{
 							"id": 193815,
@@ -263,7 +263,7 @@
 							],
 							"slot": "trinket",
 							"type": "agistr",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_60pvp_trinket4a.jpg"
+							"imglink": "inv_60pvp_trinket4a.jpg"
 						},
 						{
 							"id": 193816,
@@ -274,7 +274,7 @@
 							],
 							"slot": "waist",
 							"type": "cloth",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_belt_dragondungeon_c_01.jpg"
+							"imglink": "inv_belt_dragondungeon_c_01.jpg"
 						},
 						{
 							"id": 193817,
@@ -286,7 +286,7 @@
 							],
 							"slot": "feet",
 							"type": "leather",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_leather_dragondungeon_c_01_boot.jpg"
+							"imglink": "inv_leather_dragondungeon_c_01_boot.jpg"
 						},
 						{
 							"id": 193819,
@@ -298,7 +298,7 @@
 							],
 							"slot": "head",
 							"type": "plate",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_plate_dragondungeon_c_01_helm.jpg"
+							"imglink": "inv_plate_dragondungeon_c_01_helm.jpg"
 						},
 						{
 							"id": 193820,
@@ -310,7 +310,7 @@
 							],
 							"slot": "weapon",
 							"type": "shield",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_shield_76.jpg"
+							"imglink": "inv_shield_76.jpg"
 						}
 					]
 				},
@@ -327,7 +327,7 @@
 							],
 							"slot": "waist",
 							"type": "leather",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_leather_dragondungeon_c_01_belt.jpg"
+							"imglink": "inv_leather_dragondungeon_c_01_belt.jpg"
 						},
 						{
 							"id": 193809,
@@ -337,7 +337,7 @@
 							],
 							"slot": "neck",
 							"type": "all",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_10_dungeonjewelry_centaur_necklace_1_color1.jpg"
+							"imglink": "inv_10_dungeonjewelry_centaur_necklace_1_color1.jpg"
 						},
 						{
 							"id": 193810,
@@ -348,7 +348,7 @@
 							],
 							"slot": "legs",
 							"type": "cloth",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_pant_cloth_dragondungeon_c_01.jpg"
+							"imglink": "inv_pant_cloth_dragondungeon_c_01.jpg"
 						},
 						{
 							"id": 193813,
@@ -360,7 +360,7 @@
 							],
 							"slot": "wrist",
 							"type": "plate",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_plate_dragondungeon_c_01_bracer.jpg"
+							"imglink": "inv_plate_dragondungeon_c_01_bracer.jpg"
 						},
 						{
 							"id": 193814,
@@ -371,7 +371,7 @@
 							],
 							"slot": "weapon",
 							"type": "agidagger",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_knife_1h_dragondungeon_c_01.jpg"
+							"imglink": "inv_knife_1h_dragondungeon_c_01.jpg"
 						},
 						{
 							"id": 193818,
@@ -383,7 +383,7 @@
 							],
 							"slot": "hands",
 							"type": "mail",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_mail_dragondungeon_c_01_glove.jpg"
+							"imglink": "inv_mail_dragondungeon_c_01_glove.jpg"
 						}
 					]
 				},
@@ -398,7 +398,7 @@
 							],
 							"slot": "finger",
 							"type": "all",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_10_dungeonjewelry_titan_ring_1_color1.jpg"
+							"imglink": "inv_10_dungeonjewelry_titan_ring_1_color1.jpg"
 						},
 						{
 							"id": 193805,
@@ -407,7 +407,7 @@
 							],
 							"slot": "trinket",
 							"type": "tank",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_60pvp_trinket3b.jpg"
+							"imglink": "inv_60pvp_trinket3b.jpg"
 						},
 						{
 							"id": 193806,
@@ -418,7 +418,7 @@
 							],
 							"slot": "feet",
 							"type": "cloth",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_boot_cloth_dragondungeon_c_01.jpg"
+							"imglink": "inv_boot_cloth_dragondungeon_c_01.jpg"
 						},
 						{
 							"id": 193807,
@@ -430,7 +430,7 @@
 							],
 							"slot": "shoulder",
 							"type": "leather",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_leather_dragondungeon_c_01_shoulder.jpg"
+							"imglink": "inv_leather_dragondungeon_c_01_shoulder.jpg"
 						},
 						{
 							"id": 193808,
@@ -442,7 +442,7 @@
 							],
 							"slot": "weapon",
 							"type": "agi2hpolearm",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_polearm_2h_dragondungeon_c_02.jpg"
+							"imglink": "inv_polearm_2h_dragondungeon_c_02.jpg"
 						}
 					]
 				},
@@ -458,7 +458,7 @@
 							],
 							"slot": "wrist",
 							"type": "cloth",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_bracer_cloth_dragondungeon_c_01.jpg"
+							"imglink": "inv_bracer_cloth_dragondungeon_c_01.jpg"
 						},
 						{
 							"id": 193794,
@@ -470,7 +470,7 @@
 							],
 							"slot": "waist",
 							"type": "mail",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_mail_dragondungeon_c_01_buckle.jpg"
+							"imglink": "inv_mail_dragondungeon_c_01_buckle.jpg"
 						},
 						{
 							"id": 193795,
@@ -482,7 +482,7 @@
 							],
 							"slot": "hands",
 							"type": "plate",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_plate_dragondungeon_c_01_glove.jpg"
+							"imglink": "inv_plate_dragondungeon_c_01_glove.jpg"
 						},
 						{
 							"id": 193796,
@@ -493,7 +493,7 @@
 							],
 							"slot": "weapon",
 							"type": "ranged",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_firearm_2h_dragondungeon_c_01.jpg"
+							"imglink": "inv_firearm_2h_dragondungeon_c_01.jpg"
 						},
 						{
 							"id": 193797,
@@ -504,7 +504,7 @@
 							],
 							"slot": "weapon",
 							"type": "agi1hmace",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_mace_1h_dragondungeon_c_01.jpg"
+							"imglink": "inv_mace_1h_dragondungeon_c_01.jpg"
 						},
 						{
 							"id": 193811,
@@ -516,7 +516,7 @@
 							],
 							"slot": "legs",
 							"type": "leather",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_leather_dragondungeon_c_01_pant.jpg"
+							"imglink": "inv_leather_dragondungeon_c_01_pant.jpg"
 						}
 					]
 				},
@@ -530,7 +530,7 @@
 							],
 							"slot": "trinket",
 							"type": "int",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_10_dungeonjewelry_explorer_trinket_3_color3.jpg"
+							"imglink": "inv_10_dungeonjewelry_explorer_trinket_3_color3.jpg"
 						},
 						{
 							"id": 193799,
@@ -541,7 +541,7 @@
 							],
 							"slot": "legs",
 							"type": "cloth",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_pant_cloth_dragondungeon_c_01.jpg"
+							"imglink": "inv_pant_cloth_dragondungeon_c_01.jpg"
 						},
 						{
 							"id": 193800,
@@ -553,7 +553,7 @@
 							],
 							"slot": "head",
 							"type": "leather",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_leather_dragondungeon_c_01_helm.jpg"
+							"imglink": "inv_leather_dragondungeon_c_01_helm.jpg"
 						},
 						{
 							"id": 193801,
@@ -565,7 +565,7 @@
 							],
 							"slot": "chest",
 							"type": "mail",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_mail_dragondungeon_c_01_chest.jpg"
+							"imglink": "inv_mail_dragondungeon_c_01_chest.jpg"
 						},
 						{
 							"id": 193802,
@@ -577,7 +577,7 @@
 							],
 							"slot": "shoulder",
 							"type": "plate",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_plate_dragondungeon_c_01_shoulder.jpg"
+							"imglink": "inv_plate_dragondungeon_c_01_shoulder.jpg"
 						},
 						{
 							"id": 193803,
@@ -589,7 +589,7 @@
 							],
 							"slot": "weapon",
 							"type": "int2hstaff",
-							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_staff_2h_drakonid_c_02.jpg"
+							"imglink": "inv_staff_2h_drakonid_c_02.jpg"
 						}
 					]
 				}
