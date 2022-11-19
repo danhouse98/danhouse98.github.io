@@ -54,7 +54,7 @@ $(document).ready(function () {
                     var bossTableHTML = "<div class= 'dungeon' id= 'dungeon" + dungeonID + "'>" + dungeonList.dungeon_name;
                 
                     //boss list
-                    $.each(this, function (key2, bossList) {
+                    $.each(dungeonList.bosses, function (key2, bossList) {
                         bossID = bossCounter.toString();
 
                         bossTableHTML += "<div class='boss'><table><caption>" + bossList.name + "</caption><tr><th>Head</th><th>Shoulder</th><th>Chest</th><th>Wrist</th><th>Hands</th><th>Waist</th><th>Legs</th><th>Feet</th><th>Neck</th><th>Back</th><th>Rings</th><th>Weapon</th><th>Trinket</th></tr><tr>";
@@ -68,7 +68,7 @@ $(document).ready(function () {
                         $('#dungeonList').append(bossTableHTML);
 
                         //item List
-                        $.each(bossList.bosses, function (key3, itemList) {
+                        $.each(bossList.drops, function (key3, itemList) {
                             
                             bossSlotID = "#" + dungeonID + "." + bossID + "." + itemList.slot;
 
