@@ -48,7 +48,7 @@ $(document).ready(function () {
                 var dungeonCounter = 0;
 
                 //dungeon list
-                $.each(this, function (key, dungeonList) {
+                $each(this, function (key, dungeonList) {
                     var bossCounter = 0;
                     dungeonID = dungeonCounter.toString();
                     var bossTableHTML = "<div class= 'dungeon' id= 'dungeon" + dungeonID + "'>" + dungeonList.dungeon_name;
