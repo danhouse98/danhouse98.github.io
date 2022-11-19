@@ -49,7 +49,7 @@ $(document).ready(function () {
                 var bossSlotID = "";
                 var bossCounter = 0;
                 dungeonID = dungeonCounter.toString();
-                var bossTableHTML = "<div class= 'dungeon' id= 'dungeon" + dungeonID + "'>" + this.dungeon_name;
+                var bossTableHTML = "<div class= 'dungeon' id= 'dungeon" + dungeonID + "'>" + data.dungeon_name;
 
 
                 //boss list
@@ -81,7 +81,7 @@ $(document).ready(function () {
                         
                         
                     });
-                    
+
                     bossCounter++;
                 });
                 
