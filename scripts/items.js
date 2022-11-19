@@ -69,7 +69,7 @@ $(document).ready(function () {
 
 
                         //item list
-                        $each(bossList.drops, function (key3, itemList) {
+                        $.each(bossList.drops, function (key3, itemList) {
                             bossSlotID = "#" + dungeonID + "." + bossID + "." + itemList.slot;
 
                             $(bossSlotID).append(
