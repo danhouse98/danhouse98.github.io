@@ -67,11 +67,13 @@ $(document).ready(function () {
 
                         bossTableHTML += "</tr></table></div><br>";
                         $("#dungeonList").append(bossTableHTML);
-                        
+
                         //item List
                         $.each(bossList.drops, function (key3, itemList) {
                             
                             bossSlotID = "#" + dungeonID + "." + bossID + "." + itemList.slot;
+
+                            console.log(bossSlotID);
 
                             $(bossSlotID).append(
                                 '<a id="' + itemList.id + '" href="https://www.wowhead.com/item=' + itemList.id +
