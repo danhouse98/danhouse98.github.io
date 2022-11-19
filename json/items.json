@@ -587,7 +587,7 @@
 								"crit",
 								"haste"
 							],
-							"slot": "staff",
+							"slot": "weapon",
 							"type": "int2hstaff",
 							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_staff_2h_drakonid_c_02.jpg"
 						}
