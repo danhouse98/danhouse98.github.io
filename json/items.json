@@ -5,7 +5,7 @@
 			"bosses": [
 				{
 					"name": "Melidrussa Chillworm",
-					"imglink" : "ui-ej-boss-melidrussa-chillworn.pn",
+					"imglink" : "ui-ej-boss-melidrussa-chillworn.png",
 					"drops": [
 						{
 							"id": 193728,
