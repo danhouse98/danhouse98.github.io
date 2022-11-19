@@ -43,96 +43,95 @@ $(document).ready(function () {
             //TODO rename id tag
             //dungeon List
             var dungeonCounter = 0;
-            $.each(data, function () {
+            $.each(data.dungeons, function (key, dungeonList) {
                 var dungeonID = "";
                 var bossID = "";
                 var bossSlotID = "";
+
                 //dungeonList
-                $.each(this, function(key, dungeonList){
-                    var bossCounter = 0;
-                    dungeonID = dungeonCounter.toString();
-                    var bossTableHTML = "<div class= 'dungeon' id= 'dungeon" + dungeonID + "'>" + dungeonList.dungeon_name;
-                
-                    //boss list
-                    $.each(dungeonList.bosses, function (key2, bossList) {
-                        bossID = bossCounter.toString();
+                var bossCounter = 0;
+                dungeonID = dungeonCounter.toString();
+                var bossTableHTML = "<div class= 'dungeon' id= 'dungeon" + dungeonID + "'>" + dungeonList.dungeon_name;
+                //boss list
+                $.each(dungeonList.bosses, function (key2, bossList) {
+                    bossID = bossCounter.toString();
 
-                        bossTableHTML += "<div class='boss'><table><caption>" + bossList.name + "</caption><tr><th>Head</th><th>Shoulder</th><th>Chest</th><th>Wrist</th><th>Hands</th><th>Waist</th><th>Legs</th><th>Feet</th><th>Neck</th><th>Back</th><th>Rings</th><th>Weapon</th><th>Trinket</th></tr><tr>";
+                    bossTableHTML += "<div class='boss'><table><caption>" + bossList.name + "</caption><tr><th>Head</th><th>Shoulder</th><th>Chest</th><th>Wrist</th><th>Hands</th><th>Waist</th><th>Legs</th><th>Feet</th><th>Neck</th><th>Back</th><th>Rings</th><th>Weapon</th><th>Trinket</th></tr><tr>";
 
-                        for (var k = 0; k < slots.length; k++) {
-                            bossSlotID = dungeonID + "." + bossID + "." + slots[k];
-                            bossTableHTML += "<tr id='" + bossSlotID + "'></tr>";
-                        }   
+                    for (var k = 0; k < slots.length; k++) {
+                        bossSlotID = dungeonID + "." + bossID + "." + slots[k];
+                        bossTableHTML += "<tr id='" + bossSlotID + "'></tr>";
+                    }
 
-                        bossTableHTML += "</tr></table></div>";
-                        $('#dungeonList').append(bossTableHTML);
+                    bossTableHTML += "</tr></table></div><br>";
+                    $('#dungeonList').append(bossTableHTML);
 
-                        //item List
-                        $.each(bossList.drops, function (key3, itemList) {
-                            
-                            bossSlotID = "#" + dungeonID + "." + bossID + "." + itemList.slot;
+                    //item List
+                    $.each(bossList.drops, function (key3, itemList) {
 
-                            $(bossSlotID).append(
-                                '<a id="' + itemList.id + '" href="https://www.wowhead.com/item=' + itemList.id +
-                                ' data-wh-icon-added="true" class="q3" data-wh-rename-link="false">' +
-                                '<span class="iconmedium" data-env="live" data-tree="live" data-game="wow" data-type="item">' +
-                                '<ins style="background-image: url(&quot;' + itemList.imglink + '&quot;);"></ins><del></del></span></a>'
-                            );
-                            
-                            
-                            
-                        });
+                        bossSlotID = "#" + dungeonID + "." + bossID + "." + itemList.slot;
 
-                        bossCounter++;
+                        $(bossSlotID).append(
+                            '<a id="' + itemList.id + '" href="https://www.wowhead.com/item=' + itemList.id +
+                            ' data-wh-icon-added="true" class="q3" data-wh-rename-link="false">' +
+                            '<span class="iconmedium" data-env="live" data-tree="live" data-game="wow" data-type="item">' +
+                            '<ins style="background-image: url(&quot;' + itemList.imglink + '&quot;);"></ins><del></del></span></a>'
+                        );
+
+
+
                     });
 
-                    dungeonCounter++;
-                });  
+                    bossCounter++;
+                });
+
+                dungeonCounter++;
             });
-        }
+        });
+}
     });
 });
 
-                    /*
-                    //dungeon list
-                    for (var i = 0; i < data.dungeon.length; i++) {
-                        //sets dungeon id respective to amount of dungeons
-                        dungeonID = i.toString();
+/*
+//dungeon list
+for (var i = 0; i < data.dungeon.length; i++) {
+    //sets dungeon id respective to amount of dungeons
+    dungeonID = i.toString();
 
-                        //boss list
-                        for (var j = 0; j < data.dungeon[i].bosses.length; j++) {
-                            //sets dungeon id respective to amount of bosses
-                            bossID = j.toString();
-                            var bossTableHTML = "<div class= 'dungeon' id= 'dungeon" + i.toString() + "'><div class='boss'><table><tr><th>Head</th><th>Shoulder</th><th>Chest</th><th>Wrist</th><th>Hands</th><th>Waist</th><th>Legs</th><th>Feet</th><th>Neck</th><th>Back</th><th>Rings</th><th>Weapon</th><th>Trinket</th></tr><tr>";
+    //boss list
+    for (var j = 0; j < data.dungeon[i].bosses.length; j++) {
+        //sets dungeon id respective to amount of bosses
+        bossID = j.toString();
+        var bossTableHTML = "<div class= 'dungeon' id= 'dungeon" + i.toString() + "'><div class='boss'><table><tr><th>Head</th><th>Shoulder</th><th>Chest</th><th>Wrist</th><th>Hands</th><th>Waist</th><th>Legs</th><th>Feet</th><th>Neck</th><th>Back</th><th>Rings</th><th>Weapon</th><th>Trinket</th></tr><tr>";
 
-                            for (var k = 0; k < slots.length; k++) {
-                                bossSlotID = dungeonID + "." + bossID + "." + slots[k];
-                                bossTableHTML += "<tr id='" + bossSlotID + "'></tr>";
-                            }
+        for (var k = 0; k < slots.length; k++) {
+            bossSlotID = dungeonID + "." + bossID + "." + slots[k];
+            bossTableHTML += "<tr id='" + bossSlotID + "'></tr>";
+        }
 
-                            bossTableHTML += "</tr></table></div></div>";
-                            $('#dungeonList').append(bossTableHTML);
+        bossTableHTML += "</tr></table></div></div>";
+        $('#dungeonList').append(bossTableHTML);
 
-                            //item list
-                            for (var k = 0; k < data.dungeon[i].bosses[j].drops.length; k++) {
+        //item list
+        for (var k = 0; k < data.dungeon[i].bosses[j].drops.length; k++) {
 
-                                bossSlotID = "#" + dungeonID + "." + bossID + "." + data.dungeon[i].bosses[j].drops[k].slot;
-                                //build wowhead links
-                                //TODO implement dynamic id values to append to the correct td element
-                                $(bossSlotID).append(
-                                    '<a id="' + data.dungeon[i].bosses[j].drops[k].id + '" href="https://www.wowhead.com/item=' + data.dungeon[i].bosses[j].drops[k].id +
-                                    ' data-wh-icon-added="true" class="q3" data-wh-rename-link="false">' +
-                                    '<span class="iconmedium" data-env="live" data-tree="live" data-game="wow" data-type="item">' +
-                                    '<ins style="background-image: url(&quot;' + data.dungeon[i].bosses[j].drops[k].imglink + '&quot;);"></ins><del></del></span></a>'
-                                );
-                            }
-                        }
-                    }
-                });
-            });
-        },
-        //On completeion, show the entry with index 0
-        complete: function () {
+            bossSlotID = "#" + dungeonID + "." + bossID + "." + data.dungeon[i].bosses[j].drops[k].slot;
+            //build wowhead links
+            //TODO implement dynamic id values to append to the correct td element
+            $(bossSlotID).append(
+                '<a id="' + data.dungeon[i].bosses[j].drops[k].id + '" href="https://www.wowhead.com/item=' + data.dungeon[i].bosses[j].drops[k].id +
+                ' data-wh-icon-added="true" class="q3" data-wh-rename-link="false">' +
+                '<span class="iconmedium" data-env="live" data-tree="live" data-game="wow" data-type="item">' +
+                '<ins style="background-image: url(&quot;' + data.dungeon[i].bosses[j].drops[k].imglink + '&quot;);"></ins><del></del></span></a>'
+            );
         }
     }
+}
+});
+});
+},
+//On completeion, show the entry with index 0
+complete: function () {
+}
+}
 });*/
