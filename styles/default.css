@@ -1,0 +1,39 @@
+/*https://coolors.co/palette/0b132b-1c2541-3a506b*/
+
+body{
+    background-color: #00233C;
+    color: white;
+    font-family: fantasy;
+}
+
+h1{
+    text-align: center;
+    width: 15%;
+}
+
+.dungeon{
+    height: 15em;
+    background-color: #002642;
+    display: flex;
+}
+
+.boss{
+    background-color: #045367;
+    height: 10em;
+    width: 100%;
+}
+
+.itemtype{
+    display:flex;
+    background-color: #087F8C;
+    height: 7em;
+    flex-basis: auto;
+}
+
+table{
+    width: 100%;
+}
+
+td{
+    width:7.14285714286%;
+}

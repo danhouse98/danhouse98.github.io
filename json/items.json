@@ -1,0 +1,599 @@
+{
+	"dungeon": [
+		{
+			"dungeon_name": "Ruby Life Pools",
+			"bosses": [
+				{
+					"name": "Melidrussa Chillworm",
+					"drops": [
+						{
+							"id": 193728,
+							"stats": [
+								"int",
+								"str",
+								"mastery",
+								"verse"
+							],
+							"slot": "feet",
+							"type": "plate",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_plate_dragondungeon_c_01_boot.jpg"
+						},
+						{
+							"id": 193757,
+							"stats": [
+								"int",
+								"agi",
+								"int"
+							],
+							"slot": "trinket",
+							"type": "all",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_item_dragonegg_redbroken01.jpg"
+						},
+						{
+							"id": 193758,
+							"stats": [
+								"int",
+								"agi",
+								"crit",
+								"verse"
+							],
+							"slot": "hands",
+							"type": "leather",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_leather_dragondungeon_c_01_glove.jpg"
+						},
+						{
+							"id": 193759,
+							"stats": [
+								"int",
+								"agi",
+								"haste",
+								"verse"
+							],
+							"slot": "legs",
+							"type": "mail",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_mail_dragondungeon_c_01_pant.jpg"
+						},
+						{
+							"id": 193761,
+							"stats": [
+								"int",
+								"crit",
+								"mastery"
+							],
+							"slot": "weapon",
+							"type": "int2hstaff",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_staff_2h_dragondungeon_c_02.jpg"
+						}
+					]
+				},
+				{
+					"name": "Kokia Blazehoof",
+					"drops": [
+						{
+							"id": 193762,
+							"stats": [
+								"str"
+							],
+							"slot": "trinket",
+							"type": "str",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_10_dungeonjewelry_primalist_trinket_2_fire.jpg"
+						},
+						{
+							"id": 193763,
+							"stats": [
+								"str",
+								"int",
+								"agi",
+								"haste",
+								"mastery"
+							],
+							"slot": "back",
+							"type": "all",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_mail_dragondungeon_c_01_cape.jpg"
+						},
+						{
+							"id": 193764,
+							"stats": [
+								"int",
+								"agi",
+								"verse",
+								"mastery"
+							],
+							"slot": "chest",
+							"type": "leather",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_leather_dragondungeon_c_01_chest.jpg"
+						},
+						{
+							"id": 193765,
+							"stats": [
+								"int",
+								"agi",
+								"verse",
+								"mastery"
+							],
+							"slot": "head",
+							"type": "mail",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_mail_dragondungeon_c_01_helm.jpg"
+						},
+						{
+							"id": 193766,
+							"stats": [
+								"int",
+								"crit",
+								"verse"
+							],
+							"slot": "offhand",
+							"type": "int",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_offhand_1h_drakonid_c_01.jpg"
+						},
+						{
+							"id": 193767,
+							"stats": [
+								"agi",
+								"haste",
+								"crit"
+							],
+							"slot": "weapon",
+							"type": "agi1hmace",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_mace_1h_dragondungeon_c_02.jpg"
+						}
+					]
+				},
+				{
+					"name": "Kyrakka",
+					"drops": [
+						{
+							"id": 193691,
+							"stats": [
+								"int",
+								"haste",
+								"mastery"
+							],
+							"slot": "waist",
+							"type": "cloth",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_belt_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193748,
+							"stats": [
+								"int"
+							],
+							"slot": "trinket",
+							"type": "healer",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_10_dungeonjewelry_primalist_trinket_2_fire.jpg"
+						},
+						{
+							"id": 193750,
+							"stats": [
+								"int",
+								"crit",
+								"mastery"
+							],
+							"slot": "legs",
+							"type": "cloth",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_pant_cloth_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193751,
+							"stats": [
+								"int",
+								"agi",
+								"crit",
+								"verse"
+							],
+							"slot": "head",
+							"type": "leather",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_leather_dragondungeon_c_01_helm.jpg"
+						},
+						{
+							"id": 193752,
+							"stats": [
+								"int",
+								"agi",
+								"crit",
+								"mastery"
+							],
+							"slot": "hands",
+							"type": "mail",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_mail_dragondungeon_c_01_glove.jpg"
+						},
+						{
+							"id": 193754,
+							"stats": [
+								"int",
+								"str",
+								"verse",
+								"mastery"
+							],
+							"slot": "offhand",
+							"type": "shield",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_shield_1h_drakonid_c_01.jpg"
+						},
+						{
+							"id": 193755,
+							"stats": [
+								"agi",
+								"crit",
+								"haste"
+							],
+							"slot": "weapon",
+							"type": "agi2haxe",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_axe_2h_drakonoid_c_01.jpg"
+						},
+						{
+							"id": 193756,
+							"stats": [
+								"agi",
+								"haste",
+								"verse"
+							],
+							"slot": "weapon",
+							"type": "agidagger",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_knife_1h_dragondungeon_c_02.jpg"
+						}
+					]
+				}
+			]
+		},
+		{
+			"dungeon_name": "Uldaman: Legacy Of Tyr",
+			"bosses": [
+				{
+					"name": "The Lost Dwarves",
+					"drops": [
+						{
+							"id": 193812,
+							"stats": [
+								"int",
+								"agi",
+								"mastery",
+								"verse"
+							],
+							"slot": "wrist",
+							"type": "mail",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_mail_dragondungeon_c_01_bracer.jpg"
+						},
+						{
+							"id": 193815,
+							"stats": [
+								"agi",
+								"str",
+								"crit",
+								"verse"
+							],
+							"slot": "trinket",
+							"type": "agistr",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_60pvp_trinket4a.jpg"
+						},
+						{
+							"id": 193816,
+							"stats": [
+								"int",
+								"haste",
+								"mastery"
+							],
+							"slot": "waist",
+							"type": "cloth",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_belt_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193817,
+							"stats": [
+								"int",
+								"agi",
+								"crit",
+								"mastery"
+							],
+							"slot": "feet",
+							"type": "leather",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_leather_dragondungeon_c_01_boot.jpg"
+						},
+						{
+							"id": 193819,
+							"stats": [
+								"int",
+								"str",
+								"haste",
+								"crit"
+							],
+							"slot": "head",
+							"type": "plate",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_plate_dragondungeon_c_01_helm.jpg"
+						},
+						{
+							"id": 193820,
+							"stats": [
+								"int",
+								"str",
+								"crit",
+								"mastery"
+							],
+							"slot": "offhand",
+							"type": "shield",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_shield_76.jpg"
+						}
+					]
+				},
+				{
+					"name": "Bromach",
+					"drops": [
+						{
+							"id": 193668,
+							"stats": [
+								"int",
+								"agi",
+								"crit",
+								"verse"
+							],
+							"slot": "waist",
+							"type": "leather",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_leather_dragondungeon_c_01_belt.jpg"
+						},
+						{
+							"id": 193809,
+							"stats": [
+								"haste",
+								"mastery"
+							],
+							"slot": "neck",
+							"type": "all",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_10_dungeonjewelry_centaur_necklace_1_color1.jpg"
+						},
+						{
+							"id": 193810,
+							"stats": [
+								"int",
+								"crit",
+								"mastery"
+							],
+							"slot": "legs",
+							"type": "cloth",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_pant_cloth_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193813,
+							"stats": [
+								"int",
+								"int",
+								"crit",
+								"haste"
+							],
+							"slot": "wrist",
+							"type": "plate",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_plate_dragondungeon_c_01_bracer.jpg"
+						},
+						{
+							"id": 193814,
+							"stats": [
+								"int",
+								"haste",
+								"verse"
+							],
+							"slot": "weapon",
+							"type": "agidagger",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_knife_1h_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193818,
+							"stats": [
+								"int",
+								"agi",
+								"haste",
+								"verse"
+							],
+							"slot": "hands",
+							"type": "mail",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_mail_dragondungeon_c_01_glove.jpg"
+						}
+					]
+				},
+				{
+					"name": "Sentinel Talondras",
+					"drops": [
+						{
+							"id": 193804,
+							"stats": [
+								"crit",
+								"haste"
+							],
+							"slot": "finger",
+							"type": "all",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_10_dungeonjewelry_titan_ring_1_color1.jpg"
+						},
+						{
+							"id": 193805,
+							"stats": [
+								"stam"
+							],
+							"slot": "trinket",
+							"type": "tank",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_60pvp_trinket3b.jpg"
+						},
+						{
+							"id": 193806,
+							"stats": [
+								"int",
+								"crit",
+								"haste"
+							],
+							"slot": "feet",
+							"type": "cloth",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_boot_cloth_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193807,
+							"stats": [
+								"int",
+								"agi",
+								"crit",
+								"mastery"
+							],
+							"slot": "shoulder",
+							"type": "leather",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_leather_dragondungeon_c_01_shoulder.jpg"
+						},
+						{
+							"id": 193808,
+							"stats": [
+								"int",
+								"agi",
+								"mastery",
+								"verse"
+							],
+							"slot": "weapon",
+							"type": "agi2hpolearm",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_polearm_2h_dragondungeon_c_02.jpg"
+						}
+					]
+				},
+				{
+					"name": "Emberon",
+					"drops": [
+						{
+							"id": 193792,
+							"stats": [
+								"int",
+								"crit",
+								"haste"
+							],
+							"slot": "wrist",
+							"type": "cloth",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_bracer_cloth_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193794,
+							"stats": [
+								"int",
+								"agi",
+								"crit",
+								"verse"
+							],
+							"slot": "waist",
+							"type": "mail",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_mail_dragondungeon_c_01_buckle.jpg"
+						},
+						{
+							"id": 193795,
+							"stats": [
+								"int",
+								"str",
+								"crit",
+								"mastery"
+							],
+							"slot": "hands",
+							"type": "plate",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_plate_dragondungeon_c_01_glove.jpg"
+						},
+						{
+							"id": 193796,
+							"stats": [
+								"agi",
+								"haste",
+								"mastery"
+							],
+							"slot": "weapon",
+							"type": "ranged",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_firearm_2h_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193797,
+							"stats": [
+								"agi",
+								"mastery",
+								"verse"
+							],
+							"slot": "weapon",
+							"type": "agi1hmace",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_mace_1h_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193811,
+							"stats": [
+								"int",
+								"agi",
+								"haste",
+								"verse"
+							],
+							"slot": "legs",
+							"type": "leather",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_leather_dragondungeon_c_01_pant.jpg"
+						}
+					]
+				},
+				{
+					"name": "Chrono-Lord Deios",
+					"drops": [
+						{
+							"id": 193791,
+							"stats": [
+								"int"
+							],
+							"slot": "trinket",
+							"type": "int",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_10_dungeonjewelry_explorer_trinket_3_color3.jpg"
+						},
+						{
+							"id": 193799,
+							"stats": [
+								"int",
+								"haste",
+								"verse"
+							],
+							"slot": "legs",
+							"type": "cloth",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_pant_cloth_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193800,
+							"stats": [
+								"int",
+								"agi",
+								"haste",
+								"mastery"
+							],
+							"slot": "head",
+							"type": "leather",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_leather_dragondungeon_c_01_helm.jpg"
+						},
+						{
+							"id": 193801,
+							"stats": [
+								"int",
+								"agi",
+								"crit",
+								"verse"
+							],
+							"slot": "chest",
+							"type": "mail",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_mail_dragondungeon_c_01_chest.jpg"
+						},
+						{
+							"id": 193802,
+							"stats": [
+								"str",
+								"agi",
+								"crit",
+								"haste"
+							],
+							"slot": "shoulder",
+							"type": "plate",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_plate_dragondungeon_c_01_shoulder.jpg"
+						},
+						{
+							"id": 193803,
+							"stats": [
+								"int",
+								"agi",
+								"crit",
+								"haste"
+							],
+							"slot": "staff",
+							"type": "int2hstaff",
+							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_staff_2h_drakonid_c_02.jpg"
+						}
+					]
+				}
+			]
+		}
+	]
+}
