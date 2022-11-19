@@ -58,7 +58,7 @@ $(document).ready(function () {
 
                             for (var k = 0; k < slots.length; k++) {
                                 bossSlotID += dungeonID + "." + bossID + "." + slots[k];
-                                bossTableHTML += "<tr>" + bossSlotID + '</tr>';
+                                bossTableHTML += "<tr id=" + bossSlotID + '></tr>';
                             }
 
                             bossTableHTML += "</tr></table></div></div>";
