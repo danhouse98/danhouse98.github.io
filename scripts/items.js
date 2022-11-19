@@ -51,14 +51,15 @@ $(document).ready(function () {
                 $.each(this, function(key, dungeonList){
                     var bossCounter = 0;
                     dungeonID = dungeonCounter.toString();
-                    var bossTableHTML = "<div class= 'dungeon' id= 'dungeon" + dungeonID + "'>" + dungeonList.dungeon_name;
+                    var bossTableHTML = "<div class= 'dungeon' id= 'dungeon" + dungeonID + "'><h2>" + dungeonList.dungeon_name + "</h2>";
                     $('#dungeonList').append(bossTableHTML);
 
                     //boss list
                     $.each(dungeonList.bosses, function (key2, bossList) {
                         bossID = bossCounter.toString();
 
-                        bossTableHTML = "<div class='boss'><img src='https://wow.zamimg.com/images/wow/journal/" + bossList.imglink + "' alt='"+ bossList.name + "'><table><caption>" + bossList.name + "</caption><tr><th>Head</th><th>Shoulder</th><th>Chest</th><th>Wrist</th><th>Hands</th><th>Waist</th><th>Legs</th><th>Feet</th><th>Neck</th><th>Back</th><th>Rings</th><th>Weapon</th><th>Trinket</th></tr><tr>";
+                        bossTableHTML = "<div class='boss'><div class='imgbox'><img src='https://wow.zamimg.com/images/wow/journal/" + bossList.imglink + "' alt='"+ bossList.name + "'><h3>" + bossList.name + "</h3></div><table>" + 
+                        "<tr><th>Head</th><th>Shoulder</th><th>Chest</th><th>Wrist</th><th>Hands</th><th>Waist</th><th>Legs</th><th>Feet</th><th>Neck</th><th>Back</th><th>Rings</th><th>Weapon</th><th>Trinket</th></tr><tr>";
 
                         for (var k = 0; k < slots.length; k++) {
                             bossSlotID = dungeonID + "." + bossID + "." + slots[k];

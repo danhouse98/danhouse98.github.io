@@ -43,3 +43,7 @@ td{
 img{
     object-fit: cover;
 }
+
+.imgbox{
+    grid-template-rows: fit-content(1em) 1em;
+}
