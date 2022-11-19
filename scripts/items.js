@@ -72,10 +72,12 @@ $(document).ready(function () {
                         $.each(bossList.drops, function (key3, itemList) {
                             
                             bossSlotID = "#" + dungeonID + "." + bossID + "." + itemList.slot;
+                            
+                            var elem = document.getElementById(bossSlotID);
 
                             console.log(bossSlotID);
 
-                            $(bossSlotID).append(
+                            elem.append(
                                 '<a id="' + itemList.id + '" href="https://www.wowhead.com/item=' + itemList.id +
                                 ' data-wh-icon-added="true" class="q3" data-wh-rename-link="false">' +
                                 '<span class="iconmedium" data-env="live" data-tree="live" data-game="wow" data-type="item">' +
