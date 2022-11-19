@@ -122,8 +122,8 @@
 								"crit",
 								"verse"
 							],
-							"slot": "offhand",
-							"type": "int",
+							"slot": "weapon",
+							"type": "intoffhand",
 							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_offhand_1h_drakonid_c_01.jpg"
 						},
 						{
@@ -205,7 +205,7 @@
 								"verse",
 								"mastery"
 							],
-							"slot": "offhand",
+							"slot": "weapon",
 							"type": "shield",
 							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_shield_1h_drakonid_c_01.jpg"
 						},
@@ -308,7 +308,7 @@
 								"crit",
 								"mastery"
 							],
-							"slot": "offhand",
+							"slot": "weapon",
 							"type": "shield",
 							"imglink": "https://wow.zamimg.com/images/wow/icons/medium/inv_shield_76.jpg"
 						}
