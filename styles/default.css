@@ -12,15 +12,15 @@ h1{
 }
 
 .dungeon{
-    height: 15em;
     background-color: #002642;
     display: flex;
 }
 
 .boss{
     background-color: #045367;
-    height: 10em;
-    width: 100%;
+    display: grid;
+    grid-template-columns: fit-content(1em) auto;
+    text-align: center;
 }
 
 .itemtype{
@@ -36,4 +36,10 @@ table{
 
 td{
     width:7.14285714286%;
+    text-align: center;
+    border: .01em solid white;
+}
+
+img{
+    object-fit: cover;
 }

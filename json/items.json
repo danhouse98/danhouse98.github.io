@@ -5,6 +5,7 @@
 			"bosses": [
 				{
 					"name": "Melidrussa Chillworm",
+					"imglink" : "ui-ej-boss-melidrussa-chillworn.pn",
 					"drops": [
 						{
 							"id": 193728,
@@ -68,6 +69,7 @@
 				},
 				{
 					"name": "Kokia Blazehoof",
+					"imglink":"ui-ej-boss-kokia-blazehoof.png",
 					"drops": [
 						{
 							"id": 193762,
@@ -141,6 +143,7 @@
 				},
 				{
 					"name": "Kyrakka",
+					"imglink": "ui-ej-boss-erkhart-stormvein.png",
 					"drops": [
 						{
 							"id": 193691,
@@ -240,6 +243,7 @@
 			"bosses": [
 				{
 					"name": "The Lost Dwarves",
+					"imglink": "ui-ej-boss-baelog.png",
 					"drops": [
 						{
 							"id": 193812,
@@ -316,6 +320,7 @@
 				},
 				{
 					"name": "Bromach",
+					"imglink" : "ui-ej-boss-bromach.png",
 					"drops": [
 						{
 							"id": 193668,
@@ -389,6 +394,7 @@
 				},
 				{
 					"name": "Sentinel Talondras",
+					"imglink": "ui-ej-boss-sentinel-talondras.png",
 					"drops": [
 						{
 							"id": 193804,
@@ -448,6 +454,7 @@
 				},
 				{
 					"name": "Emberon",
+					"imglink": "ui-ej-boss-emberon.png",
 					"drops": [
 						{
 							"id": 193792,
@@ -522,6 +529,7 @@
 				},
 				{
 					"name": "Chrono-Lord Deios",
+					"imglink": "ui-ej-boss-chrono-lord-deios.png",
 					"drops": [
 						{
 							"id": 193791,
