@@ -291,6 +291,8 @@ function statUpdate() {
         }
     }
 
+    console.log(flag);
+
     var statArray = [];
 
     //stat filter handler
@@ -310,7 +312,7 @@ function statUpdate() {
         var id = itemArray[i].id;
         
         //TODO make sure id is working properly
-        console.log(id);
+        //console.log(id);
 
         var element = document.getElementById(id);
         //hide each entry
