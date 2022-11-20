@@ -198,7 +198,7 @@ $(document).ready(function () {
         slotHTML += "<input type='checkbox' id='slot" + i + "' value='" + slots[i] + "' name ='slot' class='slotCheckbox' checked>" +
             "<label for ='stat" + i + "'>" + slotName + "</label><br>";
     }
-    slotHTML += "<button onclick='slotUpdate()' value='Filter Slots'>";
+    slotHTML += "<button onclick='slotUpdate()' value='Filter Slots'>Filter Slots</button>";
 
     $('#statPanel').append(slotHTML);
     $("#classDropdown").append(classHTML);
@@ -230,7 +230,7 @@ function slotUpdate() {
     var checkboxValue = "";
     var inputElements = document.getElementsByClassName('slotCheckbox');
     var changedElements;
-    for (var i = 0; i < inputElements.length; j++) {
+    for (var i = 0; i < inputElements.length; i++) {
         checkboxValue = inputElements[i].value;
         changedElements = document.getElementsByClassName(checkboxValue);
         if (inputElements[i].checked) {
