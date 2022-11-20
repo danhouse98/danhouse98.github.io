@@ -239,7 +239,7 @@ function slotUpdate() {
             }
         } else {
             for(var j = 0; j  < changedElements.length; j++){
-                changedElements[j].style.block = "";
+                changedElements[j].style.block = "none";
             }
         }
     }
