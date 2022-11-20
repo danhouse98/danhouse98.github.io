@@ -198,7 +198,7 @@ $(document).ready(function () {
         slotHTML += "<input type='checkbox' id='slot" + i + "' value='" + slots[i] + "' name ='slot' class='slotCheckbox' checked>" +
             "<label for ='slot" + i + "'>" + slotName + "</label>";
 
-            if(i == 7){
+            if(i == 6){
                 slotHTML += '</div><div>';
             }
     }
