@@ -299,7 +299,7 @@ function statUpdate() {
 
         //gets all wanted stats
         if (inputElements[i].checked) {
-            statArray.push(inputElement[i].value);
+            statArray.push(inputElements[i].value);
         }
     }
 
