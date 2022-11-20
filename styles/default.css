@@ -1,49 +1,69 @@
 /*https://coolors.co/palette/0b132b-1c2541-3a506b*/
 
-body{
+body {
     background-color: #00233C;
     color: white;
     font-family: fantasy;
 }
 
-h1{
+h1 {
     text-align: center;
     width: 15%;
 }
 
-.dungeon{
+.dungeon {
     background-color: #002642;
     display: flex;
 }
 
-.boss{
+.boss {
     background-color: #045367;
     display: grid;
     grid-template-columns: fit-content(1em) auto;
     text-align: center;
 }
 
-.itemtype{
-    display:flex;
+.itemtype {
+    display: flex;
     background-color: #087F8C;
     height: 7em;
     flex-basis: auto;
 }
 
-table{
+table {
     width: 100%;
 }
 
-td{
-    width:7.14285714286%;
+tr {
+    display: flex;
+}
+
+td,
+th {
+    flex-grow: 1;
     text-align: center;
     border: .01em solid white;
 }
 
-img{
+img {
     object-fit: cover;
 }
 
-.imgbox{
+.imgbox {
     grid-template-rows: fit-content(1em) 1em;
+}
+
+#controlPanel {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+#subclassDropdown {
+    text-align: right;
+    padding-top: .5em;
+}
+
+#controlPanel div {
+    padding-right: 2em;
 }

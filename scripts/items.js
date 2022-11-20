@@ -63,7 +63,7 @@ $(document).ready(function () {
                         bossTableHTML = "<div class='boss'><div class='imgbox'><img src='https://wow.zamimg.com/images/wow/journal/" + bossList.imglink + "' alt='" + bossList.name + "'><h3>" + bossList.name + "</h3></div><table>" +
                             "<tr><th class ='head'>Head</th><th class='shoulder'>Shoulder</th><th class='chest'>Chest</th><th class='wrist'>Wrist</th><th class='hands'>Hands</th>" +
                             "<th class='waist'>Waist</th><th class='legs'>Legs</th><th class='feet'>Feet</th><th class='neck'>Neck</th><th class='back'>Back</th>" +
-                            "<th class='neck'>Rings</th><th class='weapon'>Weapon</th><th class='trinket'>Trinket</th></tr><tr>";
+                            "<th class='ring'>Rings</th><th class='weapon'>Weapon</th><th class='trinket'>Trinket</th></tr><tr>";
 
                         for (var k = 0; k < slots.length; k++) {
                             bossSlotID = dungeonID + "." + bossID + "." + slots[k];
@@ -196,7 +196,11 @@ $(document).ready(function () {
         var slotName = slots[i];
         slotName = slotName.charAt(0).toUpperCase() + slotName.slice(1);
         slotHTML += "<input type='checkbox' id='slot" + i + "' value='" + slots[i] + "' name ='slot' class='slotCheckbox' checked>" +
-            "<label for ='stat" + i + "'>" + slotName + "</label><br>";
+            "<label for ='stat" + i + "'>" + slotName + "</label>";
+
+            if( i % 2 == 0 && i != 0){
+                slotHTML += '<br>';
+            }
     }
     slotHTML += "<button type='button' onclick='slotUpdate()' value='Filter Slots'>Filter Slots</button>";
 
