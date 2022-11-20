@@ -232,7 +232,7 @@ function slotUpdate() {
     var changedElements;
     for (var i = 0; i < inputElements.length; i++) {
         checkboxValue = inputElements[i].value;
-        console.log(checkboxValue + " : " + inputElement[i].checked);
+        console.log(checkboxValue + " : " + inputElements[i].checked);
         changedElements = document.getElementsByClassName(checkboxValue);
         if (inputElements[i].checked) {
             for(var j = 0; j  < changedElements.length; j++){
