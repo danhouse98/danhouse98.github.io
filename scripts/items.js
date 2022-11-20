@@ -236,7 +236,6 @@ function slotUpdate() {
         changedElements = document.getElementsByClassName(checkboxValue);
         if (inputElements[i].checked) {
             for(var j = 0; j  < changedElements.length; j++){
-                changedElement[j]
                 changedElements[j].style.display = "block";
             }
         } else {
