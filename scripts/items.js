@@ -190,21 +190,21 @@ $(document).ready(function () {
 
     });
 
-    slotHTML = "<form>";
+    slotHTML = "<form><div>";
     //Slot Table
     for (var i = 0; i < slots.length; i++) {
         var slotName = slots[i];
         slotName = slotName.charAt(0).toUpperCase() + slotName.slice(1);
         slotHTML += "<input type='checkbox' id='slot" + i + "' value='" + slots[i] + "' name ='slot' class='slotCheckbox' checked>" +
-            "<label for ='stat" + i + "'>" + slotName + "</label>";
+            "<label for ='slot" + i + "'>" + slotName + "</label>";
 
-            if( i % 2 == 0 && i != 0){
-                slotHTML += '<br>';
+            if(i == 7){
+                slotHTML += '</div><div>';
             }
     }
-    slotHTML += "<button type='button' onclick='slotUpdate()' value='Filter Slots'>Filter Slots</button>";
+    slotHTML += "<button type='button' onclick='slotUpdate()' value='Filter Slots'>Filter Slots</button></form>";
 
-    $('#statPanel').append(slotHTML);
+    $('#slotPanel').append(slotHTML);
     $("#classDropdown").append(classHTML);
 });
 
