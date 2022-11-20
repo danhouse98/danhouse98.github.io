@@ -22,9 +22,11 @@ function Item() {
     this.type = "";
 }
 
+const itemArray = [];
+
 var slots = ['head', 'shoulder', 'chest', 'wrist', 'hands', 'waist', 'legs', 'feet', 'neck', 'back', 'ring', 'weapon', 'trinket'];
 
-
+//Reads JSON file and fills DOM with content
 $(document).ready(function () {
 
     $.ajax({
@@ -75,7 +77,6 @@ $(document).ready(function () {
 
                         //item List
                         $.each(bossList.drops, function (key3, itemList) {
-
                             bossSlotID = dungeonID + "." + bossID + "." + itemList.slot;
 
                             var elem = document.getElementById(bossSlotID);
@@ -91,7 +92,29 @@ $(document).ready(function () {
                                 console.log("Invalid entry - ID : " + itemList.id);
                             }
 
+                            //Filling out itemArray with item info
+                            var currentItem = new Item();
+                            currentItem.id = itemList.id;
+                            currentItem.type = itemList.type;
 
+                            for (var i = 0; i < itemList.stats.length; i++) {
+                                switch (itemList.stats[i]) {
+                                    case "mastery":
+                                        currentItem.mastery = 1;
+                                        break;
+                                    case "verse":
+                                        currentItem.verse = 1;
+                                        break;
+                                    case "crit":
+                                        currentItem.crit = 1;
+                                        break;
+                                    case "haste":
+                                        currentItem.hate = 1;
+                                        break;
+                                }
+                            }
+
+                            itemArray.push(currentItem);
                         });
 
                         bossCounter++;
@@ -198,9 +221,9 @@ $(document).ready(function () {
         slotHTML += "<input type='checkbox' id='slot" + i + "' value='" + slots[i] + "' name ='slot' class='slotCheckbox' checked>" +
             "<label for ='slot" + i + "'>" + slotName + "</label>";
 
-            if(i == 6){
-                slotHTML += '</div><div>';
-            }
+        if (i == 6) {
+            slotHTML += '</div><div>';
+        }
     }
     slotHTML += "<br><button type='button' onclick='slotUpdate()' value='Filter Slots'>Filter Slots</button></form>";
 
@@ -239,13 +262,121 @@ function slotUpdate() {
         console.log(checkboxValue + " : " + inputElements[i].checked);
         changedElements = document.getElementsByClassName(checkboxValue);
         if (inputElements[i].checked) {
-            for(var j = 0; j  < changedElements.length; j++){
+            for (var j = 0; j < changedElements.length; j++) {
                 changedElements[j].style.display = "block";
             }
         } else {
-            for(var j = 0; j  < changedElements.length; j++){
+            for (var j = 0; j < changedElements.length; j++) {
                 changedElements[j].style.display = "none";
             }
         }
     }
 }
+
+//Reads statPanel and hides & shows items based on the input
+function statUpdate() {
+    var checkboxValue = "";
+    var inputElements = document.getElementsByClassName('statCheckbox');
+    var changedElements;
+    var flag = '';
+
+    //get appropriate flag 'or' or 'and'
+    var ele = document.getElementsByClassName('andOr');
+    for (var i = 0; i < ele.length; i++) {
+        if (ele[i].checked) {
+            flag = ele[i].value;
+            break;
+        }
+    }
+
+    var statArray = [];
+
+    //stat filter handler
+    for (var i = 0; i < inputElements.length; i++) {
+        checkboxValue = inputElements[i].value;
+        console.log(checkboxValue + " : " + inputElements[i].checked);
+        changedElements = document.getElementsByClassName(checkboxValue);
+
+        //gets all wanted stats
+        if (inputElements[i].checked) {
+            statArray.push(inputElement[i].value);
+        }
+    }
+
+    //Loop through itemArray, hide all items then show all relevent items
+    for (var item = 0; item < itemArray.length; item++) {
+        var id = itemArray[i].id;
+        var element = document.getElementById(id);
+        //hide each entry
+        element.style.display = none;
+
+        //only needs to check 1 at a time
+        if (flag === "or") {
+
+            var orChecker = "";
+            for (var j = 0; j < statArray.length && orChecker !== 'passed'; j++) {
+                switch (statArray[j]) {
+                    case 'mastery':
+                        if (itemArray.mastery == 1) {
+                            orChecker = 'passed';
+                            element.style.display ='block';
+                        }
+                        break;
+                    case 'haste':
+                        if (itemArray.haste == 1) {
+                            orChecker = 'passed';
+                            element.style.display ='block';
+                        }
+                        break;
+                    case 'verse':
+                        if (itemArray.verse == 1) {
+                            orChecker = 'passed';
+                            element.style.display ='block';
+                        }
+                        break;
+                    case 'crit':
+                        if (itemArray.crit == 1) {
+                            orChecker = 'passed';
+                            element.style.display ='block';
+                        }
+                        break;
+                }
+            }
+
+            //else check all stats before changing
+        } else {
+
+            var andChecker = "";
+            for (var j = 0; j < statArray.length && andChecker !== 'failed'; j++) {
+                switch (statArray[j]) {
+                    case 'mastery':
+                        if (itemArray.mastery != 1) {
+                            andChecker = 'failed';
+                        }
+                        break;
+                    case 'haste':
+                        if (itemArray.haste != 1) {
+                            andChecker = 'failed';
+                        }
+                        break;
+                    case 'verse':
+                        if (itemArray.verse != 1) {
+                            andChecker = 'failed';
+                        }
+                        break;
+                    case 'crit':
+                        if (itemArray.crit != 1) {
+                            andChecker = 'failed';
+                        }
+                        break;
+                }
+
+                if (j == statArray.length && andChecker !== 'failed') {
+                    element.style.display = 'block';
+                }
+            }
+        }
+
+    }
+}
+
