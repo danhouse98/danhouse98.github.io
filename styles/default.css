@@ -40,7 +40,7 @@ tr {
 
 td,
 th {
-    flex-grow: 1;
+    flex: 1;
     text-align: center;
     border: .01em solid white;
 }
@@ -60,10 +60,13 @@ img {
 }
 
 #subclassDropdown {
-    text-align: right;
-    padding-top: .5em;
+    float: right;
 }
 
 #controlPanel div {
-    padding-right: 2em;
+    padding-right: 1em;
+}
+#statPanel{
+    display: grid;
+    grid-template-columns: auto auto;
 }

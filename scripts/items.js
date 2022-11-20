@@ -202,7 +202,7 @@ $(document).ready(function () {
                 slotHTML += '</div><div>';
             }
     }
-    slotHTML += "<button type='button' onclick='slotUpdate()' value='Filter Slots'>Filter Slots</button></form>";
+    slotHTML += "<br><button type='button' onclick='slotUpdate()' value='Filter Slots'>Filter Slots</button></form>";
 
     $('#slotPanel').append(slotHTML);
     $("#classDropdown").append(classHTML);
