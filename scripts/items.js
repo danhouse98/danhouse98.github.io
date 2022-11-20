@@ -109,7 +109,7 @@ $(document).ready(function () {
                                         currentItem.crit = 1;
                                         break;
                                     case "haste":
-                                        currentItem.hate = 1;
+                                        currentItem.haste = 1;
                                         break;
                                 }
                             }
