@@ -236,11 +236,12 @@ function slotUpdate() {
         changedElements = document.getElementsByClassName(checkboxValue);
         if (inputElements[i].checked) {
             for(var j = 0; j  < changedElements.length; j++){
-                changedElements[j].style.block = "block";
+                changedElement[j]
+                changedElements[j].style.display = "block";
             }
         } else {
             for(var j = 0; j  < changedElements.length; j++){
-                changedElements[j].style.block = "none";
+                changedElements[j].style.display = "none";
             }
         }
     }
