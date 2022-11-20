@@ -308,7 +308,7 @@ function statUpdate() {
         var id = itemArray[i].id;
         var element = document.getElementById(id);
         //hide each entry
-        element.style.display = none;
+        element.style.display = 'none';
 
         //only needs to check 1 at a time
         if (flag === "or") {
