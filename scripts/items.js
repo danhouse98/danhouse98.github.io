@@ -327,25 +327,25 @@ function statUpdate() {
                 console.log(statArray[j]);
                 switch (statArray[j]) {
                     case 'mastery':
-                        if (itemArray.mastery == 1) {
+                        if (itemArray[i].mastery == 1) {
                             orChecker = 'passed';
                             element.style.display ='block';
                         }
                         break;
                     case 'haste':
-                        if (itemArray.haste == 1) {
+                        if (itemArray[i].haste == 1) {
                             orChecker = 'passed';
                             element.style.display ='block';
                         }
                         break;
                     case 'verse':
-                        if (itemArray.verse == 1) {
+                        if (itemArray[i].verse == 1) {
                             orChecker = 'passed';
                             element.style.display ='block';
                         }
                         break;
                     case 'crit':
-                        if (itemArray.crit == 1) {
+                        if (itemArray[i].crit == 1) {
                             orChecker = 'passed';
                             element.style.display ='block';
                         }
@@ -360,22 +360,22 @@ function statUpdate() {
             for (var j = 0; j < statArray.length && andChecker !== 'failed'; j++) {
                 switch (statArray[j]) {
                     case 'mastery':
-                        if (itemArray.mastery != 1) {
+                        if (itemArray[i].mastery != 1) {
                             andChecker = 'failed';
                         }
                         break;
                     case 'haste':
-                        if (itemArray.haste != 1) {
+                        if (itemArray[i].haste != 1) {
                             andChecker = 'failed';
                         }
                         break;
                     case 'verse':
-                        if (itemArray.verse != 1) {
+                        if (itemArray[i].verse != 1) {
                             andChecker = 'failed';
                         }
                         break;
                     case 'crit':
-                        if (itemArray.crit != 1) {
+                        if (itemArray[i].crit != 1) {
                             andChecker = 'failed';
                         }
                         break;
