@@ -306,12 +306,12 @@ function statUpdate() {
     }
 
     //Loop through itemArray, hide all items then show all relevent items
-    for (var item = 0; item < itemArray.length; item++) {
+    for (var i = 0; i < itemArray.length; i++) {
         var id = itemArray[i].id;
         
         //TODO make sure id is working properly
         console.log(id);
-        
+
         var element = document.getElementById(id);
         //hide each entry
         element.style.display = 'none';
