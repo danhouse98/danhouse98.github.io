@@ -311,8 +311,8 @@ function statUpdate() {
     for (var i = 0; i < itemArray.length; i++) {
         var id = itemArray[i].id;
         
-        //TODO make sure id is working properly
-        //console.log(id);
+        //TODO make sure id & vals are working properly
+        console.log(id + " m: " + itemArray[i].mastery + " v: " + itemArray[i].verse  + ' c: ' + itemArray[i].crit +  ' h: ' + itemArray[i].haste);
 
         var element = document.getElementById(id);
         //hide each entry
@@ -323,6 +323,8 @@ function statUpdate() {
 
             var orChecker = "";
             for (var j = 0; j < statArray.length && orChecker !== 'passed'; j++) {
+                //check if stat is stored properly
+                console.log(statArray[j]);
                 switch (statArray[j]) {
                     case 'mastery':
                         if (itemArray.mastery == 1) {
@@ -379,7 +381,7 @@ function statUpdate() {
                         break;
                 }
 
-                if (j == statArray.length && andChecker !== 'failed') {
+                if (j == statArray.length-1 && andChecker !== 'failed') {
                     element.style.display = 'block';
                 }
             }
