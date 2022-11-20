@@ -195,11 +195,11 @@ $(document).ready(function () {
     for (var i = 0; i < slots.length; i++) {
         var slotName = slots[i];
         slotName = slotName.charAt(0).toUpperCase() + slotName.slice(1);
-        slotHTML += "<input type='checkbox' id='stat" + i + "' value='" + slots[i] + "' name ='slot'>" +
+        slotHTML += "<input type='checkbox' id='slot" + i + "' value='" + slots[i] + "' name ='slot' class='slotCheckbox' checked>" +
             "<label for ='stat" + i + "'>" + slotName + "</label><br>";
     }
-    slotHTML += "<input type='submit' value='Filter Slots'>";
-    
+    slotHTML += "<button onclick='slotUpdate()' value='Filter Slots'>";
+
     $('#statPanel').append(slotHTML);
     $("#classDropdown").append(classHTML);
 });
@@ -226,27 +226,21 @@ window.addEventListener("DOMContentLoaded", function () {
     })
 });
 
-let checkboxes = $("input[type=checkbox][name=slot]")
-let enabledSettings = [];
-
-checkboxes.change(function() {
-
-    //hide all relevent elements before reshowing them
-    for(var i in slots){
-        var allElements = document.getElementsByClassName(id);
-        for(var j in allElements){
-            j.style.block="none";
+function slotUpdate() {
+    var checkboxValue = "";
+    var inputElements = document.getElementsByClassName('slotCheckbox');
+    var changedElements;
+    for (var i = 0; i < inputElements.length; j++) {
+        checkboxValue = inputElements[i].value;
+        changedElements = document.getElementsByClassName(checkboxValue);
+        if (inputElements[i].checked) {
+            for(var j = 0; j  < changedElements.length; j++){
+                changedElements[j].style.block = "block";
+            }
+        } else {
+            for(var j = 0; j  < changedElements.length; j++){
+                changedElements[j].style.block = "";
+            }
         }
     }
-
-    //reshow elements
-    enabledSettings = checkboxes
-      .filter(":checked") // Filter out unchecked boxes.
-      .map(function() { // Extract values using jQuery map.
-        var id = this.value;
-        var elements = document.getElementsByClassName(id);
-        for(var i in elements){
-            i.style.block = "block";
-        }
-      }) 
-  });
+}
