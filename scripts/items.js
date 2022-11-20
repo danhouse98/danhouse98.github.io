@@ -259,7 +259,9 @@ function slotUpdate() {
     var changedElements;
     for (var i = 0; i < inputElements.length; i++) {
         checkboxValue = inputElements[i].value;
-        console.log(checkboxValue + " : " + inputElements[i].checked);
+        
+        //console.log(checkboxValue + " : " + inputElements[i].checked);
+        
         changedElements = document.getElementsByClassName(checkboxValue);
         if (inputElements[i].checked) {
             for (var j = 0; j < changedElements.length; j++) {
@@ -306,6 +308,10 @@ function statUpdate() {
     //Loop through itemArray, hide all items then show all relevent items
     for (var item = 0; item < itemArray.length; item++) {
         var id = itemArray[i].id;
+        
+        //TODO make sure id is working properly
+        console.log(id);
+        
         var element = document.getElementById(id);
         //hide each entry
         element.style.display = 'none';
