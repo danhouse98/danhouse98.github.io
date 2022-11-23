@@ -5,7 +5,7 @@
 			"bosses": [
 				{
 					"name": "Melidrussa Chillworm",
-					"imglink" : "ui-ej-boss-melidrussa-chillworn.png",
+					"imglink": "ui-ej-boss-melidrussa-chillworn.png",
 					"drops": [
 						{
 							"id": 193728,
@@ -69,7 +69,7 @@
 				},
 				{
 					"name": "Kokia Blazehoof",
-					"imglink":"ui-ej-boss-kokia-blazehoof.png",
+					"imglink": "ui-ej-boss-kokia-blazehoof.png",
 					"drops": [
 						{
 							"id": 193762,
@@ -320,7 +320,7 @@
 				},
 				{
 					"name": "Bromach",
-					"imglink" : "ui-ej-boss-bromach.png",
+					"imglink": "ui-ej-boss-bromach.png",
 					"drops": [
 						{
 							"id": 193668,
@@ -598,6 +598,1696 @@
 							"slot": "weapon",
 							"type": "int2hstaff",
 							"imglink": "inv_staff_2h_drakonid_c_02.jpg"
+						}
+					]
+				}
+			]
+		},
+		{
+			"dungeon_name": "The Nokhud Offensive",
+			"bosses": [
+				{
+					"name": "Granyth",
+					"imglink": "ui-ej-boss-granyth.png",
+					"drops": [
+						{
+							"id": 193689,
+							"stats": [
+								"agi",
+								"str"
+							],
+							"slot": "trinket",
+							"type": "tank",
+							"imglink": "inv_skinning_80_shimmerscale.jpg"
+						},
+						{
+							"id": 193690,
+							"stats": [
+								"int",
+								"verse",
+								"mastery"
+							],
+							"slot": "shoulder",
+							"type": "cloth",
+							"imglink": "inv_shoulder_cloth_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193692,
+							"stats": [
+								"int",
+								"agi",
+								"mastery",
+								"haste"
+							],
+							"slot": "head",
+							"type": "leather",
+							"imglink": "inv_leather_dragondungeon_c_01_helm.jpg"
+						},
+						{
+							"id": 193693,
+							"stats": [
+								"int",
+								"agi",
+								"mastery",
+								"haste"
+							],
+							"slot": "wrist",
+							"type": "mail",
+							"imglink": "inv_mail_dragondungeon_c_01_bracer.jpg"
+						},
+						{
+							"id": 193694,
+							"stats": [
+								"int",
+								"str",
+								"mastery",
+								"haste"
+							],
+							"slot": "legs",
+							"type": "plate",
+							"imglink": "inv_plate_dragondungeon_c_01_pant.jpg"
+						},
+						{
+							"id": 193695,
+							"stats": [
+								"str",
+								"crit",
+								"verse"
+							],
+							"slot": "weapon",
+							"type": "str2hpolearm",
+							"imglink": "inv_polearm_2h_dragondungeon_c_01.jpg"
+						}
+					]
+				},
+				{
+					"name": "The Raging Tempest",
+					"imglink": "ui-ej-boss-the-raging-tempest.png",
+					"drops": [
+						{
+							"id": 193696,
+							"stats": [
+								"verse",
+								"haste"
+							],
+							"slot": "ring",
+							"type": "all",
+							"imglink": "inv_10_dungeonjewelry_primalist_ring_1_earth.jpg"
+						},
+						{
+							"id": 193697,
+							"stats": [
+								"agi",
+								"haste"
+							],
+							"slot": "trinket",
+							"type": "agi",
+							"imglink": "inv_10_alchemy_bottle_shape1_white.jpg"
+						},
+						{
+							"id": 193698,
+							"stats": [
+								"int",
+								"str",
+								"verse",
+								"mastery"
+							],
+							"slot": "wrist",
+							"type": "plate",
+							"imglink": "inv_plate_dragondungeon_c_01_bracer.jpg"
+						},
+						{
+							"id": 193699,
+							"stats": [
+								"int",
+								"verse",
+								"mastery"
+							],
+							"slot": "weapon",
+							"type": "int2hstaff",
+							"imglink": "inv_staff_2h_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193700,
+							"stats": [
+								"str",
+								"crit",
+								"mastery"
+							],
+							"slot": "weapon",
+							"type": "str1hsword",
+							"imglink": "inv_sword_1h_dragondungeon_c_01.jpg"
+						}
+					]
+				},
+				{
+					"name": "Terra and Maruuk",
+					"imglink": "ui-ej-boss-teera-and-maruuk.png",
+					"drops": [
+						{
+							"id": 193676,
+							"stats": [
+								"mastery",
+								"haste"
+							],
+							"slot": "neck",
+							"type": "all",
+							"imglink": "inv_10_dungeonjewelry_centaur_necklace_1_color3.jpg"
+						},
+						{
+							"id": 193677,
+							"stats": [
+								"int"
+							],
+							"slot": "trinket",
+							"type": "intdamage",
+							"imglink": "inv_icon_feather03d.jpg"
+						},
+						{
+							"id": 193678,
+							"stats": [
+								"int"
+							],
+							"slot": "trinket",
+							"type": "healer",
+							"imglink": "inv_10_dungeonjewelry_centaur_trinket_1_color1.jpg"
+						},
+						{
+							"id": 193679,
+							"stats": [
+								"str"
+							],
+							"slot": "trinket",
+							"type": "strdps",
+							"imglink": "inv_10_dungeonjewelry_centaur_trinket_2_color5.jpg"
+						},
+						{
+							"id": 193680,
+							"stats": [
+								"agi",
+								"int",
+								"crit",
+								"haste"
+							],
+							"slot": "chest",
+							"type": "leather",
+							"imglink": "inv_leather_dragondungeon_c_01_chest.jpg"
+						},
+						{
+							"id": 193681,
+							"stats": [
+								"agi",
+								"crit",
+								"haste"
+							],
+							"slot": "weapon",
+							"type": "ranged",
+							"imglink": "inv_bow_1h_dragondungeon_c_01.jpg"
+						}
+					]
+				},
+				{
+					"name": "Balakar Khan",
+					"imglink": "ui-ej-boss-balakar-khan.png",
+					"drops": [
+						{
+							"id": 193683,
+							"stats": [
+								"int",
+								"haste",
+								"verse"
+							],
+							"slot": "chest",
+							"type": "cloth",
+							"imglink": "inv_chest_cloth_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193684,
+							"stats": [
+								"int",
+								"agi",
+								"crit",
+								"haste"
+							],
+							"slot": "legs",
+							"type": "leather",
+							"imglink": "inv_leather_dragondungeon_c_01_pant.jpg"
+						},
+						{
+							"id": 193685,
+							"stats": [
+								"int",
+								"agi",
+								"mastery",
+								"haste"
+							],
+							"slot": "feet",
+							"type": "mail",
+							"imglink": "inv_mail_dragondungeon_c_01_boot.jpg"
+						},
+						{
+							"id": 193686,
+							"stats": [
+								"int",
+								"str",
+								"crit",
+								"verse"
+							],
+							"slot": "shoulder",
+							"type": "plate",
+							"imglink": "inv_plate_dragondungeon_c_01_shoulder.jpg"
+						},
+						{
+							"id": 193687,
+							"stats": [
+								"int",
+								"mastery",
+								"haste"
+							],
+							"slot": "weapon",
+							"type": "intdagger",
+							"imglink": "inv_knife_1h_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193688,
+							"stats": [
+								"agi",
+								"verse",
+								"haste"
+							],
+							"slot": "weapon",
+							"type": "warglaive",
+							"imglink": "inv_glaive_1h_dragondungeon_c_01.jpg"
+						}
+					]
+				}
+			]
+		},
+		{
+			"dungeon_name": "The Halls of Infusion",
+			"bosses": [
+				{
+					"name": "Watcher Irideus",
+					"imglink": "ui-ej-boss-watcher-irideus.png",
+					"drops": [
+						{
+							"id": 193743,
+							"stats": [
+								"mastery"
+							],
+							"slot": "trinket",
+							"type": "all",
+							"imglink": "inv_10_dungeonjewelry_titan_trinket_1facefragment_color3.jpg"
+						},
+						{
+							"id": 193744,
+							"stats": [
+								"str",
+								"int",
+								"verse",
+								"mastery"
+							],
+							"slot": "waist",
+							"type": "leather",
+							"imglink": "inv_leather_dragondungeon_c_01_belt.jpg"
+						},
+						{
+							"id": 193745,
+							"stats": [
+								"int",
+								"haste",
+								"mastery"
+							],
+							"slot": "weapon",
+							"type": "intoffhand",
+							"imglink": "inv_offhand_1h_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193746,
+							"stats": [
+								"str",
+								"int",
+								"crit",
+								"mastery"
+							],
+							"slot": "hands",
+							"type": "plate",
+							"imglink": "inv_plate_dragondungeon_c_01_glove.jpg"
+						},
+						{
+							"id": 193747,
+							"stats": [
+								"agi",
+								"verse",
+								"mastery"
+							],
+							"slot": "weapon",
+							"type": "ranged",
+							"imglink": "inv_firearm_2h_dragondungeon_c_01.jpg"
+						}
+					]
+				},
+				{
+					"name": "Gulping Goliath",
+					"imglink": "ui-ej-boss-gulping-goliath.png",
+					"drops": [
+						{
+							"id": 193724,
+							"stats": [
+								"int",
+								"verse",
+								"mastery"
+							],
+							"slot": "wrist",
+							"type": "cloth",
+							"imglink": "inv_bracer_cloth_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193725,
+							"stats": [
+								"int",
+								"agi",
+								"verse",
+								"haste"
+							],
+							"slot": "shoulder",
+							"type": "leather",
+							"imglink": "inv_leather_dragondungeon_c_01_shoulder.jpg"
+						},
+						{
+							"id": 193726,
+							"stats": [
+								"int",
+								"agi",
+								"crit",
+								"mastery"
+							],
+							"slot": "head",
+							"type": "mail",
+							"imglink": "inv_mail_dragondungeon_c_01_helm.jpg"
+						},
+						{
+							"id": 193729,
+							"stats": [
+								"str",
+								"verse",
+								"haste"
+							],
+							"slot": "weapon",
+							"type": "str1haxe",
+							"imglink": "inv_axe_1h_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193730,
+							"stats": [
+								"agi",
+								"crit",
+								"verse"
+							],
+							"slot": "weapon",
+							"type": "agidagger",
+							"imglink": "inv_knife_1h_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193760,
+							"stats": [
+								"int",
+								"str",
+								"crit",
+								"mastery"
+							],
+							"slot": "waist",
+							"type": "plate",
+							"imglink": "inv_plate_dragondungeon_c_01_belt.jpg"
+						},
+						{
+							"id": 193770,
+							"stats": [
+								"int",
+								"agi",
+								"verse",
+								"mastery"
+							],
+							"slot": "feet",
+							"type": "mail",
+							"imglink": "inv_mail_dragondungeon_c_01_boot.jpg"
+						}
+					]
+				},
+				{
+					"name": "Khajin the Unyielding",
+					"imglink": "ui-ej-boss-khajin-the-unyielding.png",
+					"drops": [
+						{
+							"id": 193731,
+							"stats": [
+								"verse",
+								"haste"
+							],
+							"slot": "ring",
+							"type": "all",
+							"imglink": "inv_10_dungeonjewelry_primalist_ring_4_frost.jpg"
+						},
+						{
+							"id": 193732,
+							"stats": [
+								"agi"
+							],
+							"slot": "trinket",
+							"type": "agidps",
+							"imglink": "spell_mage_frostbomb.jpg"
+						},
+						{
+							"id": 193733,
+							"stats": [
+								"int",
+								"verse",
+								"mastery"
+							],
+							"slot": "feet",
+							"type": "cloth",
+							"imglink": "inv_boot_cloth_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193734,
+							"stats": [
+								"agi",
+								"int",
+								"verse",
+								"crit"
+							],
+							"slot": "chest",
+							"type": "mail",
+							"imglink": "inv_mail_dragondungeon_c_01_chest.jpg"
+						},
+						{
+							"id": 193735,
+							"stats": [
+								"str",
+								"int",
+								"verse",
+								"mastery"
+							],
+							"slot": "head",
+							"type": "plate",
+							"imglink": "inv_plate_dragondungeon_c_01_helm.jpg"
+						}
+					]
+				},
+				{
+					"name": "Primal Tsunami",
+					"imglink": "ui-ej-boss-primal-tsunami.png",
+					"drops": [
+						{
+							"id": 193736,
+							"stats": [
+								"int"
+							],
+							"slot": "trinket",
+							"type": "healer",
+							"imglink": "inv_heart_of_the_thunder-king_icon.jpg"
+						},
+						{
+							"id": 193738,
+							"stats": [
+								"int",
+								"crit",
+								"mastery"
+							],
+							"slot": "chest",
+							"type": "cloth",
+							"imglink": "inv_chest_cloth_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193739,
+							"stats": [
+								"int",
+								"agi",
+								"haste",
+								"verse"
+							],
+							"slot": "feet",
+							"type": "leather",
+							"imglink": "inv_leather_dragondungeon_c_01_boot.jpg"
+						},
+						{
+							"id": 193740,
+							"stats": [
+								"int",
+								"agi",
+								"haste",
+								"verse"
+							],
+							"slot": "hands",
+							"type": "mail",
+							"imglink": "inv_mail_dragondungeon_c_01_glove.jpg"
+						},
+						{
+							"id": 193741,
+							"stats": [
+								"int",
+								"str",
+								"verse",
+								"mastery"
+							],
+							"slot": "shoulder",
+							"type": "plate",
+							"imglink": "inv_plate_dragondungeon_c_01_shoulder.jpg"
+						},
+						{
+							"id": 193742,
+							"stats": [
+								"str",
+								"crit",
+								"mastery"
+							],
+							"slot": "weapon",
+							"type": "str2hsword",
+							"imglink": "inv_sword_2h_dragondungeon_c_01.jpg"
+						}
+					]
+				}
+			]
+		},
+		{
+			"dungeon_name": "Algeth'ar Academy",
+			"bosses": [
+				{
+					"name": "Vexamus",
+					"imglink": "ui-ej-boss-vexamus.png",
+					"drops": [
+						{
+							"id": 193708,
+							"stats": [
+								"crit",
+								"mastery"
+							],
+							"slot": "ring",
+							"type": "all",
+							"imglink": "inv_10_dungeonjewelry_explorer_ring_1_color1.jpg"
+						},
+						{
+							"id": 193709,
+							"stats": [
+								"int",
+								"crit",
+								"haste"
+							],
+							"slot": "weapon",
+							"type": "intoffhand",
+							"imglink": "inv_offhand_1h_drakonid_c_01.jpg"
+						},
+						{
+							"id": 193710,
+							"stats": [
+								"int",
+								"mastery",
+								"haste"
+							],
+							"slot": "weapon",
+							"type": "int1hsword",
+							"imglink": "inv_sword_1h_dragon_c_01.jpg"
+						},
+						{
+							"id": 193711,
+							"stats": [
+								"str",
+								"verse",
+								"haste"
+							],
+							"slot": "weapon",
+							"type": "str1hsword",
+							"imglink": "inv_sword_1h_drakonid_c_01.jpg"
+						}
+					]
+				},
+				{
+					"name": "Overgrown Ancient",
+					"imglink": "ui-ej-boss-overgrown-ancient.png",
+					"drops": [
+						{
+							"id": 193712,
+							"stats": [
+								"str",
+								"int",
+								"agi",
+								"verse",
+								"haste"
+							],
+							"slot": "back",
+							"type": "agi",
+							"imglink": "inv_leather_dragondungeon_c_01_cape.jpg"
+						},
+						{
+							"id": 193713,
+							"stats": [
+								"int",
+								"verse",
+								"crit"
+							],
+							"slot": "hands",
+							"type": "cloth",
+							"imglink": "inv_glove_cloth_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193714,
+							"stats": [
+								"int",
+								"agi",
+								"mastery",
+								"haste"
+							],
+							"slot": "wrist",
+							"type": "leather",
+							"imglink": "inv_leather_dragondungeon_c_01_bracer.jpg"
+						},
+						{
+							"id": 193715,
+							"stats": [
+								"int",
+								"agi",
+								"crit",
+								"haste"
+							],
+							"slot": "feet",
+							"type": "mail",
+							"imglink": "inv_mail_dragondungeon_c_01_boot.jpg"
+						},
+						{
+							"id": 193716,
+							"stats": [
+								"str",
+								"verse",
+								"mastery"
+							],
+							"slot": "weapon",
+							"type": "str2haxe",
+							"imglink": "inv_axe_2h_drakonoid_c_01.jpg"
+						},
+						{
+							"id": 193717,
+							"stats": [
+								"agi",
+								"verse",
+								"crit"
+							],
+							"slot": "weapon",
+							"type": "warglaive",
+							"imglink": "inv_glaive_1h_drakonid_c_01.jpg"
+						}
+					]
+				},
+				{
+					"name": "Crawth",
+					"imglink": "ui-ej-boss-crawth.png",
+					"drops": [
+						{
+							"id": 193718,
+							"stats": [
+								"int",
+								"mastery"
+							],
+							"slot": "trinket",
+							"type": "healer",
+							"imglink": "inv_misc_head_dragon_green.jpg"
+						},
+						{
+							"id": 193719,
+							"stats": [
+								"str"
+							],
+							"slot": "trinket",
+							"type": "str",
+							"imglink": "reliquarybag_icon.jpg"
+						},
+						{
+							"id": 193720,
+							"stats": [
+								"int",
+								"crit",
+								"mastery"
+							],
+							"slot": "chest",
+							"type": "cloth",
+							"imglink": "inv_chest_cloth_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193721,
+							"stats": [
+								"int",
+								"agi",
+								"mastery",
+								"verse"
+							],
+							"slot": "hands",
+							"type": "leather",
+							"imglink": "inv_leather_dragondungeon_c_01_glove.jpg"
+						},
+						{
+							"id": 193722,
+							"stats": [
+								"int",
+								"agi",
+								"mastery",
+								"verse"
+							],
+							"slot": "waist",
+							"type": "mail",
+							"imglink": "inv_mail_dragondungeon_c_01_buckle.jpg"
+						},
+						{
+							"id": 193723,
+							"stats": [
+								"agi",
+								"crit",
+								"verse"
+							],
+							"slot": "weapon",
+							"type": "agi2hstaff",
+							"imglink": "inv_staff_2h_drakonid_c_02.jpg"
+						}
+					]
+				},
+				{
+					"name": "Echo of Doragosa",
+					"imglink": "ui-ej-boss-echo-of-doragosa.png",
+					"drops": [
+						{
+							"id": 193701,
+							"stats": [
+								"agi",
+								"str",
+								"mastery"
+							],
+							"slot": "trinket",
+							"type": "agistr",
+							"imglink": "inv_misc_enggizmos_18.jpg"
+						},
+						{
+							"id": 193703,
+							"stats": [
+								"int",
+								"crit",
+								"haste"
+							],
+							"slot": "head",
+							"type": "cloth",
+							"imglink": "inv_helm_cloth_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193704,
+							"stats": [
+								"agi",
+								"int",
+								"crit",
+								"mastery"
+							],
+							"slot": "shoulder",
+							"type": "mail",
+							"imglink": "inv_mail_dragondungeon_c_01_shoulder.jpg"
+						},
+						{
+							"id": 193705,
+							"stats": [
+								"int",
+								"str",
+								"crit",
+								"verse"
+							],
+							"slot": "chest",
+							"type": "plate",
+							"imglink": "inv_plate_dragondungeon_c_01_chest.jpg"
+						},
+						{
+							"id": 193706,
+							"stats": [
+								"int",
+								"str",
+								"verse",
+								"crit"
+							],
+							"slot": "legs",
+							"type": "plate",
+							"imglink": "inv_plate_dragondungeon_c_01_pant.jpg"
+						},
+						{
+							"id": 193707,
+							"stats": [
+								"int",
+								"haste",
+								"mastery"
+							],
+							"slot": "weapon",
+							"type": "int2hstaff",
+							"imglink": "inv_staff_2h_drakonid_c_01.jpg"
+						}
+					]
+				}
+			]
+		},
+		{
+			"dungeon_name": "Neltharus",
+			"bosses": [
+				{
+					"name": "Chargath, Bane of Scales",
+					"imglink": "ui-ej-boss-chargath-bane-of-scales.png",
+					"drops": [
+						{
+							"id": 193727,
+							"stats": [
+								"int",
+								"agi",
+								"crit",
+								"verse"
+							],
+							"slot": "wrist",
+							"type": "mail",
+							"imglink": "inv_mail_dragondungeon_c_01_bracer.jpg"
+						},
+						{
+							"id": 193768,
+							"stats": [
+								"crit",
+								"mastery"
+							],
+							"slot": "ring",
+							"type": "all",
+							"imglink": "inv_10_dungeonjewelry_tuskarr_ring_2_color3.jpg"
+						},
+						{
+							"id": 193769,
+							"stats": [
+								"agi",
+								"int",
+								"crit"
+							],
+							"slot": "trinket",
+							"type": "intagi",
+							"imglink": "inv_10_dungeonjewelry_primalist_trinket_5_fire.jpg"
+						},
+						{
+							"id": 193771,
+							"stats": [
+								"str",
+								"int",
+								"crit",
+								"haste"
+							],
+							"slot": "feet",
+							"type": "plate",
+							"imglink": "inv_plate_dragondungeon_c_01_boot.jpg"
+						},
+						{
+							"id": 193772,
+							"stats": [
+								"agi",
+								"crit",
+								"verse"
+							],
+							"slot": "weapon",
+							"type": "agifist",
+							"imglink": "inv_hand_1h_dragondungeon_c_01.jpg"
+						}
+					]
+				},
+				{
+					"name": "Forgemaster Gorek",
+					"imglink": "ui-ej-boss-forgemaster-gorek.png",
+					"drops": [
+						{
+							"id": 193780,
+							"stats": [
+								"int",
+								"crit",
+								"verse"
+							],
+							"slot": "waist",
+							"type": "cloth",
+							"imglink": "inv_belt_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193781,
+							"stats": [
+								"int",
+								"agi",
+								"mastery",
+								"verse"
+							],
+							"slot": "legs",
+							"type": "leather",
+							"imglink": "inv_leather_dragondungeon_c_01_pant.jpg"
+						},
+						{
+							"id": 193782,
+							"stats": [
+								"int",
+								"agi",
+								"haste",
+								"mastery"
+							],
+							"slot": "chest",
+							"type": "mail",
+							"imglink": "inv_mail_dragondungeon_c_01_chest.jpg"
+						},
+						{
+							"id": 193783,
+							"stats": [
+								"int",
+								"crit",
+								"haste"
+							],
+							"slot": "weapon",
+							"type": "intoffhand",
+							"imglink": "inv_offhand_1h_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193784,
+							"stats": [
+								"int",
+								"str",
+								"haste",
+								"verse"
+							],
+							"slot": "hands",
+							"type": "plate",
+							"imglink": "inv_plate_dragondungeon_c_01_glove.jpg"
+						},
+						{
+							"id": 193785,
+							"stats": [
+								"crit",
+								"haste"
+							],
+							"slot": "weapon",
+							"type": "1hmace",
+							"imglink": "inv_mace_1h_dragondungeon_c_01.jpg"
+						}
+					]
+				},
+				{
+					"name": "Magmatusk",
+					"imglink": "ui-ej-boss-magmatusk.png",
+					"drops": [
+						{
+							"id": 193786,
+							"stats": [
+								"agi",
+								"str"
+							],
+							"slot": "trinket",
+							"type": "agistrdps",
+							"imglink": "ability_deathwing_grasping_tendrils.jpg"
+						},
+						{
+							"id": 193787,
+							"stats": [
+								"agi",
+								"str",
+								"int",
+								"crit",
+								"mastery"
+							],
+							"slot": "back",
+							"type": "all",
+							"imglink": "inv_plate_dragondungeon_c_01_cape.jpg"
+						},
+						{
+							"id": 193788,
+							"stats": [
+								"int",
+								"crit",
+								"haste"
+							],
+							"slot": "shoulder",
+							"type": "cloth",
+							"imglink": "inv_shoulder_cloth_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193789,
+							"stats": [
+								"int",
+								"str",
+								"haste",
+								"mastery"
+							],
+							"slot": "legs",
+							"type": "plate",
+							"imglink": "inv_plate_dragondungeon_c_01_pant.jpg"
+						},
+						{
+							"id": 193790,
+							"stats": [
+								"int",
+								"verse",
+								"mastery"
+							],
+							"slot": "weapon",
+							"type": "intdagger",
+							"imglink": "inv_knife_1h_dragondungeon_c_02.jpg"
+						}
+					]
+				},
+				{
+					"name": "Warlord Sargha",
+					"imglink": "ui-ej-boss-warlord-sargha.png",
+					"drops": [
+						{
+							"id": 193773,
+							"stats": [
+								"int"
+							],
+							"slot": "trinket",
+							"type": "int",
+							"imglink": "inv_10_dungeonjewelry_dragon_trinket_4_bronze.jpg"
+						},
+						{
+							"id": 193775,
+							"stats": [
+								"int",
+								"haste",
+								"mastery"
+							],
+							"slot": "hands",
+							"type": "cloth",
+							"imglink": "inv_glove_cloth_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193776,
+							"stats": [
+								"int",
+								"agi",
+								"haste",
+								"verse"
+							],
+							"slot": "chest",
+							"type": "leather",
+							"imglink": "inv_leather_dragondungeon_c_01_chest.jpg"
+						},
+						{
+							"id": 193777,
+							"stats": [
+								"int",
+								"agi",
+								"crit",
+								"haste"
+							],
+							"slot": "head",
+							"type": "mail",
+							"imglink": "inv_mail_dragondungeon_c_01_helm.jpg"
+						},
+						{
+							"id": 193778,
+							"stats": [
+								"str",
+								"int"
+							],
+							"slot": "weapon",
+							"type": "shield",
+							"imglink": "inv_shield_1h_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193779,
+							"stats": [
+								"str",
+								"crit",
+								"haste"
+							],
+							"slot": "weapon",
+							"type": "str2hmace",
+							"imglink": "inv_mace_2h_dragondungeon_c_01.jpg"
+						}
+					]
+				}
+			]
+		},
+		{
+			"dungeon_name": "The Azure Vault",
+			"bosses": [
+				{
+					"name": "Leymor",
+					"imglink": "ui-ej-boss-leymor.png",
+					"drops": [
+						{
+							"id": 193633,
+							"stats": [
+								"crit",
+								"haste"
+							],
+							"slot": "ring",
+							"type": "all",
+							"imglink": "inv_10_dungeonjewelry_tuskarr_ring_2_color4.jpg"
+						},
+						{
+							"id": 193634,
+							"stats": [
+								"agi",
+								"str",
+								"verse"
+							],
+							"slot": "trinket",
+							"type": "tank",
+							"imglink": "inv_10_herb_seed_magiccolor5.jpg"
+						},
+						{
+							"id": 193635,
+							"stats": [
+								"int",
+								"crit",
+								"verse"
+							],
+							"slot": "wrist",
+							"type": "cloth",
+							"imglink": "inv_bracer_cloth_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193636,
+							"stats": [
+								"int",
+								"agi",
+								"crit",
+								"haste"
+							],
+							"slot": "waist",
+							"type": "leather",
+							"imglink": "inv_leather_dragondungeon_c_01_belt.jpg"
+						},
+						{
+							"id": 193637,
+							"stats": [
+								"int",
+								"agi",
+								"crit",
+								"mastery"
+							],
+							"slot": "shoulder",
+							"type": "mail",
+							"imglink": "inv_mail_dragondungeon_c_01_shoulder.jpg"
+						},
+						{
+							"id": 193638,
+							"stats": [
+								"str",
+								"haste",
+								"mastery"
+							],
+							"slot": "weapon",
+							"type": "str2hpolearm",
+							"imglink": "inv_polearm_2h_drakonid_c_01.jpg"
+						}
+					]
+				},
+				{
+					"name": "Azureblade",
+					"imglink": "ui-ej-boss-azureblade.png",
+					"drops": [
+						{
+							"id": 193628,
+							"stats": [
+								"int"
+							],
+							"slot": "trinket",
+							"type": "int",
+							"imglink": "inv_jewelry_trinket_17.jpg"
+						},
+						{
+							"id": 193629,
+							"stats": [
+								"int",
+								"str",
+								"agi",
+								"crit",
+								"haste"
+							],
+							"slot": "back",
+							"type": "all",
+							"imglink": "inv_cape_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193630,
+							"stats": [
+								"int",
+								"str",
+								"crit",
+								"verse"
+							],
+							"slot": "feet",
+							"type": "plate",
+							"imglink": "inv_plate_dragondungeon_c_01_boot.jpg"
+						},
+						{
+							"id": 193631,
+							"stats": [
+								"agi",
+								"haste",
+								"verse"
+							],
+							"slot": "weapon",
+							"type": "agi1haxe",
+							"imglink": "inv_axe_1h_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193632,
+							"stats": [
+								"int",
+								"haste",
+								"verse"
+							],
+							"slot": "weapon",
+							"type": "int1hsword",
+							"imglink": "inv_sword_1h_drakonid_c_01.jpg"
+						}
+					]
+				},
+				{
+					"name": "Telash Greywing",
+					"imglink": "ui-ej-boss-telash-greywing.png",
+					"drops": [
+						{
+							"id": 193647,
+							"stats": [
+								"verse",
+								"mastery"
+							],
+							"slot": "neck",
+							"type": "all",
+							"imglink": "inv_10_dungeonjewelry_titan_necklace_1_color2.jpg"
+						},
+						{
+							"id": 193648,
+							"stats": [
+								"int",
+								"haste",
+								"mastery"
+							],
+							"slot": "hands",
+							"type": "cloth",
+							"imglink": "inv_glove_cloth_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193649,
+							"stats": [
+								"agi",
+								"int",
+								"haste",
+								"mastery"
+							],
+							"slot": "wrist",
+							"type": "leather",
+							"imglink": "inv_leather_dragondungeon_c_01_bracer.jpg"
+						},
+						{
+							"id": 193650,
+							"stats": [
+								"str",
+								"int",
+								"crit",
+								"mastery"
+							],
+							"slot": "waist",
+							"type": "plate",
+							"imglink": "inv_plate_dragondungeon_c_01_belt.jpg"
+						},
+						{
+							"id": 193651,
+							"stats": [
+								"agi",
+								"verse",
+								"mastery"
+							],
+							"slot": "weapon",
+							"type": "agi2hstaff",
+							"imglink": "inv_staff_2h_drakonid_c_01.jpg"
+						}
+					]
+				},
+				{
+					"name": "Umbrelskul",
+					"imglink": "ui-ej-boss-umbrelskul.png",
+					"drops": [
+						{
+							"id": 193639,
+							"stats": [
+								"int"
+							],
+							"slot": "trinket",
+							"type": "int",
+							"imglink": "inv_elemental_eternal_air.jpg"
+						},
+						{
+							"id": 193641,
+							"stats": [
+								"int",
+								"crit",
+								"verse"
+							],
+							"slot": "head",
+							"type": "cloth",
+							"imglink": "inv_helm_cloth_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193642,
+							"stats": [
+								"int",
+								"agi",
+								"crit",
+								"mastery"
+							],
+							"slot": "shoulder",
+							"type": "leather",
+							"imglink": "inv_leather_dragondungeon_c_01_shoulder.jpg"
+						},
+						{
+							"id": 193643,
+							"stats": [
+								"int",
+								"agi",
+								"crit",
+								"haste"
+							],
+							"slot": "legs",
+							"type": "mail",
+							"imglink": "inv_mail_dragondungeon_c_01_pant.jpg"
+						},
+						{
+							"id": 193644,
+							"stats": [
+								"int",
+								"str",
+								"haste",
+								"mastery"
+							],
+							"slot": "chest",
+							"type": "plate",
+							"imglink": "inv_plate_dragondungeon_c_01_chest.jpg"
+						},
+						{
+							"id": 193645,
+							"stats": [
+								"int",
+								"str",
+								"haste",
+								"verse"
+							],
+							"slot": "weapon",
+							"type": "shield",
+							"imglink": "inv_shield_1h_dragondungeon_c_02.jpg"
+						},
+						{
+							"id": 193646,
+							"stats": [
+								"agi",
+								"crit",
+								"verse"
+							],
+							"slot": "weapon",
+							"type": "agi1hsword",
+							"imglink": "inv_sword_1h_dragon_c_01.jpg"
+						},
+					]
+				}
+			]
+		},
+		{
+			"dungeon_name": "Brackenhide Hollow",
+			"bosses": [
+				{
+					"name": "Hackclaw's War-Band",
+					"imglink": "ui-ej-boss-rira-hackclaw.png",
+					"drops": [
+						{
+							"id": 193671,
+							"stats": [
+								"verse",
+								"mastery"
+							],
+							"slot": "ring",
+							"type": "all",
+							"imglink": "inv_10_dungeonjewelry_tuskarr_ring_1_color1.jpg"
+						},
+						{
+							"id": 193672,
+							"stats": [
+								"agi",
+								"str"
+							],
+							"slot": "trinket",
+							"type": "agistrdps",
+							"imglink": "inv_misc_cat_trinket08.jpg"
+						},
+						{
+							"id": 193673,
+							"stats": [
+								"int",
+								"verse",
+								"haste"
+							],
+							"slot": "feet",
+							"type": "cloth",
+							"imglink": "inv_boot_cloth_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193674,
+							"stats": [
+								"int",
+								"haste",
+								"mastery"
+							],
+							"slot": "weapon",
+							"type": "int2hmace",
+							"imglink": "inv_mace_2h_dragondungeon_c_02.jpg"
+						},
+						{
+							"id": 193675,
+							"stats": [
+								"agi",
+								"crit",
+								"haste"
+							],
+							"slot": "weapon",
+							"type": "agi2hpolearm",
+							"imglink": "inv_polearm_2h_dragondungeon_c_03.jpg"
+						}
+					]
+				},
+				{
+					"name": "Treemouth",
+					"imglink": "ui-ej-boss-treemouth.png",
+					"drops": [
+						{
+							"id": 193652,
+							"stats": [
+								"agi",
+								"str"
+							],
+							"slot": "trinket",
+							"type": "tank",
+							"imglink": "inv_10_dungeonjewelry_primitive_trinket_1gnoll_color3.jpg"
+						},
+						{
+							"id": 193653,
+							"stats": [
+								"int",
+								"verse",
+								"mastery"
+							],
+							"slot": "head",
+							"type": "cloth",
+							"imglink": "inv_helm_cloth_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193654,
+							"stats": [
+								"agi",
+								"int",
+								"crit",
+								"mastery"
+							],
+							"slot": "feet",
+							"type": "leather",
+							"imglink": "inv_leather_dragondungeon_c_01_boot.jpg"
+						},
+						{
+							"id": 193655,
+							"stats": [
+								"agi",
+								"int",
+								"verse",
+								"haste"
+							],
+							"slot": "shoulder",
+							"type": "mail",
+							"imglink": "inv_mail_dragondungeon_c_01_shoulder.jpg"
+						},
+						{
+							"id": 193656,
+							"stats": [
+								"agi",
+								"int",
+								"haste",
+								"crit"
+							],
+							"slot": "waist",
+							"type": "mail",
+							"imglink": "inv_mail_dragondungeon_c_01_buckle.jpg"
+						},
+						{
+							"id": 193657,
+							"stats": [
+								"str",
+								"int",
+								"verse",
+								"haste"
+							],
+							"slot": "wrist",
+							"type": "plate",
+							"imglink": "inv_plate_dragondungeon_c_01_bracer.jpg"
+						},
+						{
+							"id": 193658,
+							"stats": [
+								"str",
+								"crit",
+								"mastery"
+							],
+							"slot": "weapon",
+							"type": "str2hmace",
+							"imglink": "inv_mace_2h_gnoll_c_01.jpg"
+						}
+					]
+				},
+				{
+					"name": "Gutshot",
+					"imglink": "ui-ej-boss-gutshot.png",
+					"drops": [
+						{
+							"id": 193666,
+							"stats": [
+								"crit",
+								"verse"
+							],
+							"slot": "neck",
+							"type": "all",
+							"imglink": "inv_10_dungeonjewelry_tuskarr_necklace_1_color5.jpg"
+						},
+						{
+							"id": 193667,
+							"stats": [
+								"int",
+								"haste",
+								"verse"
+							],
+							"slot": "shoulder",
+							"type": "cloth",
+							"imglink": "inv_shoulder_cloth_dragondungeon_c_01.jpg"
+						},
+						{
+							"id": 193669,
+							"stats": [
+								"str",
+								"int",
+								"haste",
+								"verse"
+							],
+							"slot": "waist",
+							"type": "plate",
+							"imglink": "inv_plate_dragondungeon_c_01_belt.jpg"
+						},
+						{
+							"id": 193670,
+							"stats": [
+								"agi",
+								"haste",
+								"mastery"
+							],
+							"slot": "weapon",
+							"type": "ranged",
+							"imglink": "inv_crossbow_2h_gnoll_c_01.jpg"
+						},
+						{
+							"id": 193793,
+							"stats": [
+								"agi",
+								"int",
+								"crit",
+								"verse"
+							],
+							"slot": "wrist",
+							"type": "leather",
+							"imglink": "inv_leather_dragondungeon_c_01_bracer.jpg"
+						}
+					]
+				},
+				{
+					"name": "Decatriarch Wratheye",
+					"imglink": "ui-ej-boss-decatriach-wratheye.png",
+					"drops": [
+						{
+							"id": 193660,
+							"stats": [
+								"agi",
+								"int"
+							],
+							"slot": "trinket",
+							"type": "rangeddps",
+							"imglink": "inv_10_dungeonjewelry_primitive_trinket_2harpy_color3.jpg"
+						},
+						{
+							"id": 193661,
+							"stats": [
+								"agi",
+								"int",
+								"crit",
+								"haste"
+							],
+							"slot": "hands",
+							"type": "leather",
+							"imglink": "inv_leather_dragondungeon_c_01_glove.jpg"
+						},
+						{
+							"id": 193662,
+							"stats": [
+								"agi",
+								"int",
+								"verse",
+								"mastery"
+							],
+							"slot": "legs",
+							"type": "mail",
+							"imglink": "inv_mail_dragondungeon_c_01_pant.jpg"
+						},
+						{
+							"id": 193663,
+							"stats": [
+								"str",
+								"int",
+								"haste",
+								"mastery"
+							],
+							"slot": "head",
+							"type": "plate",
+							"imglink": "inv_plate_dragondungeon_c_01_helm.jpg"
+						},
+						{
+							"id": 193664,
+							"stats": [
+								"agi",
+								"crit",
+								"verse"
+							],
+							"slot": "weapon",
+							"type": "agidagger",
+							"imglink": "inv_knife_1h_dragondungeon_c_02.jpg"
+						},
+						{
+							"id": 193665,
+							"stats": [
+								"int",
+								"crit",
+								"mastery"
+							],
+							"slot": "weapon",
+							"type": "int1hmace",
+							"imglink": "inv_mace_1h_gnoll_c_01.jpg"
 						}
 					]
 				}
