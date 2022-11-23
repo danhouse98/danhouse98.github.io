@@ -24,7 +24,7 @@ function Item() {
 
 const itemArray = [];
 
-var slots = ['head', 'shoulder', 'chest', 'wrist', 'hands', 'waist', 'legs', 'feet', 'neck', 'back', 'ring', 'weapon', 'trinket'];
+var slots = ['head', 'shoulder', 'chest', 'wrist', 'hands', 'waist', 'legs', 'feet', 'neck', 'back', 'ring', 'weapon', 'off-hand', 'trinket'];
 
 //Reads JSON file and fills DOM with content
 $(document).ready(function () {
