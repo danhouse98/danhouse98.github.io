@@ -2292,6 +2292,1368 @@
                ]
             }
          ]
+      },
+      {
+         "dungeon_name": "Halls of Valor",
+         "bosses": [
+            {}
+         ]
+      },
+      {
+         "dungeon_name": "Court of Stars",
+         "bosses": [
+            {}
+         ]
+      },
+      {
+         "dungeon_name": "Shadowmoon Burial Grounds",
+         "bosses": [
+            {
+               "name": "Sadana Bloodfury",
+               "imglink": "ui-ej-boss-sadana-bloodfury.png",
+               "drops": [
+                  {}
+               ]
+            },
+            {
+               "name": "Nhallish",
+               "imglink": "ui-ej-boss-nhallish-feaster-of-souls.png",
+               "drops": [
+                  {}
+               ]
+            },
+            {
+               "name": "Bonemaw",
+               "imglink": "ui-ej-boss-bonemaw.png",
+               "drops": [
+                  {}
+               ]
+            },
+            {
+               "name": "Ner'zhul",
+               "imglink": "ui-ej-boss-nerzhul.png",
+               "drops": [
+                  {}
+               ]
+            }
+         ]
+      },
+      {
+         "dungeon_name": "Temple of the Jade Serpent",
+         "bosses": [
+            {
+               "name": "Wise Mari",
+               "imglink": "ui-ej-boss-wise-mari.png",
+               "drops": [
+                  {
+                     "id": 81072,
+                     "stats": [
+                        "agi",
+                        "int",
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "feet",
+                     "type": "leather",
+                     "imglink": "nv_boots_leather_dungeonleather_c_06.jpg"
+                  },
+                  {
+                     "id": 81075,
+                     "stats": [
+                        "agi",
+                        "int",
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "head",
+                     "type": "mail",
+                     "imglink": "inv_helm_mail_dungeonmail_c_06.jpg"
+                  },
+                  {
+                     "id": 81083,
+                     "stats": [
+                        "str",
+                        "int",
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "chest",
+                     "type": "plate",
+                     "imglink": "inv_chest_plate_dungeonplate_c_07.jpg"
+                  },
+                  {
+                     "id": 81123,
+                     "stats": [
+                        "agi",
+                        "int",
+                        "str",
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "back",
+                     "type": "all",
+                     "imglink": "inv_cape_pandaria_c_01.jpg"
+                  },
+                  {
+                     "id": 81124,
+                     "stats": [
+                        "crit",
+                        "verse"
+                     ],
+                     "slot": "ring",
+                     "type": "all",
+                     "imglink": "inv_jewelry_ring_131.jpg"
+                  }
+               ]
+            },
+            {
+               "name": "Lorewalker Stonestep",
+               "imglink": "ui-ej-boss-lorewalker-stonestep.png",
+               "drops": [
+                  {
+                     "id": 81058,
+                     "stats": [
+                        "int",
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "waist",
+                     "type": "cloth",
+                     "imglink": "inv_belt_cloth_dungeoncloth_c_06.jpg"
+                  },
+                  {
+                     "id": 81060,
+                     "stats": [
+                        "int",
+                        "agi",
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "waist",
+                     "type": "mail",
+                     "imglink": "inv_belt_mail_dungeonmail_c_06.jpg"
+                  },
+                  {
+                     "id": 81073,
+                     "stats": [
+                        "int",
+                        "str",
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "feet",
+                     "type": "plate",
+                     "imglink": "inv_boots_plate_dungeonplate_c_07.jpg"
+                  },
+                  {
+                     "id": 81125,
+                     "stats": [
+                        "agi",
+                        "haste"
+                     ],
+                     "slot": "trinket",
+                     "type": "agi",
+                     "imglink": "inv_jewelry_trinket_15.jpg"
+                  },
+                  {
+                     "id": 81126,
+                     "stats": [
+                        "int",
+                        "agi",
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "legs",
+                     "type": "leather",
+                     "imglink": "inv_pants_leather_dungeonleather_c_06.jpg"
+                  }
+               ]
+            },
+            {
+               "name": "Liu Flameheart",
+               "imglink": "ui-ej-boss-liu-flameheart.png",
+               "drops": [
+                  {
+                     "id": 81067,
+                     "stats": [
+                        "agi",
+                        "haste",
+                        "crit"
+                     ],
+                     "slot": "weapon",
+                     "type": "ranged",
+                     "imglink": "inv_firearm_2h_rifle_pandung_c_01.jpg"
+                  },
+                  {
+                     "id": 81070,
+                     "stats": [
+                        "str",
+                        "int",
+                        "mastery",
+                        "crit"
+                     ],
+                     "slot": "shoulder",
+                     "type": "plate",
+                     "imglink": "inv_shoulder_plate_dungeonplate_c_07.jpg"
+                  },
+                  {
+                     "id": 81084,
+                     "stats": [
+                        "agi",
+                        "int",
+                        "str",
+                        "haste",
+                        "crit"
+                     ],
+                     "slot": "back",
+                     "type": "all",
+                     "imglink": "inv_cape_pandaria_c_02.jpg"
+                  },
+                  {
+                     "id": 81127,
+                     "stats": [
+                        "int",
+                        "mastery",
+                        "crit"
+                     ],
+                     "slot": "feet",
+                     "type": "cloth",
+                     "imglink": "inv_boots_cloth_dungeoncloth_c_06.jpg"
+                  },
+                  {
+                     "id": 81128,
+                     "stats": [
+                        "haste",
+                        "crit"
+                     ],
+                     "slot": "ring",
+                     "type": "all",
+                     "imglink": "inv_jewelry_ring_154.jpg"
+                  }
+               ]
+            },
+            {
+               "name": "Sha of Doubt",
+               "imglink": "ui-ej-boss-sha-of-doubt.png",
+               "drops": [
+                  {
+                     "id": 81063,
+                     "stats": [
+                        "str",
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "weapon",
+                     "type": "str1haxe",
+                     "imglink": "inv_axe_1h_pandung_c_01.jpg"
+                  },
+                  {
+                     "id": 81069,
+                     "stats": [
+                        "agi",
+                        "int",
+                        "mastery",
+                        "haste"
+                     ],
+                     "slot": "shoulder",
+                     "type": "mail",
+                     "imglink": "inv_shoulder_mail_dungeonmail_c_06.jpg"
+                  },
+                  {
+                     "id": 81071,
+                     "stats": [
+                        "agi",
+                        "int",
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "shoulder",
+                     "type": "leather",
+                     "imglink": "inv_shoulder_leather_dungeonleather_c_06.jpg"
+                  },
+                  {
+                     "id": 81074,
+                     "stats": [
+                        "agi",
+                        "int",
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "hands",
+                     "type": "mail",
+                     "imglink": "inv_glove_mail_dungeonmail_c_06.jpg"
+                  },
+                  {
+                     "id": 81079,
+                     "stats": [
+                        "int",
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "weapon",
+                     "type": "int2hstaff",
+                     "imglink": "inv_staff_2h_pandung_c_01.jpg"
+                  },
+                  {
+                     "id": 81082,
+                     "stats": [
+                        "agi",
+                        "int",
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "chest",
+                     "type": "leather",
+                     "imglink": "inv_chest_leather_dungeonleather_c_06.jpg"
+                  },
+                  {
+                     "id": 81129,
+                     "stats": [
+                        "agi",
+                        "int",
+                        "str",
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "back",
+                     "type": "all",
+                     "imglink": "inv_cape_pandaria_c_01.jpg"
+                  },
+                  {
+                     "id": 81130,
+                     "stats": [
+                        "str",
+                        "int",
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "waist",
+                     "type": "plate",
+                     "imglink": "inv_belt_plate_dungeonplate_c_07.jpg"
+                  },
+                  {
+                     "id": 81131,
+                     "stats": [
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "neck",
+                     "type": "all",
+                     "imglink": "inv_jewelry_necklace_89.jpg"
+                  },
+                  {
+                     "id": 81132,
+                     "stats": [
+                        "int",
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "hands",
+                     "type": "cloth",
+                     "imglink": "inv_gauntlets_cloth_dungeoncloth_c_06.jpg"
+                  },
+                  {
+                     "id": 87544,
+                     "stats": [
+                        "int",
+                        "mastery",
+                        "haste"
+                     ],
+                     "slot": "weapon",
+                     "type": "int1hmace",
+                     "imglink": "inv_mace_1h_pandung_c_02.jpg"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "dungeon_name": "Vault of The Incarnates",
+         "bosses": [
+            {
+               "name": "Eranog",
+               "imglink": "ui-ej-boss-eranog.png",
+               "drops": [
+                  {
+                     "id": 195480,
+                     "stats": [
+                        "agi",
+                        "int",
+                        "str",
+                        "crit",
+                        "verse"
+                     ],
+                     "slot": "ring",
+                     "type": "all",
+                     "imglink": "inv_10_dungeonjewelry_primalist_ring_2_fire.jpg"
+                  },
+                  {
+                     "id": 194299,
+                     "stats": [
+                        "agi",
+                        "str"
+                     ],
+                     "slot": "trinket",
+                     "type": "agistr",
+                     "imglink": "ability_mage_flamecannon.jpg"
+                  },
+                  {
+                     "id": 195475,
+                     "stats": [
+                        "int",
+                        "str",
+                        "crit",
+                        "verse"
+                     ],
+                     "slot": "off-hand",
+                     "type": "shield",
+                     "imglink": "inv_shield_1h_primalistraid_d_02.jpg"
+                  },
+                  {
+                     "id": 195476,
+                     "stats": [
+                        "agi",
+                        "int",
+                        "crit",
+                        "verse"
+                     ],
+                     "slot": "head",
+                     "type": "mail",
+                     "imglink": "inv_mail_raidhunterprimalist_d_01_helm.jpg"
+                  },
+                  {
+                     "id": 195477,
+                     "stats": [
+                        "int",
+                        "str",
+                        "haste",
+                        "verse"
+                     ],
+                     "slot": "shoulder",
+                     "type": "plate",
+                     "imglink": "inv_shoulder_plate_raidwarriorprimalist_d_01.jpg"
+                  },
+                  {
+                     "id": 195478,
+                     "stats": [
+                        "agi",
+                        "int",
+                        "haste",
+                        "verse"
+                     ],
+                     "slot": "chest",
+                     "type": "leather",
+                     "imglink": "inv_leather_raiddruidprimalist_d_01_chest.jpg"
+                  },
+                  {
+                     "id": 195479,
+                     "stats": [
+                        "int",
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "legs",
+                     "type": "cloth",
+                     "imglink": "inv_cloth_raidpriestprimalist_d_01_pant.jpg"
+                  },
+                  {
+                     "id": 195482,
+                     "stats": [
+                        "agi",
+                        "int",
+                        "str",
+                        "haste",
+                        "verse"
+                     ],
+                     "slot": "back",
+                     "type": "all",
+                     "imglink": "inv_cape_leather_raidmonkprimalist_d_01.jpg"
+                  },
+                  {
+                     "id": 195490,
+                     "stats": [
+                        "agi",
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "weapon",
+                     "type": "ranged",
+                     "imglink": "inv_crossbow_2h_primalistraid_d_01.jpg"
+                  }
+               ]
+            },
+            {
+               "name": "Terros",
+               "imglink": "ui-ej-boss-terros.png",
+               "drops": [
+                  {
+                     "id": 194303,
+                     "stats": [
+                        "str"
+                     ],
+                     "slot": "trinket",
+                     "type": "str",
+                     "imglink": "inv_10_dungeonjewelry_primalist_trinket_3_fire.jpg"
+                  },
+                  {
+                     "id": 195497,
+                     "stats": [
+                        "int",
+                        "haste",
+                        "verse"
+                     ],
+                     "slot": "weapon",
+                     "type": "int2hstaff",
+                     "imglink": "inv_staff_2h_primalistraid_d_02.jpg"
+                  },
+                  {
+                     "id": 195498,
+                     "stats": [
+                        "int",
+                        "str",
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "head",
+                     "type": "plate",
+                     "imglink": "inv_helm_plate_raidwarriorprimalist_d_01.jpg"
+                  },
+                  {
+                     "id": 195499,
+                     "stats": [
+                        "agi",
+                        "int",
+                        "mastery",
+                        "verse"
+                     ],
+                     "slot": "shoulder",
+                     "type": "mail",
+                     "imglink": "inv_shoulder_mail_raidshamanprimalist_d_01.jpg"
+                  },
+                  {
+                     "id": 195500,
+                     "stats": [
+                        "int",
+                        "crit",
+                        "verse"
+                     ],
+                     "slot": "chest",
+                     "type": "cloth",
+                     "imglink": "inv_cloth_raidpriestprimalist_d_01_robe.jpg"
+                  },
+                  {
+                     "id": 195501,
+                     "stats": [
+                        "agi",
+                        "int",
+                        "mastery",
+                        "verse"
+                     ],
+                     "slot": "waist",
+                     "type": "leather",
+                     "imglink": "inv_belt_leather_raiddemonhunterprimalist_d_01.jpg"
+                  },
+                  {
+                     "id": 195502,
+                     "stats": [
+                        "haste",
+                        "verse"
+                     ],
+                     "slot": "neck",
+                     "type": "all",
+                     "imglink": "inv_10_dungeonjewelry_primalist_trinket_4_earth.jpg"
+                  },
+                  {
+                     "id": 195503,
+                     "stats": [
+                        "agi",
+                        "crit",
+                        "verse"
+                     ],
+                     "slot": "weapon",
+                     "type": "agidagger",
+                     "imglink": "inv_knife_1h_primalistraid_d_02.jpg"
+                  },
+                  {
+                     "id": 195504,
+                     "stats": [
+                        "agi",
+                        "mastery",
+                        "verse"
+                     ],
+                     "slot": "weapon",
+                     "type": "agi2hstaff",
+                     "imglink": "inv_staff_2h_primalistraid_d_01.jpg"
+                  }
+               ]
+            },
+            {
+               "name": "The Primal Council",
+               "imglink": "ui-ej-boss-theprimalcouncil.png",
+               "drops": [
+                  {
+                     "id": 194301,
+                     "stats": [
+                        "str",
+                        "agi",
+                        "int",
+                        "crit"
+                     ],
+                     "slot": "trinket",
+                     "type": "all",
+                     "imglink": "inv_10_dungeonjewelry_primalist_necklace_1_omni.jpg"
+                  },
+                  {
+                     "id": 194300,
+                     "stats": [
+                        "int"
+                     ],
+                     "slot": "trinket",
+                     "type": "int",
+                     "imglink": "inv_10_specialreagentfoozles_primalistrune_frost.jpg"
+                  },
+                  {
+                     "id": 195484,
+                     "stats": [
+                        "int",
+                        "haste",
+                        "mastery"
+                     ],
+                     "slot": "off-hand",
+                     "type": "intoffhand",
+                     "imglink": "inv_offhand_1h_primalistraid_d_02.jpg"
+                  },
+                  {
+                     "id": 195485,
+                     "stats": [
+                        "int",
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "head",
+                     "type": "cloth",
+                     "imglink": "inv_cloth_raidpriestprimalist_d_01_helm.jpg"
+                  },
+                  {
+                     "id": 195486,
+                     "stats": [
+                        "agi",
+                        "int",
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "shoulder",
+                     "type": "leather",
+                     "imglink": "inv_shoulder_leather_raiddemonhunterprimalist_d_01.jpg"
+                  },
+                  {
+                     "id": 195486,
+                     "stats": [
+                        "agi",
+                        "int",
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "chest",
+                     "type": "mail",
+                     "imglink": "inv_chest_mail_raidshamanprimalist_d_01.jpg"
+                  },
+                  {
+                     "id": 195488,
+                     "stats": [
+                        "str",
+                        "int",
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "legs",
+                     "type": "plate",
+                     "imglink": "inv_pant_plate_raiddeathknightprimalist_d_01.jpg"
+                  },
+                  {
+                     "id": 195489,
+                     "stats": [
+                        "str",
+                        "haste",
+                        "verse"
+                     ],
+                     "slot": "weapon",
+                     "type": "str1hmace",
+                     "imglink": "inv_mace_1h_primalistraid_d_01.jpg"
+                  },
+                  {
+                     "id": 195518,
+                     "stats": [
+                        "str",
+                        "haste",
+                        "mastery"
+                     ],
+                     "slot": "weapon",
+                     "type": "str2hmace",
+                     "imglink": "inv_mace_2h_primalistraid_d_01.jpg"
+                  }
+               ]
+            },
+            {
+               "name": "Sennarth, the Cold Breath",
+               "imglink": "TODO.png",
+               "drops": [
+                  {
+                     "id": 194304,
+                     "stats": [
+                        "int"
+                     ],
+                     "slot": "trinket",
+                     "type": "int",
+                     "imglink": "inv_misc_web_01.jpg"
+                  },
+                  {
+                     "id": 195505,
+                     "stats": [
+                        "str",
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "weapon",
+                     "type": "str1hsword",
+                     "imglink": "inv_sword_1h_primalistraid_d_01.jpg"
+                  },
+                  {
+                     "id": 195506,
+                     "stats": [
+                        "str",
+                        "int",
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "hands",
+                     "type": "plate",
+                     "imglink": "inv_glove_plate_raiddeathknightprimalist_d_01.jpg"
+                  },
+                  {
+                     "id": 195507,
+                     "stats": [
+                        "agi",
+                        "int",
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "waist",
+                     "type": "mail",
+                     "imglink": "inv_belt_mail_raidevokerprimalist_d_01.jpg"
+                  },
+                  {
+                     "id": 195508,
+                     "stats": [
+                        "int",
+                        "haste",
+                        "verse"
+                     ],
+                     "slot": "wrist",
+                     "type": "cloth",
+                     "imglink": "inv_cloth_raidmageprimalist_d_01_bracer.jpg"
+                  },
+                  {
+                     "id": 195509,
+                     "stats": [
+                        "int",
+                        "agi",
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "feet",
+                     "type": "leather",
+                     "imglink": "inv_boot_leather_raidrogueprimalist_d_01.jpg"
+                  },
+                  {
+                     "id": 195510,
+                     "stats": [
+                        "agi",
+                        "crit",
+                        "verse"
+                     ],
+                     "slot": "weapon",
+                     "type": "agi1hmace",
+                     "imglink": "inv_mace_1h_primalistraid_d_01.jpg"
+                  },
+                  {
+                     "id": 195511,
+                     "stats": [
+                        "str",
+                        "int",
+                        "agi",
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "back",
+                     "type": "all",
+                     "imglink": "inv_mail_raidhunterprimalist_d_01_cape.jpg"
+                  },
+                  {
+                     "id": 196588,
+                     "stats": [],
+                     "slot": "legs",
+                     "type": "set1",
+                     "imglink": "inv_10_jewelcrafting_gem3primal_fire_cut_green.jpg"
+                  },
+                  {
+                     "id": 196593,
+                     "stats": [],
+                     "slot": "legs",
+                     "type": "set2",
+                     "imglink": "inv_10_jewelcrafting_gem3primal_fire_cut_green.jpg"
+                  },
+                  {
+                     "id": 196598,
+                     "stats": [],
+                     "slot": "legs",
+                     "type": "set3",
+                     "imglink": "inv_10_jewelcrafting_gem3primal_fire_cut_green.jpg"
+                  },
+                  {
+                     "id": 196603,
+                     "stats": [],
+                     "slot": "legs",
+                     "type": "set4",
+                     "imglink": "inv_10_jewelcrafting_gem3primal_fire_cut_green.jpg"
+                  }
+               ]
+            },
+            {
+               "name": "Dathea, Ascended",
+               "imglink": "ui-ej-boss-datheaascended.png",
+               "drops": [
+                  {
+                     "id": 194302,
+                     "stats": [
+                        "agi",
+                        "str"
+                     ],
+                     "slot": "trinket",
+                     "type": "agistr",
+                     "imglink": "inv_10_elementalspiritfoozles_air.jpg"
+                  },
+                  {
+                     "id": 195481,
+                     "stats": [
+                        "int",
+                        "haste",
+                        "verse"
+                     ],
+                     "slot": "weapon",
+                     "type": "int1hmace",
+                     "imglink": "inv_mace_1h_primalistraid_d_02.jpg"
+                  },
+                  {
+                     "id": 195491,
+                     "stats": [
+                        "agi",
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "weapon",
+                     "type": "warglaive",
+                     "imglink": "inv_glaive_1h_primalistraid_d_01.jpg"
+                  },
+                  {
+                     "id": 195492,
+                     "stats": [
+                        "agi",
+                        "int",
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "head",
+                     "type": "leather",
+                     "imglink": "inv_helm_leather_raidrogueprimalist_d_01.jpg"
+                  },
+                  {
+                     "id": 195493,
+                     "stats": [
+                        "int",
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "shoulder",
+                     "type": "cloth",
+                     "imglink": "inv_cloth_raidmageprimalist_d_01_shoulder.jpg"
+                  },
+                  {
+                     "id": 195494,
+                     "stats": [
+                        "str",
+                        "int",
+                        "verse",
+                        "haste"
+                     ],
+                     "slot": "chest",
+                     "type": "plate",
+                     "imglink": "inv_plate_raidpaladinprimalist_d_01_chest.jpg"
+                  },
+                  {
+                     "id": 195495,
+                     "stats": [
+                        "agi",
+                        "int",
+                        "verse",
+                        "haste"
+                     ],
+                     "slot": "feet",
+                     "type": "mail",
+                     "imglink": "inv_mail_raidhunterprimalist_d_01_boot.jpg"
+                  },
+                  {
+                     "id": 195496,
+                     "stats": [
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "neck",
+                     "type": "all",
+                     "imglink": "inv_10_dungeonjewelry_primalist_necklace_1_air.jpg"
+                  },
+                  {
+                     "id": 196587,
+                     "stats": [],
+                     "slot": "hands",
+                     "type": "set1",
+                     "imglink": "inv_10_jewelcrafting_gem3primal_fire_cut_red.jpg"
+                  },
+                  {
+                     "id": 196592,
+                     "stats": [],
+                     "slot": "hands",
+                     "type": "set2",
+                     "imglink": "inv_10_jewelcrafting_gem3primal_fire_cut_red.jpg"
+                  },
+                  {
+                     "id": 196597,
+                     "stats": [],
+                     "slot": "hands",
+                     "type": "set3",
+                     "imglink": "inv_10_jewelcrafting_gem3primal_fire_cut_red.jpg"
+                  },
+                  {
+                     "id": 196692,
+                     "stats": [],
+                     "slot": "hands",
+                     "type": "set4",
+                     "imglink": "inv_10_jewelcrafting_gem3primal_fire_cut_red.jpg"
+                  }
+               ]
+            },
+            {
+               "name": "Kurog Grimtotem",
+               "imglink": "ui-ej-boss-kuroggrimtotem.png",
+               "drops": [
+                  {
+                     "id": 194305,
+                     "stats": [
+                        "agi"
+                     ],
+                     "slot": "trinket",
+                     "type": "agi",
+                     "imglink": "trade_archaeology_apexisscroll.jpg"
+                  },
+                  {
+                     "id": 194306,
+                     "stats": [
+                        "agi",
+                        "str"
+                     ],
+                     "slot": "trinket",
+                     "type": "agistr",
+                     "imglink": "inv_10_dungeonjewelry_primalist_necklace_2_omni.jpg"
+                  },
+                  {
+                     "id": 195483,
+                     "stats": [
+                        "agi",
+                        "haste",
+                        "mastery"
+                     ],
+                     "slot": "weapon",
+                     "type": "agi2hpolearm",
+                     "imglink": "inv_polearm_2h_primalistraid_d_01.jpg"
+                  },
+                  {
+                     "id": 195512,
+                     "stats": [
+                        "agi",
+                        "haste",
+                        "mastery"
+                     ],
+                     "slot": "weapon",
+                     "type": "agifist",
+                     "imglink": "inv_hand_1h_primalistraid_d_01.jpg"
+                  },
+                  {
+                     "id": 195513,
+                     "stats": [
+                        "haste",
+                        "verse"
+                     ],
+                     "slot": "off-hand",
+                     "type": "intoffhand",
+                     "imglink": "inv_offhand_1h_primalistraid_d_01.jpg"
+                  },
+                  {
+                     "id": 195514,
+                     "stats": [
+                        "agi",
+                        "int",
+                        "haste",
+                        "mastery"
+                     ],
+                     "slot": "hands",
+                     "type": "leather",
+                     "imglink": "inv_glove_leather_raidmonkprimalist_d_01.jpg"
+                  },
+                  {
+                     "id": 195515,
+                     "stats": [
+                        "int",
+                        "haste",
+                        "mastery"
+                     ],
+                     "slot": "wrist",
+                     "type": "cloth",
+                     "imglink": "inv_belt_cloth_raidwarlockprimalist_d_01.jpg"
+                  },
+                  {
+                     "id": 195516,
+                     "stats": [
+                        "agi",
+                        "int",
+                        "verse",
+                        "mastery"
+                     ],
+                     "slot": "wrist",
+                     "type": "mail",
+                     "imglink": "inv_mail_raidhunterprimalist_d_01_bracer.jpg"
+                  },
+                  {
+                     "id": 195517,
+                     "stats": [
+                        "int",
+                        "str",
+                        "haste",
+                        "mastery"
+                     ],
+                     "slot": "feet",
+                     "type": "plate",
+                     "imglink": "inv_plate_raidpaladinprimalist_d_01_boot.jpg"
+                  },
+                  {
+                     "id": 196586,
+                     "stats": [],
+                     "slot": "chest",
+                     "type": "set1",
+                     "imglink": "inv_10_jewelcrafting_gem3primal_fire_cut_black.jpg"
+                  },
+                  {
+                     "id": 196591,
+                     "stats": [],
+                     "slot": "chest",
+                     "type": "set2",
+                     "imglink": "inv_10_jewelcrafting_gem3primal_fire_cut_black.jpg"
+                  },
+                  {
+                     "id": 196596,
+                     "stats": [],
+                     "slot": "chest",
+                     "type": "set3",
+                     "imglink": "inv_10_jewelcrafting_gem3primal_fire_cut_black.jpg"
+                  },
+                  {
+                     "id": 196601,
+                     "stats": [],
+                     "slot": "chest",
+                     "type": "set4",
+                     "imglink": "inv_10_jewelcrafting_gem3primal_fire_cut_black.jpg"
+                  }
+               ]
+            },
+            {
+               "name": "Broodkepper Diurna",
+               "imglink": "ui-ej-boss-broodkeeperdiurna.png",
+               "drops": [
+                  {
+                     "id": 195526,
+                     "stats": [
+                        "haste",
+                        "mastery"
+                     ],
+                     "slot": "ring",
+                     "type": "all",
+                     "imglink": "inv_10_dungeonjewelry_primalist_ring_3_fire.jpg"
+                  },
+                  {
+                     "id": 194307,
+                     "stats": [
+                        "int",
+                        "verse"
+                     ],
+                     "slot": "trinket",
+                     "type": "int",
+                     "imglink": "inv_10_dungeonjewelry_primalist_trinket_3_omni.jpg"
+                  },
+                  {
+                     "id": 194308,
+                     "stats": [
+                        "agi",
+                        "str"
+                     ],
+                     "slot": "trinket",
+                     "type": "agistr",
+                     "imglink": "shaman_talent_unleashedfury.jpg"
+                  },
+                  {
+                     "id": 195519,
+                     "stats": [
+                        "int",
+                        "haste",
+                        "mastery"
+                     ],
+                     "slot": "2hstaff",
+                     "type": "evoker",
+                     "imglink": "inv_staff_2h_dragondungeon_c_02.jpg"
+                  },
+                  {
+                     "id": 195520,
+                     "stats": [
+                        "int",
+                        "str",
+                        "haste",
+                        "mastery"
+                     ],
+                     "slot": "off-hand",
+                     "type": "shield",
+                     "imglink": "inv_shield_1h_primalistraid_d_01.jpg"
+                  },
+                  {
+                     "id": 195521,
+                     "stats": [
+                        "agi",
+                        "haste",
+                        "verse"
+                     ],
+                     "slot": "weapon",
+                     "type": "agidagger",
+                     "imglink": "inv_knife_1h_primalistraid_d_01.jpg"
+                  },
+                  {
+                     "id": 195522,
+                     "stats": [
+                        "agi",
+                        "int",
+                        "haste",
+                        "mastery"
+                     ],
+                     "slot": "legs",
+                     "type": "mail",
+                     "imglink": "inv_pant_mail_raidevokerprimalist_d_01.jpg"
+                  },
+                  {
+                     "id": 195523,
+                     "stats": [
+                        "int",
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "hands",
+                     "type": "cloth",
+                     "imglink": "inv_cloth_raidpriestprimalist_d_01_glove.jpg"
+                  },
+                  {
+                     "id": 195524,
+                     "stats": [
+                        "int",
+                        "str",
+                        "mastery",
+                        "verse"
+                     ],
+                     "slot": "waist",
+                     "type": "plate",
+                     "imglink": "inv_plate_raidpaladinprimalist_d_01_belt.jpg"
+                  },
+                  {
+                     "id": 195525,
+                     "stats": [
+                        "agi",
+                        "int",
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "wrist",
+                     "type": "leather",
+                     "imglink": "inv_leather_raiddruidprimalist_d_01_bracer.jpg"
+                  },
+                  {
+                     "id": 195589,
+                     "stats": [],
+                     "slot": "shoulder",
+                     "type": "set1",
+                     "imglink": "inv_10_jewelcrafting_gem3primal_fire_cut_blue.jpg"
+                  },
+                  {
+                     "id": 195594,
+                     "stats": [],
+                     "slot": "shoulder",
+                     "type": "set2",
+                     "imglink": "inv_10_jewelcrafting_gem3primal_fire_cut_blue.jpg"
+                  },
+                  {
+                     "id": 195599,
+                     "stats": [],
+                     "slot": "shoulder",
+                     "type": "set3",
+                     "imglink": "inv_10_jewelcrafting_gem3primal_fire_cut_blue.jpg"
+                  },
+                  {
+                     "id": 195604,
+                     "stats": [],
+                     "slot": "shoulder",
+                     "type": "set4",
+                     "imglink": "inv_10_jewelcrafting_gem3primal_fire_cut_blue.jpg"
+                  }
+               ]
+            },
+            {
+               "name": "Raszageth the Storm-Eater",
+               "imglink": "TODO.png",
+               "drops": [
+                  {
+                     "id": 195527,
+                     "stats": [
+                        "agi",
+                        "haste",
+                        "crit"
+                     ],
+                     "slot": "weapon",
+                     "type": "ranged",
+                     "imglink": "inv_bow_1h_primalistraid_d_01.jpg"
+                  },
+                  {
+                     "id": 194309,
+                     "stats": [
+                        "str",
+                        "int",
+                        "agi"
+                     ],
+                     "slot": "trinket",
+                     "type": "all",
+                     "imglink": "inv_10_dungeonjewelry_primalist_trinket_1ragingelement_air.jpg"
+                  },
+                  {
+                     "id": 194310,
+                     "stats": [
+                        "int"
+                     ],
+                     "slot": "trinket",
+                     "type": "int",
+                     "imglink": "inv_10_inscription2_book1_color4.jpg"
+                  },
+                  {
+                     "id": 195528,
+                     "stats": [
+                        "str",
+                        "verse",
+                        "crit"
+                     ],
+                     "slot": "weapon",
+                     "type": "str2haxe",
+                     "imglink": "inv_axe_2h_primalistraid_d_01.jpg"
+                  },
+                  {
+                     "id": 195529,
+                     "stats": [
+                        "int",
+                        "mastery",
+                        "crit"
+                     ],
+                     "slot": "weapon",
+                     "type": "intdagger",
+                     "imglink": "inv_knife_1h_primalistraid_d_01.jpg"
+                  },
+                  {
+                     "id": 195530,
+                     "stats": [
+                        "agi",
+                        "int",
+                        "haste",
+                        "verse"
+                     ],
+                     "slot": "legs",
+                     "type": "leather",
+                     "imglink": "inv_pant_leather_raidmonkprimalist_d_01.jpg"
+                  },
+                  {
+                     "id": 195531,
+                     "stats": [
+                        "int",
+                        "agi",
+                        "haste",
+                        "crit"
+                     ],
+                     "slot": "hands",
+                     "type": "mail",
+                     "imglink": "inv_glove_mail_raidevokerprimalist_d_01.jpg"
+                  },
+                  {
+                     "id": 195532,
+                     "stats": [
+                        "int",
+                        "haste",
+                        "mastery"
+                     ],
+                     "slot": "feet",
+                     "type": "cloth",
+                     "imglink": "inv_cloth_raidmageprimalist_d_01_boot.jpg"
+                  },
+                  {
+                     "id": 195533,
+                     "stats": [
+                        "str",
+                        "int",
+                        "verse",
+                        "crit"
+                     ],
+                     "slot": "wrist",
+                     "type": "plate",
+                     "imglink": "inv_plate_raidpaladinprimalist_d_01_bracer.jpg"
+                  },
+                  {
+                     "id": 196590,
+                     "stats": [],
+                     "slot": "head",
+                     "type": "set1",
+                     "imglink": "inv_10_jewelcrafting_gem3primal_fire_cut_bronze.jpg"
+                  },
+                  {
+                     "id": 196595,
+                     "stats": [],
+                     "slot": "head",
+                     "type": "set2",
+                     "imglink": "inv_10_jewelcrafting_gem3primal_fire_cut_bronze.jpg"
+                  },
+                  {
+                     "id": 196600,
+                     "stats": [],
+                     "slot": "head",
+                     "type": "set3",
+                     "imglink": "inv_10_jewelcrafting_gem3primal_fire_cut_bronze.jpg"
+                  },
+                  {
+                     "id": 196605,
+                     "stats": [],
+                     "slot": "head",
+                     "type": "set4",
+                     "imglink": "inv_10_jewelcrafting_gem3primal_fire_cut_bronze.jpg"
+                  }
+               ]
+            }
+         ]
       }
    ]
 }
