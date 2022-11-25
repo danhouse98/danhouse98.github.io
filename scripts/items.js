@@ -88,7 +88,7 @@ $(document).ready(function () {
 
                         //item List
                         $.each(bossList.drops, function (key3, itemList) {
-                            bossSlotID = bossCounter.toString() + "." + bossID + "." + itemList.slot;
+                            bossSlotID = dungeonCounter.toString() + "." + bossID + "." + itemList.slot;
 
                             var elem = document.getElementById(bossSlotID);
 
