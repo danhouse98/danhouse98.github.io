@@ -65,7 +65,7 @@ $(document).ready(function () {
                         bossTableHTML = "<div class='boss'><div class='imgbox'><img src='https://wow.zamimg.com/images/wow/journal/" + bossList.imglink + "' alt='" + bossList.name + "'><h3>" + bossList.name + "</h3></div><table>" +
                             "<tr><th class ='head'>Head</th><th class='shoulder'>Shoulder</th><th class='chest'>Chest</th><th class='wrist'>Wrist</th><th class='hands'>Hands</th>" +
                             "<th class='waist'>Waist</th><th class='legs'>Legs</th><th class='feet'>Feet</th><th class='neck'>Neck</th><th class='back'>Back</th>" +
-                            "<th class='ring'>Rings</th><th class='weapon'>Weapon</th><th class='off-hand>Off-Hand</th><th class='trinket'>Trinket</th></tr><tr>";
+                            "<th class='ring'>Rings</th><th class='weapon'>Weapon</th><th class='off-hand'>Off-Hand</th><th class='trinket'>Trinket</th></tr><tr>";
 
                         for (var k = 0; k < slots.length; k++) {
                             bossSlotID = dungeonID + "." + bossID + "." + slots[k];
@@ -173,7 +173,7 @@ complete: function () {
 }
 });*/
 
-
+//Holds class list with all relevant cooresponding subclasses
 var classes = {
     "classList": [{ "class": "Shaman", "subclass": [{ "name": "Elemental" }, { "name": "Enhancement" }, { "name": "Restoration" }] },
     { "class": "Death Knight", "subclass": [{ "name": "Blood" }, { "name": "Frost" }, { "name": "Unholy" }] }, { "class": "Monk", "subclass": [{ "name": "Mistweaver" }, { "name": "Brewmaster" }, { "name": "Windwalker" }] },
