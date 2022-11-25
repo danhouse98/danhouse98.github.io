@@ -1,55 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<link href="styles/default.css" rel="stylesheet" type="text/css">
-		<title>Wow.Loot</title>
-		<script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: false};</script>
-		<script src="https://wow.zamimg.com/js/tooltips.js"></script>
-		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-		<script src= 'scripts/items.js'></script>
-	</head>
-	<body>
-		<header>
-			<h1>Wow.Loot</h1>
-		</header>
-		<main>
-			<div id = "controlPanel">
-				<div id = "classPanel">
-					<label for="">Choose a Class:</label>
-					<select name="class" id="classDropdown"></select>
-					<div id ="subclassDropdown"></div>
-				</div>
-				<div id = "slotPanel"></div>
-				<div id = "statPanel">
-					<form>
-						<input id="stat0" class="statCheckbox" type="checkbox" value="haste" name="stat" checked>
-						<label for="stat0">Haste</label>
-						<input id="stat1" class="statCheckbox" type="checkbox" value="crit" name="stat" checked>
-						<label for="stat1">Critical Strike</label><br>
-						<input id="stat2" class="statCheckbox" type="checkbox" value="mastery" name="stat" checked>
-						<label for="stat2">Mastery</label>
-						<input id="stat3" class="statCheckbox" type="checkbox" value="verse" name="stat" checked>
-						<label for="stat3">Versatility</label><br>
-						<button type="button" onClick="statUpdate()" value="Filter Stats">Filter Stats</button>
-					</form>
-					<fieldset>
-						<legend>AND or OR sorting:</legend>
-						<div><input class="andOr" type="radio" id="or" name="andOr" value="or" checked> <label for="or">OR</label></div>				
-						<div><input class="andOr" type="radio" id="and" name="andOr" value="and"> <label for="and">AND</label></div>				
-					</fieldset>
-				</div>
-				<div id = "seasonPanel">
-					<input type="radio" id="mythic0" name="tableSelector" value="mythic0" checked> <label for="mythic0">Mythic 0 Dungeons</label>				
-					<input type="radio" id="season1" name="tableSelector" value="season1"> <label for="season1">Season 1 Dungeons</label>
-					<input type="radio" id="raid1" name="tableSelector" value="raid1"> <label for="raid1">Vault of the Incarnates</label>
-				</div>
+
+<head>
+	<meta charset="UTF-8">
+	<link href="styles/default.css" rel="stylesheet" type="text/css">
+	<title>Wow.Loot</title>
+	<script>const whTooltips = { colorLinks: true, iconizeLinks: true, renameLinks: false };</script>
+	<script src="https://wow.zamimg.com/js/tooltips.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src='scripts/items.js'></script>
+</head>
+
+<body>
+	<header>
+		<h1>Wow.Loot</h1>
+	</header>
+	<main>
+		<div id="controlPanel">
+			<div id="classPanel">
+				<label for="">Choose a Class:</label>
+				<select name="class" id="classDropdown"></select>
+				<div id="subclassDropdown"></div>
 			</div>
-			<div id="dungeonList">
-				<div class ="dungeon"><h2>Dungeon Name</h2>
-					<div class="boss"><h3>Boss Name</h3>
-						<table>
-							<tr>
+			<div id="slotPanel"></div>
+			<div id="statPanel">
+				<form>
+					<input id="stat0" class="statCheckbox" type="checkbox" value="haste" name="stat" checked>
+					<label for="stat0">Haste</label>
+					<input id="stat1" class="statCheckbox" type="checkbox" value="crit" name="stat" checked>
+					<label for="stat1">Critical Strike</label><br>
+					<input id="stat2" class="statCheckbox" type="checkbox" value="mastery" name="stat" checked>
+					<label for="stat2">Mastery</label>
+					<input id="stat3" class="statCheckbox" type="checkbox" value="verse" name="stat" checked>
+					<label for="stat3">Versatility</label><br>
+					<button type="button" onClick="statUpdate()" value="Filter Stats">Filter Stats</button>
+				</form>
+				<fieldset>
+					<legend>AND or OR sorting:</legend>
+					<div><input class="andOr" type="radio" id="or" name="andOr" value="or" checked> <label
+							for="or">OR</label></div>
+					<div><input class="andOr" type="radio" id="and" name="andOr" value="and"> <label
+							for="and">AND</label></div>
+				</fieldset>
+			</div>
+		</div>
+		8<div id="seasonPanel">
+			<input type="radio" id="mythic0" name="tableSelector" value="mythic0" checked> <label for="mythic0">Mythic 0
+				Dungeons</label>
+			<input type="radio" id="season1" name="tableSelector" value="season1"> <label for="season1">Season 1
+				Dungeons</label>
+			<input type="radio" id="raid1" name="tableSelector" value="raid1"> <label for="raid1">Vault of the
+				Incarnates</label>
+		</div>
+
+		<div id="dungeonList">
+			<div class="dungeon">
+				<h2>Dungeon Name</h2>
+				<div class="boss">
+					<h3>Boss Name</h3>
+					<table>
+						<tr>
 							<th>Head</th>
 							<th>Shoulder</th>
 							<th>Chest</th>
@@ -63,10 +73,17 @@
 							<th>Rings</th>
 							<th>Weapon</th>
 							<th>Trinket</th>
-							</tr>
-							<tr>
-							<td><a href="https://www.wowhead.com/item=110052" data-wh-icon-added="true" class="q3" data-wh-rename-link="false"><span class="iconmedium" data-env="live" data-tree="live" data-game="wow" data-type="item"><ins style="background-image: url(&quot;https://wow.zamimg.com/images/wow/icons/medium/inv_mace_1h_draenordungeon_c_02.jpg&quot;);"></ins><del></del></span></a>
-							<a href="https://www.wowhead.com/item=110053" data-wh-icon-added="true" class="q3"><span class="iconmedium" data-env="live" data-tree="live" data-game="wow" data-type="item"><ins style="background-image: url(&quot;https://wow.zamimg.com/images/wow/icons/medium/inv_shield_draenordungeon_c_02.jpg&quot;);"></ins><del></del></span></a> </td>
+						</tr>
+						<tr>
+							<td><a href="https://www.wowhead.com/item=110052" data-wh-icon-added="true" class="q3"
+									data-wh-rename-link="false"><span class="iconmedium" data-env="live"
+										data-tree="live" data-game="wow" data-type="item"><ins
+											style="background-image: url(&quot;https://wow.zamimg.com/images/wow/icons/medium/inv_mace_1h_draenordungeon_c_02.jpg&quot;);"></ins><del></del></span></a>
+								<a href="https://www.wowhead.com/item=110053" data-wh-icon-added="true" class="q3"><span
+										class="iconmedium" data-env="live" data-tree="live" data-game="wow"
+										data-type="item"><ins
+											style="background-image: url(&quot;https://wow.zamimg.com/images/wow/icons/medium/inv_shield_draenordungeon_c_02.jpg&quot;);"></ins><del></del></span></a>
+							</td>
 							<td></td>
 							<td></td>
 							<td></td>
@@ -79,22 +96,24 @@
 							<td></td>
 							<td></td>
 							<td></td>
-							</tr>
-						</table>
-					</div>
+						</tr>
+					</table>
 				</div>
 			</div>
 		</div>
-		</main>
-		<footer>
-			<br>
-			<p>Page built by Daniel House</p>
-			<a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fdhouse1uncc.github.io%2Fitis3135%2F" target="_blank">
-					<img src="images/button-valid-html5.gif" width="88" height="31" alt="Link to HTML validator">
-				</a>
-				<a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdhouse1uncc.github.io%2Fitis3135%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" target="_blank">
-					<img src="images/vcss.gif" width="88" height="31" alt="Link to CSS validator">
-				</a>	
-		</footer>
-	</body>
+		</div>
+	</main>
+	<footer>
+		<br>
+		<p>Page built by Daniel House</p>
+		<a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fdhouse1uncc.github.io%2Fitis3135%2F" target="_blank">
+			<img src="images/button-valid-html5.gif" width="88" height="31" alt="Link to HTML validator">
+		</a>
+		<a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdhouse1uncc.github.io%2Fitis3135%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en"
+			target="_blank">
+			<img src="images/vcss.gif" width="88" height="31" alt="Link to CSS validator">
+		</a>
+	</footer>
+</body>
+
 </html>
