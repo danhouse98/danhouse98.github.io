@@ -446,7 +446,7 @@ function showMythic0() {
 
 function showSeason1() {
     hideAllDungeons();
-    for (var i = 0; i < season1.length; i++) {
+    for (var i = 0; i < season1MythicPlus.length; i++) {
         var id = indexMap.get(season1MythicPlus[i]);
         var element = document.getElementById(id);
         element.style.display = "block";
