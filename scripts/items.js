@@ -447,7 +447,7 @@ function showMythic0() {
 function showSeason1() {
     hideAllDungeons();
     for (var i = 0; i < season1.length; i++) {
-        var id = indexMap.get(season1[i]);
+        var id = indexMap.get(season1MythicPlus[i]);
         var element = document.getElementById(id);
         element.style.display = "block";
     }
@@ -455,7 +455,7 @@ function showSeason1() {
 
 function showRaid1() {
     hideAllDungeons();
-    var id = indexMap.get(raids[1]);
+    var id = indexMap.get(raids[0]);
     var element = document.getElementById(id);
     element.style.display = "block";
 }
