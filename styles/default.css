@@ -13,7 +13,7 @@ h1 {
 
 .dungeon {
     background-color: #002642;
-    display: flex;
+    display: grid;
 }
 
 .boss {
@@ -21,6 +21,7 @@ h1 {
     display: grid;
     grid-template-columns: fit-content(1em) auto;
     text-align: center;
+    border: .1em solid white;
 }
 
 .itemtype {
