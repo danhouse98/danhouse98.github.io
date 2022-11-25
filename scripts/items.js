@@ -23,8 +23,17 @@ function Item() {
 }
 
 const itemArray = [];
+const filteredItemArray = [];
+const indexMap = new Map();
+
+var dungeonCounter = 0;
+
 
 var slots = ['head', 'shoulder', 'chest', 'wrist', 'hands', 'waist', 'legs', 'feet', 'neck', 'back', 'ring', 'weapon', 'off-hand', 'trinket'];
+
+var mythic0 = ["Ruby Life Pools", "Brackenhide Hollow", "The Nokhud Offensive", "Uldaman: Legacy of Tyr", "Algeth'ar Academy", "The Azure Vault", "Halls of Illusion", "Neltharus"];
+var season1MythicPlus = ["Ruby Life Pools", "The Nokhud OFfensive", "The Azure Vault", "Algeth'ar Academy", "Halls of Valor", "Court of Stars", "Shadowmoon Burial Grounds", "Temple of the Jade Serpent"];
+var raids = ["Vault of The Incarnates"]
 
 //Reads JSON file and fills DOM with content
 $(document).ready(function () {
@@ -46,7 +55,6 @@ $(document).ready(function () {
             $("#dungeonList").html("");
             //TODO rename id tag
             //dungeon List
-            var dungeonCounter = 0;
             $.each(data, function () {
                 var dungeonID = "";
                 var bossID = "";
@@ -54,9 +62,11 @@ $(document).ready(function () {
                 //dungeonList
                 $.each(this, function (key, dungeonList) {
                     var bossCounter = 0;
-                    dungeonID = dungeonCounter.toString();
-                    var bossTableHTML = "<div class= 'dungeon' id= 'dungeon" + dungeonID + "'><h2>" + dungeonList.dungeon_name + "</h2>";
+                    dungeonID = "dungeon" + dungeonCounter.toString();
+                    var bossTableHTML = "<div class= 'dungeon' id= '" + dungeonID + "'><h2>" + dungeonList.dungeon_name + "</h2>";
                     $('#dungeonList').append(bossTableHTML);
+
+                    indexMap.set(dungeonList.dungeon_name, dungeonID);
 
                     //boss list
                     $.each(dungeonList.bosses, function (key2, bossList) {
@@ -119,6 +129,7 @@ $(document).ready(function () {
 
                         bossCounter++;
                     });
+
 
                     bossTableHTML = "</div>";
                     $("#dungeonList").append(bossTableHTML);
@@ -259,9 +270,9 @@ function slotUpdate() {
     var changedElements;
     for (var i = 0; i < inputElements.length; i++) {
         checkboxValue = inputElements[i].value;
-        
+
         //console.log(checkboxValue + " : " + inputElements[i].checked);
-        
+
         changedElements = document.getElementsByClassName(checkboxValue);
         if (inputElements[i].checked) {
             for (var j = 0; j < changedElements.length; j++) {
@@ -310,9 +321,9 @@ function statUpdate() {
     //Loop through itemArray, hide all items then show all relevent items
     for (var i = 0; i < itemArray.length; i++) {
         var id = itemArray[i].id;
-        
+
         //TODO make sure id & vals are working properly
-        console.log(id + " m: " + itemArray[i].mastery + " v: " + itemArray[i].verse  + ' c: ' + itemArray[i].crit +  ' h: ' + itemArray[i].haste);
+        console.log(id + " m: " + itemArray[i].mastery + " v: " + itemArray[i].verse + ' c: ' + itemArray[i].crit + ' h: ' + itemArray[i].haste);
 
         var element = document.getElementById(id);
         //hide each entry
@@ -329,25 +340,25 @@ function statUpdate() {
                     case 'mastery':
                         if (itemArray[i].mastery == 1) {
                             orChecker = 'passed';
-                            element.style.display ='block';
+                            element.style.display = 'block';
                         }
                         break;
                     case 'haste':
                         if (itemArray[i].haste == 1) {
                             orChecker = 'passed';
-                            element.style.display ='block';
+                            element.style.display = 'block';
                         }
                         break;
                     case 'verse':
                         if (itemArray[i].verse == 1) {
                             orChecker = 'passed';
-                            element.style.display ='block';
+                            element.style.display = 'block';
                         }
                         break;
                     case 'crit':
                         if (itemArray[i].crit == 1) {
                             orChecker = 'passed';
-                            element.style.display ='block';
+                            element.style.display = 'block';
                         }
                         break;
                 }
@@ -381,7 +392,7 @@ function statUpdate() {
                         break;
                 }
 
-                if (j == statArray.length-1 && andChecker !== 'failed') {
+                if (j == statArray.length - 1 && andChecker !== 'failed') {
                     element.style.display = 'block';
                 }
             }
@@ -390,3 +401,34 @@ function statUpdate() {
     }
 }
 
+//Handler for drop table selector
+function handleTableSelection() {
+    for (var i = 0; i < dungeonCounter; i++) {
+        var id = 'dungeon' + i
+        var element = document.getElementById(id);
+        element.style.display = "none";
+    }
+
+    if (document.getElementById('mythic0').checked) {
+        for (var i = 0; i < mythic0.length; i++) {
+            var id = indexMap.get(mythic0[i]);
+            var element = document.getElementById(id);
+            element.style.display = "block";
+        }
+    } else if (document.getElementById('season1').checked) {
+        for (var i = 0; i < season1.length; i++) {
+            var id = indexMap.get(season1[i]);
+            var element = document.getElementById(id);
+            element.style.display = "block";
+        }
+    } else if (document.getElementById('raid1').checked) {
+        var id = indexMap.get(raids[1]);
+        var element = document.getElementById(id);
+        element.style.display = "block";
+    }
+}
+
+const dropTableButtons = document.querySelectorAll('input[name="tableSelector"]');
+dropTableButtons.forEach(radio => {
+    radio.addEventListener('click', handleTableSelection);
+});
