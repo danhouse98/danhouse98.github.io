@@ -401,7 +401,7 @@ function statUpdate() {
 
     }
 }
-
+/*
 //Handler for drop table selector
 function handleTableSelection() {
     for (var i = 0; i < dungeonCounter; i++) {
@@ -433,3 +433,37 @@ const dropTableButtons = document.querySelectorAll('input[name="tableSelector"]'
 dropTableButtons.forEach(radio => {
     radio.addEventListener('click', handleTableSelection);
 });
+*/
+
+function showMythic0() {
+    hideAllDungeons();
+    for (var i = 0; i < mythic0.length; i++) {
+        var id = indexMap.get(mythic0[i]);
+        var element = document.getElementById(id);
+        element.style.display = "block";
+    }
+}
+
+function showSeason1() {
+    hideAllDungeons();
+    for (var i = 0; i < season1.length; i++) {
+        var id = indexMap.get(season1[i]);
+        var element = document.getElementById(id);
+        element.style.display = "block";
+    }
+}
+
+function showRaid1() {
+    hideAllDungeons();
+    var id = indexMap.get(raids[1]);
+    var element = document.getElementById(id);
+    element.style.display = "block";
+}
+
+function hideAllDungeons() {
+    for (var i = 0; i < dungeonCounter; i++) {
+        var id = 'dungeon' + i
+        var element = document.getElementById(id);
+        element.style.display = "none";
+    }
+}
