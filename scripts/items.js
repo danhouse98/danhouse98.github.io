@@ -136,7 +136,7 @@ $(document).ready(function () {
                     $("#dungeonList").append(bossTableHTML);
                     dungeonCounter++;
                 });
-                console.log([...mapObject.entries()]);
+                console.log([...indexMap.entries()]);
             });
         }
     });
