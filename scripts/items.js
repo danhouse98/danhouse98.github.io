@@ -78,16 +78,17 @@ $(document).ready(function () {
                             "<th class='ring'>Rings</th><th class='weapon'>Weapon</th><th class='off-hand'>Off-Hand</th><th class='trinket'>Trinket</th></tr><tr>";
 
                         for (var k = 0; k < slots.length; k++) {
-                            bossSlotID = dungeonID + "." + bossID + "." + slots[k];
+                            bossSlotID = dungeonCounter.toString() + "." + bossID + "." + slots[k];
                             bossTableHTML += "<td id='" + bossSlotID + "' class='" + slots[k] + "'></td>";
                         }
 
                         bossTableHTML += "</tr></table></div></div><br>";
-                        $("#dungeonList").append(dungeonID);
+                        var appendID = "#" + dungeonID;
+                        $(appendID).append(bossTableHTML);
 
                         //item List
                         $.each(bossList.drops, function (key3, itemList) {
-                            bossSlotID = dungeonID + "." + bossID + "." + itemList.slot;
+                            bossSlotID = bossCounter.toString() + "." + bossID + "." + itemList.slot;
 
                             var elem = document.getElementById(bossSlotID);
 
