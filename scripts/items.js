@@ -32,7 +32,7 @@ var dungeonCounter = 0;
 var slots = ['head', 'shoulder', 'chest', 'wrist', 'hands', 'waist', 'legs', 'feet', 'neck', 'back', 'ring', 'weapon', 'off-hand', 'trinket'];
 
 var mythic0 = ["Ruby Life Pools", "Brackenhide Hollow", "The Nokhud Offensive", "Uldaman: Legacy of Tyr", "Algeth'ar Academy", "The Azure Vault", "Halls of Illusion", "Neltharus"];
-var season1MythicPlus = ["Ruby Life Pools", "The Nokhud OFfensive", "The Azure Vault", "Algeth'ar Academy", "Halls of Valor", "Court of Stars", "Shadowmoon Burial Grounds", "Temple of the Jade Serpent"];
+var season1MythicPlus = ["Ruby Life Pools", "The Nokhud Offensive", "The Azure Vault", "Algeth'ar Academy", "Halls of Valor", "Court of Stars", "Shadowmoon Burial Grounds", "Temple of the Jade Serpent"];
 var raids = ["Vault of The Incarnates"]
 
 //Reads JSON file and fills DOM with content
@@ -136,6 +136,7 @@ $(document).ready(function () {
                     $("#dungeonList").append(bossTableHTML);
                     dungeonCounter++;
                 });
+                console.log([...mapObject.entries()]);
             });
         }
     });
