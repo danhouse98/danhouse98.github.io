@@ -82,7 +82,7 @@ $(document).ready(function () {
                             bossTableHTML += "<td id='" + bossSlotID + "' class='" + slots[k] + "'></td>";
                         }
 
-                        bossTableHTML += "</tr></table></div></div><br>";
+                        bossTableHTML += "</tr></table></div></div>";
                         var appendID = "#" + dungeonID;
                         $(appendID).append(bossTableHTML);
 
