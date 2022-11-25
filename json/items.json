@@ -2312,28 +2312,28 @@
                "name": "Sadana Bloodfury",
                "imglink": "ui-ej-boss-sadana-bloodfury.png",
                "drops": [
-                  {}
+                  
                ]
             },
             {
                "name": "Nhallish",
                "imglink": "ui-ej-boss-nhallish-feaster-of-souls.png",
                "drops": [
-                  {}
+                  
                ]
             },
             {
                "name": "Bonemaw",
                "imglink": "ui-ej-boss-bonemaw.png",
                "drops": [
-                  {}
+                 
                ]
             },
             {
                "name": "Ner'zhul",
                "imglink": "ui-ej-boss-nerzhul.png",
                "drops": [
-                  {}
+                  
                ]
             }
          ]
