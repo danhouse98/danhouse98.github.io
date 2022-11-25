@@ -83,7 +83,7 @@ $(document).ready(function () {
                         }
 
                         bossTableHTML += "</tr></table></div><br>";
-                        $("#dungeonList").append(bossTableHTML);
+                        $("#dungeonList").append(dungeonID);
 
                         //item List
                         $.each(bossList.drops, function (key3, itemList) {
