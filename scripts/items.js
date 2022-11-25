@@ -468,3 +468,11 @@ function hideAllDungeons() {
         element.style.display = "none";
     }
 }
+
+function showAllDungeons(){
+    for (var i = 0; i < dungeonCounter; i++) {
+        var id = 'dungeon' + i
+        var element = document.getElementById(id);
+        element.style.display = "block";
+    }
+}
