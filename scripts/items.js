@@ -149,7 +149,7 @@ $(document).ready(function () {
                                         break;
                                     case "haste":
                                         currentItem.haste = 1;
-                                        break;
+  adds                                      break;
                                 }
                             }
 
@@ -858,7 +858,7 @@ function dungeonHider() {
 
         //check if item.style.display is "block"
         //iterate and check id and add to map
-        if (itemArray[i].style.display == "block") {
+        if (document.getElementById(itemArray[i].id).style.display == "block") {
             if (itemsShownPerBoss.containsKey(bossElementID)) {
                 var currentCount = itemsShownPerBoss.get(bossElementID) + 1;
                 itemsShownPerBoss.set
