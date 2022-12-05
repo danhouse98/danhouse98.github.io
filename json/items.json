@@ -2296,13 +2296,682 @@
       {
          "dungeon_name": "Halls of Valor",
          "bosses": [
-            {}
+            {
+               "name": "Hymdall",
+               "imglink": "ui-ej-boss-hymdall.png",
+               "drops": [
+                  {
+                     "id": 201997,
+                     "stats": [
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "weapon",
+                     "type": "intdagger",
+                     "imglink": "inv_knife_1h_felfireraid_d_02.jpg"
+                  },
+                  {
+                     "id": 133621,
+                     "stats": [
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "wrist",
+                     "type": "leather",
+                     "imglink": "inv_bracer_leather_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 133628,
+                     "stats": [
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "hands",
+                     "type": "plate",
+                     "imglink": "inv_glove_plate_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 133805,
+                     "stats": [
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "waist",
+                     "type": "mail",
+                     "imglink": "inv_belt_mail_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 136774,
+                     "stats": [
+                        "mastery",
+                        "haste"
+                     ],
+                     "slot": "feet",
+                     "type": "cloth",
+                     "imglink": "inv_boot_cloth_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 133642,
+                     "stats": [
+                        "verse"
+                     ],
+                     "slot": "trinket",
+                     "type": "all",
+                     "imglink": "inv_misc_horn_03.jpg"
+                  }
+               ]
+            },
+            {
+               "name": "Hyrja",
+               "imglink": "ui-ej-boss-hyrja.png",
+               "drops": [
+                  {
+                     "id": 133620,
+                     "stats": [
+                        "verse",
+                        "haste"
+                     ],
+                     "slot": "shoulder",
+                     "type": "leather",
+                     "imglink": "inv_shoulder_leather_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 133622,
+                     "stats": [
+                        "verse",
+                        "haste"
+                     ],
+                     "slot": "chest",
+                     "type": "mail",
+                     "imglink": "inv_chest_mail_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 133613,
+                     "stats": [
+                        "verse",
+                        "mastery"
+                     ],
+                     "slot": "waist",
+                     "type": "cloth",
+                     "imglink": "inv_cloth_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 133679,
+                     "stats": [
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "ring",
+                     "type": "all",
+                     "imglink": "inv_70_dungeon_ring8a.jpg"
+                  },
+                  {
+                     "id": 133646,
+                     "stats": [
+                        "mastery"
+                     ],
+                     "slot": "trinket",
+                     "type": "healer",
+                     "imglink": "paladin_holy.jpg"
+                  }
+               ]
+            },
+            {
+               "name": "Fenryr",
+               "imglink": "ui-ej-boss-fenryr.png",
+               "drops": [
+                  {
+                     "id": 201998,
+                     "stats": [
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "weapon",
+                     "type": "agidagger",
+                     "imglink": "inv_knife_1h_felfireraid_d_03.jpg"
+                  },
+                  {
+                     "id": 133633,
+                     "stats": [
+                        "haste",
+                        "mastery"
+                     ],
+                     "slot": "neck",
+                     "type": "all",
+                     "imglink": "inv_7_0raid_necklace_01b.jpg"
+                  },
+                  {
+                     "id": 133639,
+                     "stats": [
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "back",
+                     "type": "all",
+                     "imglink": "inv_cape_leather_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 133615,
+                     "stats": [
+                        "mastery",
+                        "haste"
+                     ],
+                     "slot": "chest",
+                     "type": "leather",
+                     "imglink": "inv_chest_leather_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 133626,
+                     "stats": [
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "wrist",
+                     "type": "mail",
+                     "imglink": "inv_bracer_mail_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 133609,
+                     "stats": [
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "hands",
+                     "type": "cloth",
+                     "imglink": "inv_glove_cloth_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 136773,
+                     "stats": [
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "waist",
+                     "type": "plate",
+                     "imglink": "inv_belt_plate_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 136975,
+                     "stats": [
+                        "crit"
+                     ],
+                     "slot": "trinket",
+                     "type": "agistr",
+                     "imglink": "ability_warrior_bloodnova.jpg"
+                  }
+               ]
+            },
+            {
+               "name": "God-King Skovald",
+               "imglink": "ui-ej-boss-god-king-skovald.png",
+               "drops": [
+                  {
+                     "id": 201999,
+                     "stats": [
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "off-hand",
+                     "type": "shield",
+                     "imglink": "inv_shield_44.jpg"
+                  },
+                  {
+                     "id": 136775,
+                     "stats": [
+                        "haste",
+                        "mastery"
+                     ],
+                     "slot": "shoulder",
+                     "type": "cloth",
+                     "imglink": "inv_shoulder_cloth_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 133617,
+                     "stats": [
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "hands",
+                     "type": "leather",
+                     "imglink": "inv_glove_leather_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 133630,
+                     "stats": [
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "legs",
+                     "type": "plate",
+                     "imglink": "inv_pant_plate_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 133623,
+                     "stats": [
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "feet",
+                     "type": "mail",
+                     "imglink": "inv_boot_mail_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 133638,
+                     "stats": [
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "ring",
+                     "type": "all",
+                     "imglink": "inv_70_dungeon_ring5a.jpg"
+                  },
+                  {
+                     "id": 133641,
+                     "stats": [
+                        "crit"
+                     ],
+                     "slot": "trinket",
+                     "type": "rangeddps",
+                     "imglink": "spell_nature_elementalshields.jpg"
+                  }
+               ]
+            },
+            {
+               "name": "Odyn",
+               "imglink": "ui-ej-boss-odyn.png",
+               "drops": [
+                  {
+                     "id": 136777,
+                     "stats": [
+                        "haste",
+                        "mastery"
+                     ],
+                     "slot": "head",
+                     "type": "mail",
+                     "imglink": "inv_helm_mail_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 139281,
+                     "stats": [
+                        "haste",
+                        "mastery"
+                     ],
+                     "slot": "head",
+                     "type": "leather",
+                     "imglink": "inv_helm_leather_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 133767,
+                     "stats": [
+                        "haste",
+                        "crit"
+                     ],
+                     "slot": "neck",
+                     "type": "all",
+                     "imglink": "inv_7_0raid_necklace_14a.jpg"
+                  },
+                  {
+                     "id": 133631,
+                     "stats": [
+                        "haste",
+                        "mastery"
+                     ],
+                     "slot": "shoulder",
+                     "type": "plate",
+                     "imglink": "inv_shoulder_plate_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 133765,
+                     "stats": [
+                        "verse",
+                        "mastery"
+                     ],
+                     "slot": "back",
+                     "type": "all",
+                     "imglink": "inv_cape_legiondungeon_c_04.jpg"
+                  },
+                  {
+                     "id": 139282,
+                     "stats": [
+                        "crit",
+                        "verse"
+                     ],
+                     "slot": "wrist",
+                     "type": "mail",
+                     "imglink": "inv_bracer_mail_legionquest100_b_01.jpg"
+                  },
+                  {
+                     "id": 139283,
+                     "stats": [
+                        "crit",
+                        "verse"
+                     ],
+                     "slot": "wrist",
+                     "type": "plate",
+                     "imglink": "inv_bracer_plate_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 136776,
+                     "stats": [
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "waist",
+                     "type": "leather",
+                     "imglink": "inv_belt_leather_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 133610,
+                     "stats": [
+                        "haste",
+                        "mastery"
+                     ],
+                     "slot": "legs",
+                     "type": "cloth",
+                     "imglink": "inv_pant_cloth_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 139280,
+                     "stats": [
+                        "verse",
+                        "crit"
+                     ],
+                     "slot": "feet",
+                     "type": "cloth",
+                     "imglink": "inv_boot_cloth_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 133647,
+                     "stats": [
+                        "mastery"
+                     ],
+                     "slot": "trinket",
+                     "type": "tank",
+                     "imglink": "ability_priest_flashoflight.jpg"
+                  }
+               ]
+            }
          ]
       },
       {
          "dungeon_name": "Court of Stars",
          "bosses": [
-            {}
+            {
+               "name": "Patrol Captain Gerdo",
+               "imglink": "ui-ej-boss-patrol-captain-gerdo.png",
+               "drops": [
+                  {
+                     "id": 134480,
+                     "stats": [
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "shoulder",
+                     "type": "mail",
+                     "imglink": "inv_shoulder_mail_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 137483,
+                     "stats": [
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "back",
+                     "type": "all",
+                     "imglink": "inv_cape_leather_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 134415,
+                     "stats": [
+                        "haste",
+                        "mastery"
+                     ],
+                     "slot": "chest",
+                     "type": "cloth",
+                     "imglink": "inv_robe_cloth_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 137480,
+                     "stats": [
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "hands",
+                     "type": "leather",
+                     "imglink": "inv_glove_leather_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 137482,
+                     "stats": [
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "feet",
+                     "type": "plate",
+                     "imglink": "inv_boot_plate_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 137484,
+                     "stats": [
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "feet",
+                     "type": "plate",
+                     "imglink": "inv_alchemy_crystalvial.jpg"
+                  }
+               ]
+            },
+            {
+               "name": "Talixae Flamewreath",
+               "imglink": "ui-ej-boss-talixae-flamewreath.png",
+               "drops": [
+                  {
+                     "id": 201994,
+                     "stats": [
+                        "verse",
+                        "mastery"
+                     ],
+                     "slot": "weapon",
+                     "type": "ranged",
+                     "imglink": "inv_bow_2h_crossbow_felfireraid_d_01.jpg"
+                  },
+                  {
+                     "id": 134473,
+                     "stats": [
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "head",
+                     "type": "mail",
+                     "imglink": "inv_helm_mail_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 134529,
+                     "stats": [
+                        "haste",
+                        "verse"
+                     ],
+                     "slot": "neck",
+                     "type": "all",
+                     "imglink": "inv_7_0raid_necklace_13d.jpg"
+                  },
+                  {
+                     "id": 134503,
+                     "stats": [
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "chest",
+                     "type": "plate",
+                     "imglink": "inv_chest_plate_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 137488,
+                     "stats": [
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "waist",
+                     "type": "cloth",
+                     "imglink": "inv_cloth_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 134460,
+                     "stats": [
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "legs",
+                     "type": "leather",
+                     "imglink": "inv_pant_leather_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 137485,
+                     "stats": [
+                        "crit"
+                     ],
+                     "slot": "trinket",
+                     "type": "int",
+                     "imglink": "inv_scroll_09.jpg"
+                  }
+               ]
+            },
+            {
+               "name": "Advisor Melandrus",
+               "imglink": "ui-ej-boss-advisor-melandrus.png",
+               "drops": [
+                  {
+                     "id": 201995,
+                     "stats": [
+                        "haste",
+                        "mastery"
+                     ],
+                     "slot": "weapon",
+                     "type": "agi2hstaff",
+                     "imglink": "inv_staff_2h_draenorchallenge_d_01.jpg"
+                  },
+                  {
+                     "id": 201996,
+                     "stats": [
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "weapon",
+                     "type": "str1hsword",
+                     "imglink": "inv_sword_156.jpg"
+                  },
+                  {
+                     "id": 134513,
+                     "stats": [
+                        "haste",
+                        "mastery"
+                     ],
+                     "slot": "head",
+                     "type": "plate",
+                     "imglink": "inv_helm_plate_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 134447,
+                     "stats": [
+                        "verse",
+                        "mastery"
+                     ],
+                     "slot": "head",
+                     "type": "leather",
+                     "imglink": "inv_helm_leather_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 137487,
+                     "stats": [
+                        "verse",
+                        "mastery"
+                     ],
+                     "slot": "neck",
+                     "type": "all",
+                     "imglink": "inv_7_0raid_necklace_12b.jpg"
+                  },
+                  {
+                     "id": 134432,
+                     "stats": [
+                        "haste",
+                        "crit"
+                     ],
+                     "slot": "shoulder",
+                     "type": "cloth",
+                     "imglink": "inv_shoulder_cloth_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 137498,
+                     "stats": [
+                        "verse",
+                        "mastery"
+                     ],
+                     "slot": "chest",
+                     "type": "mail",
+                     "imglink": "inv_chest_mail_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 137489,
+                     "stats": [
+                        "haste",
+                        "crit"
+                     ],
+                     "slot": "waist",
+                     "type": "mail",
+                     "imglink": "inv_belt_mail_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 137499,
+                     "stats": [
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "waist",
+                     "type": "plate",
+                     "imglink": "inv_belt_plate_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 137496,
+                     "stats": [
+                        "haste",
+                        "verse"
+                     ],
+                     "slot": "legs",
+                     "type": "cloth",
+                     "imglink": "inv_pant_cloth_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 137497,
+                     "stats": [
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "feet",
+                     "type": "leather",
+                     "imglink": "inv_boot_leather_legiondungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 134542,
+                     "stats": [
+                        "haste",
+                        "crit"
+                     ],
+                     "slot": "ring",
+                     "type": "all",
+                     "imglink": "inv_70_dungeon_ring7d.jpg"
+                  },
+                  {
+                     "id": 137486,
+                     "stats": [
+                        "mastery"
+                     ],
+                     "slot": "trinket",
+                     "type": "melee",
+                     "imglink": "creatureportrait_altarofair_01.jpg"
+                  }
+               ]
+            }
          ]
       },
       {
@@ -2312,28 +2981,212 @@
                "name": "Sadana Bloodfury",
                "imglink": "ui-ej-boss-sadana-bloodfury.png",
                "drops": [
-                  
+                  {
+                     "id": 110035,
+                     "stats": [
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "off-hand",
+                     "type": "intoffhand",
+                     "imglink": "inv_offhand_1h_draenordungeon_c_01.jpg"
+                  }
                ]
             },
             {
                "name": "Nhallish",
                "imglink": "ui-ej-boss-nhallish-feaster-of-souls.png",
                "drops": [
-                  
+                  {
+                     "id": 110036,
+                     "stats": [
+                        "crit",
+                        "mastery"
+                     ],
+                     "slot": "weapon",
+                     "type": "str2hpolearm",
+                     "imglink": "inv_polearm_2h_draenordungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 109899,
+                     "stats": [
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "chest",
+                     "type": "cloth",
+                     "imglink": "inv_cloth_draenordungeon_c_01robe.jpg"
+                  },
+                  {
+                     "id": 109888,
+                     "stats": [
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "chest",
+                     "type": "mail",
+                     "imglink": "inv_chest_mail_draenordungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 109864,
+                     "stats": [
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "wrist",
+                     "type": "cloth",
+                     "imglink": "inv_cloth_draenordungeon_c_01bracer.jpg"
+                  },
+                  {
+                     "id": 109878,
+                     "stats": [
+                        "verse",
+                        "haste"
+                     ],
+                     "slot": "wrist",
+                     "type": "plate",
+                     "imglink": "inv_bracer_plate_draenordungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 109873,
+                     "stats": [
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "wrist",
+                     "type": "mail",
+                     "imglink": "inv_bracer_mail_draenordungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 110007,
+                     "stats": [
+                        "crit"
+                     ],
+                     "slot": "trinket",
+                     "type": "int",
+                     "imglink": "inv_polearm_2h_draenordungeon_c_01.jpg"
+                  }
                ]
             },
             {
                "name": "Bonemaw",
                "imglink": "ui-ej-boss-bonemaw.png",
                "drops": [
-                 
+                  {
+                     "id": 110037,
+                     "stats": [
+                        "crit",
+                        "verse"
+                     ],
+                     "slot": "weapon",
+                     "type": "ranged",
+                     "imglink": "inv_bow_1h_draenordungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 109858,
+                     "stats": [
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "hands",
+                     "type": "plate",
+                     "imglink": "inv_glove_plate_draenordungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 109829,
+                     "stats": [
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "waist",
+                     "type": "leather",
+                     "imglink": "inv_leather_draenordungeon_c_01belt.jpg"
+                  },
+                  {
+                     "id": 110012,
+                     "stats": [
+                        "crit"
+                     ],
+                     "slot": "trinket",
+                     "type": "strdps",
+                     "imglink": "inv_leather_draenordungeon_c_01belt.jpg"
+                  }
                ]
             },
             {
                "name": "Ner'zhul",
                "imglink": "ui-ej-boss-nerzhul.png",
                "drops": [
-                  
+                  {
+                     "id": 110039,
+                     "stats": [
+                        "crit",
+                        "haste"
+                     ],
+                     "slot": "weapon",
+                     "type": "int2hstaff",
+                     "imglink": "inv_staff_2h_draenordungeon_c_03.jpg"
+                  },
+                  {
+                     "id": 110038,
+                     "stats": [
+                        "haste",
+                        "mastery"
+                     ],
+                     "slot": "weapon",
+                     "type": "agidagger",
+                     "imglink": "inv_knife_1h_draenordungeon_c_02.jpg"
+                  },
+                  {
+                     "id": 109987,
+                     "stats": [
+                        "verse",
+                        "crit"
+                     ],
+                     "slot": "head",
+                     "type": "plate",
+                     "imglink": "inv_helm_draenordungeon_c_01.jpg"
+                  },
+                  {
+                     "id": 109970,
+                     "stats": [
+                        "mastery",
+                        "crit"
+                     ],
+                     "slot": "head",
+                     "type": "cloth",
+                     "imglink": "inv_cloth_draenordungeon_c_01helm.jpg"
+                  },
+                  {
+                     "id": 109787,
+                     "stats": [
+                        "mastery",
+                        "crit"
+                     ],
+                     "slot": "feet",
+                     "type": "leather",
+                     "imglink": "inv_leather_draenordungeon_c_01boot.jpg"
+                  },
+                  {
+                     "id": 109784,
+                     "stats": [
+                        "mastery",
+                        "crit"
+                     ],
+                     "slot": "feet",
+                     "type": "cloth",
+                     "imglink": "inv_cloth_draenordungeon_c_01boot.jpg"
+                  },
+                  {
+                     "id": 109784,
+                     "stats": [
+                        "mastery",
+                        "crit"
+                     ],
+                     "slot": "feet",
+                     "type": "cloth",
+                     "imglink": "inv_boot_mail_draenordungeon_c_01.jpg"
+                  }
                ]
             }
          ]
@@ -2355,7 +3208,7 @@
                      ],
                      "slot": "feet",
                      "type": "leather",
-                     "imglink": "nv_boots_leather_dungeonleather_c_06.jpg"
+                     "imglink": "inv_boots_leather_dungeonleather_c_06.jpg"
                   },
                   {
                      "id": 81075,
@@ -2651,17 +3504,6 @@
                      "slot": "hands",
                      "type": "cloth",
                      "imglink": "inv_gauntlets_cloth_dungeoncloth_c_06.jpg"
-                  },
-                  {
-                     "id": 87544,
-                     "stats": [
-                        "int",
-                        "mastery",
-                        "haste"
-                     ],
-                     "slot": "weapon",
-                     "type": "int1hmace",
-                     "imglink": "inv_mace_1h_pandung_c_02.jpg"
                   }
                ]
             }
@@ -3316,7 +4158,7 @@
                         "haste",
                         "mastery"
                      ],
-                     "slot": "wrist",
+                     "slot": "waist",
                      "type": "cloth",
                      "imglink": "inv_belt_cloth_raidwarlockprimalist_d_01.jpg"
                   },
