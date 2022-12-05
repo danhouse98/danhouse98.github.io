@@ -875,14 +875,14 @@ function dungeonHider() {
 
     //check map at end and hide all bosses where value == 0;
     itemsShownPerBoss.forEach((value, key) => {
-        if(document.getElementById(value)!= null){
-        if (key == 0) {
-            document.getElementById(value).style.display = "none";
+        if (document.getElementById(value) != null) {
+            if (key == 0) {
+                document.getElementById(value).style.display = "none";
+            } else {
+                document.getElementById(value).style.display = "block";
+            }
         } else {
-            document.getElementById(value).style.display = "block";
+            console.log("Invalid dungeonID: " + value);
         }
-    } else{
-        console.log("Invalid dungeonID: " + value);
-    }
     })
 }
