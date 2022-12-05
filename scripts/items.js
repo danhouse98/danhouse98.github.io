@@ -960,7 +960,6 @@ function dungeonHiderRadioCheck() {
 //execute functions needed for proper starting page state
 $(window).load(function () {
         statUpdate();
-        slotUpdate();
         clearStatFilter();
     }
 );
