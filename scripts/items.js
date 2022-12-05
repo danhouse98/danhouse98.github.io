@@ -25,7 +25,7 @@ const filteredItemArray = []; //Holds filted Item objects based on classPanel
 const currentTags = []; //Holds tags defined but currently selected subclass
 const indexMap = new Map(); //Key: Dungeon Name, Val: html ID for each dungeon <div>
 const itemsShownPerBoss = new Map(); //Key: bossHtmlId, Val: # of items being shown currently for boss
-const dungeonDisplayFlags = new Map(); //Key: dungeonHtmlId, Val: "none" or "block" depending on display status
+const dungeonDisplayFlags = new Map(); //Key: dungeonHtmlId, Val: "none" or "grid" depending on display status
 var classCounter = 0; //Counts number of classes
 var dungeonCounter = 0; //Counts number of dungeons
 
@@ -913,7 +913,7 @@ function dungeonHider() {
                 }
             } else { //if this dungeon has entries
                 document.getElementById(key).style.display = "grid"; //display as grid to keep integrity of layout
-                dungeonDisplayFlags.set(dungeonID, "block");
+                dungeonDisplayFlags.set(dungeonID, "grid"); //display as grid to keep integrity of layout
             }
         } else {
             console.log("Invalid ID:" + key);
@@ -921,7 +921,7 @@ function dungeonHider() {
     });
 
     //Check each dungeon in map and show or hide
-    dungeonDisplayFlags.forEach((value, key) => { //Key: dungeonID, val: "none" or "block"
+    dungeonDisplayFlags.forEach((value, key) => { //Key: dungeonID, val: "none" or "grid"
         document.getElementById(key).style.display = value;
     })
 
