@@ -217,7 +217,7 @@ $(document).ready(function () {
 window.addEventListener("DOMContentLoaded", function () {
     document.getElementById("classDropdown").addEventListener("change", function () {
         //returns value of the selected class
-        var classElementValue = document.getElementById("classDropdown").tag;
+        var classElementValue = document.getElementById("classDropdown").dataset.tag;
 
 
         for (var i = 0; i < classCounter; i++) {
