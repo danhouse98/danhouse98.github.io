@@ -860,7 +860,7 @@ function dungeonHider() {
 
         //check if item.style.display is "block"
         //if item is showing and slot the item is in is not hidden
-        if (document.getElementById(itemArray[i].id).style.display == "block" && trElement.style.display != "none") {
+        if (document.getElementById(itemArray[i].id).style.display == "block" && tdElement.style.display != "none") {
             if (itemsShownPerBoss.has(bossElementID)) {
                 var currentCount = itemsShownPerBoss.get(bossElementID) + 1;
                 itemsShownPerBoss.set(bossElementID, currentCount);
