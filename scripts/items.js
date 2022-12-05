@@ -885,9 +885,10 @@ function dungeonHider() {
         //add up itemsShownPerBoss into showDungeonFlags
         var lastCharOfElementID = "";
         var dungeonID = key; //dungeonID, yet to be extracted
-        for (var i = -1; lastCharOfElementID !== "."; i--) {
-            lastCharOfElementID = dungeonID.slice(i);
-            dungeonID = dungeonID.slice(0, i);
+        for (var i = 1; lastCharOfElementID !== "."; i++) {
+            var index = i *-1;
+            lastCharOfElementID = dungeonID.slice(index);
+            dungeonID = dungeonID.slice(0, index);
         }// we now have the properDungeonID
 
         //complete check for if to display or hide boss <div>
