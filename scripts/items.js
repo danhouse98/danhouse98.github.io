@@ -964,4 +964,4 @@ function startupProcedure() {
 }
 
 //listener for startupProcedure()
-window.addEventListener("load", startupProcedure, false);
+window.addEventListener("DOMContentLoaded", startupProcedure, false);
