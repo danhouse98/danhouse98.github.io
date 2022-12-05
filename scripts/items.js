@@ -594,7 +594,7 @@ function subclassListener() {
     //retrieves selected class
     var selectedClass = document.getElementById("classDropdown").value;
     //retrieves selected subclass
-    var selectedSubclass = $(this).attr('value');
+    var selectedSubclass = document.getELementById(selectedClass).value;
 
     //if subclass is selected
     if (selectedSubclass != "none") {
@@ -862,10 +862,11 @@ function subclassListener() {
         //show only filtered items
         showFilteredItems();
     } else { //if no subclass is selected show all items
+        console.log("Nothing to filter!")
         styleAllItems('block');
     }
 };
 
 for(var i = 0; i < subclassSet.length; i++){
-    subclassSet[i].addEventListener('click', subclassListener, false);
+    subclassSet[i].addEventListener('change', subclassListener, false);
 }
