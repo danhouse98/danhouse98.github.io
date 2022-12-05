@@ -558,7 +558,7 @@ function subclassListener() {
     //retrieves selected class
     var selectedClass = document.getElementById("classDropdown").value;
     //retrieves selected subclass
-    var selectedSubclass = document.getELementById(selectedClass).value;
+    var selectedSubclass = document.getElementById(selectedClass).value;
 
     //if subclass is selected
     if (selectedSubclass != "none") {
