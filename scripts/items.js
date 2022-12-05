@@ -474,7 +474,7 @@ function showMythic0() {
         element.style.display = "block";
     }
 
-    dungeonHiderRadioCheck()
+    dungeonHider();
 }
 
 //Funciton for Season 1 radio button
@@ -486,7 +486,7 @@ function showSeason1() {
         element.style.display = "block";
     }
 
-    dungeonHiderRadioCheck()
+    dungeonHider();
 }
 
 //Function for Raid 1 radio button
@@ -496,7 +496,7 @@ function showRaid1() {
     var element = document.getElementById(id);
     element.style.display = "block";
 
-    dungeonHiderRadioCheck()
+    dungeonHider();
 }
 
 //Hides all dungeon elements
@@ -516,7 +516,7 @@ function showAllDungeons() {
         element.style.display = "block";
     }
 
-    dungeonHiderRadioCheck()
+    dungeonHider();
 }
 
 //Resets stat filtering
@@ -956,10 +956,3 @@ function dungeonHiderRadioCheck() {
         }
     }
 }
-
-//execute functions needed for proper starting page state
-$(window).load(function () {
-        statUpdate();
-        clearStatFilter();
-    }
-);
