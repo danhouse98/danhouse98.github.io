@@ -176,7 +176,7 @@ $(document).ready(function () {
     //builds class dropboxes
     $.each(classes.classList, function (i, elementText) {
         classHTML += "<option data-class-name ='" + elementText.class + "' value='class" + classCounter + "'>" + elementText.class + "</option>";
-        var subclassHTML = "<select name='" + elementText.class + "' id = 'class" + classCounter + "'>" +
+        var subclassHTML = "<select name='" + elementText.class + "' id = 'class" + classCounter + "' class ='subclassBox'>" +
             "<option value='none'>Select Subclass</option>";
 
         //builds subclass dropboxes, one dropbox for each class
@@ -582,9 +582,12 @@ function showFilteredItems() {
     }
 }
 
-//TODO Fill out switches
+//get all subclass dropdown elements to add listeners to
+var subclassSet = document.getElementsByClassName("subclassBox");
+
+
 //fills filteredItemArray based on selected class
-$("a.subclass").on('change', function () {
+function subclassListener() {
     //empties array
     filteredItemArray.length = 0;
     currentTags.length = 0;
@@ -809,9 +812,9 @@ $("a.subclass").on('change', function () {
             //case"Protection": found under warrior
             case "Retribution":
                 var tags = ['all', 'plate', 'str', 'agistr', 'strdps', 'agistrdps', 'meleedps', 'str2hsword', 'str2haxe', 'str2hmace', 'str2hpolearm']; //tags for subclass
-                    for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
-                        currentTags.push(tags[i]);
-                    }
+                for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                    currentTags.push(tags[i]);
+                }
                 break;
 
             //Warlock
@@ -833,7 +836,7 @@ $("a.subclass").on('change', function () {
                 }
                 break;
             case "Preservation":
-                var tags = ['all', 'mail', 'int', 'intagi', 'healer', 'int1hsword', 'intdagger','intmace', 'int2hstaff', 'intoffhand', 'evoker'];
+                var tags = ['all', 'mail', 'int', 'intagi', 'healer', 'int1hsword', 'intdagger', 'intmace', 'int2hstaff', 'intoffhand', 'evoker'];
                 for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
                     currentTags.push(tags[i]);
                 }
@@ -861,4 +864,8 @@ $("a.subclass").on('change', function () {
     } else { //if no subclass is selected show all items
         styleAllItems('block');
     }
-});
+};
+
+for(var i = 0; i < subclassSet.length; i++){
+    subclassSet[i].addEventListener('click', subclassListener, false);
+}
