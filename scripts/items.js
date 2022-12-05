@@ -888,7 +888,7 @@ function dungeonHider() {
         var dungeonID = key; //dungeonID, yet to be extracted
         for (var i = 1; lastCharOfElementID != "." && dungeonID.length != 0; i++) {
             var index = i *-1;
-            lastCharOfElementID = dungeonID.slice(index);
+            lastCharOfElementID = dungeonID.slice(-1);
             dungeonID = dungeonID.slice(0, index);
         }// we now have the properDungeonID
         console.log("DungeonID:" + dungeonID);
