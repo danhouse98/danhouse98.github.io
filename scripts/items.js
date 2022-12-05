@@ -845,6 +845,7 @@ function subclassBatch() {
     }
 }
 
+//listener for subclassBatch
 window.addEventListener("load", subclassBatch, false);
 
 //automatically shows and hides dungeons based on if there is currently something shown via filter
@@ -885,7 +886,7 @@ function dungeonHider() {
         //add up itemsShownPerBoss into showDungeonFlags
         var lastCharOfElementID = "";
         var dungeonID = key; //dungeonID, yet to be extracted
-        for (var i = 1; lastCharOfElementID !== "." && dungeonID.length != 0; i++) {
+        for (var i = 1; lastCharOfElementID != "." && dungeonID.length != 0; i++) {
             var index = i *-1;
             lastCharOfElementID = dungeonID.slice(index);
             dungeonID = dungeonID.slice(0, index);
