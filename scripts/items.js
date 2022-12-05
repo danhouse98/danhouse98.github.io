@@ -899,7 +899,8 @@ function dungeonHider() {
             lastCharOfElementID = dungeonID.slice(-1);
             dungeonID = dungeonID.slice(0, -1);
         }// we now have the properDungeonID
-        console.log("DungeonID:" + dungeonID);
+
+        //console.log("DungeonID:" + dungeonID);
 
         //complete check for if to display or hide boss <div>
         if (document.getElementById(key) != null) {
@@ -957,11 +958,9 @@ function dungeonHiderRadioCheck() {
 }
 
 //execute functions needed for proper starting page state
-function startupProcedure() {
-    statUpdate();
-    slotUpdate();
-    clearStatFilter();
-}
-
-//listener for startupProcedure()
-window.addEventListener("DOMContentLoaded", startupProcedure, false);
+$(window).load(function () {
+        statUpdate();
+        slotUpdate();
+        clearStatFilter();
+    }
+);
