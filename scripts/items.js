@@ -219,7 +219,6 @@ window.addEventListener("DOMContentLoaded", function () {
         //returns value of the selected class
         var classElementValue = document.getElementById("classDropdown").value;
 
-
         for (var i = 0; i < classCounter; i++) {
             var id = "class" + i;
             //console.log(id);
