@@ -926,6 +926,7 @@ function dungeonHider() {
 }
 
 function dungeonHiderRadioCheck(){
+    hideAllDungeons();
     if($('#all').is(checked)){ //Show all if true
         //for each dungeonDisplayFlags show dungeon if value == block
         dungeonDisplayFlags.forEach((value, key) =>{ //Key: dungeonID value: "block" or "none"
