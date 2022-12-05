@@ -25,7 +25,7 @@ const filteredItemArray = []; //Holds filted Item objects based on classPanel
 const currentTags = []; //Holds tags defined but currently selected subclass
 const indexMap = new Map(); //Key: Dungeon Name, Val: html ID for each dungeon <div>
 const itemsShownPerBoss = new Map(); //Key: bossHtmlId, Val: # of items being shown currently for boss
-const showDungeonFlags = new Map(); //Key: dungeonHtmlId, Val: "none" or "block" depending on display status
+const dungeonDisplayFlags = new Map(); //Key: dungeonHtmlId, Val: "none" or "block" depending on display status
 var classCounter = 0; //Counts number of classes
 var dungeonCounter = 0; //Counts number of dungeons
 
@@ -472,6 +472,8 @@ function showMythic0() {
         var element = document.getElementById(id);
         element.style.display = "block";
     }
+
+    dungeonHiderRadioCheck()
 }
 
 //Funciton for Season 1 radio button
@@ -482,6 +484,8 @@ function showSeason1() {
         var element = document.getElementById(id);
         element.style.display = "block";
     }
+
+    dungeonHiderRadioCheck()
 }
 
 //Function for Raid 1 radio button
@@ -490,6 +494,8 @@ function showRaid1() {
     var id = indexMap.get(raids[0]);
     var element = document.getElementById(id);
     element.style.display = "block";
+
+    dungeonHiderRadioCheck()
 }
 
 //Hides all dungeon elements
@@ -508,6 +514,8 @@ function showAllDungeons() {
         var element = document.getElementById(id);
         element.style.display = "block";
     }
+
+    dungeonHiderRadioCheck()
 }
 
 //Resets stat filtering
@@ -851,7 +859,7 @@ window.addEventListener("load", subclassBatch, false);
 //automatically shows and hides dungeons based on if there is currently something shown via filter
 function dungeonHider() {
     itemsShownPerBoss.clear();
-    showDungeonFlags.clear();
+    dungeonDisplayFlags.clear();
     //get items via our arrays and get parent boss element with dom controls
     for (var i = 0; i < itemArray.length; i++) {
         var tdElement = document.getElementById(itemArray[i].id).parentElement; //td our item sits in
@@ -880,10 +888,10 @@ function dungeonHider() {
     }
 
     //check map at end and hide all bosses where value == 0;
-    //then add up the total to map showDungeonFlags
+    //then add up the total to map dungeonDisplayFlags
     itemsShownPerBoss.forEach((value, key) => {
 
-        //add up itemsShownPerBoss into showDungeonFlags
+        //add up itemsShownPerBoss into dungeonDisplayFlags
         var lastCharOfElementID = "";
         var dungeonID = key; //dungeonID, yet to be extracted
         for (var i = 1; lastCharOfElementID != "." && dungeonID.length != 0; i++) {
@@ -896,13 +904,13 @@ function dungeonHider() {
         if (document.getElementById(key) != null) {
             if (value == 0) { //if we have no entries
                 document.getElementById(key).style.display = "none";
-                if(showDungeonFlags.has(dungeonID)){ //if true check do nothing
+                if(dungeonDisplayFlags.has(dungeonID)){ //if true check do nothing
                 } else{ //if no entry, Map(Key, "none")
-                    showDungeonFlags.set(dungeonID, "none");
+                    dungeonDisplayFlags.set(dungeonID, "none");
                 }
             } else { //if this dungeon has entries
                 document.getElementById(key).style.display = "grid"; //display as grid to keep integrity of layout
-                showDungeonFlags.set(dungeonID, "block");
+                dungeonDisplayFlags.set(dungeonID, "block");
             }
         } else {
             console.log("Invalid ID:" + key);
@@ -910,7 +918,38 @@ function dungeonHider() {
     });
 
     //Check each dungeon in map and show or hide
-    showDungeonFlags.forEach((value, key)=>{ //Key: dungeonID, val: "none" or "block"
+    dungeonDisplayFlags.forEach((value, key)=>{ //Key: dungeonID, val: "none" or "block"
         document.getElementById(key).style.display = value;
     })
+
+    dungeonHiderRadioCheck();
+}
+
+function dungeonHiderRadioCheck(){
+    if($('#all').is(checked)){ //Show all if true
+        //for each dungeonDisplayFlags show dungeon if value == block
+        dungeonDisplayFlags.forEach((value, key) =>{ //Key: dungeonID value: "block" or "none"
+            document.getElementById(value).style.display = key;
+        })
+
+    }else if($('#mythic0').is(checked)){//show m0 dungeons if true
+        //for each dungeon in mythic 0, get id from indexMap and use this id to display with dungeonDisplayFlags
+        for(var i= 0; i < mythic0.length; i++){
+            var dungeonID = indexMap.get(mythic0[i]);
+            document.getElementById(dungeonID).style.display = dungeonDisplayFlags.get(dungeonID);
+        }
+
+    }else if($('#season1').is(checked)){//show season1 dungeons if true
+        //for each dungeon in season1MythicPlus, get id from indexMap and use this id to display with dungeonDisplayFlags
+        for(var i= 0; i < mythic0.length; i++){
+            var dungeonID = indexMap.get(season1MythicPlus[i]);
+            document.getElementById(dungeonID).style.display = dungeonDisplayFlags.get(dungeonID);
+        }
+    }else if($('#raid1').is(checked)){ //show raid1 if true
+        //for each dungeon in raids, get id from indexMap and use this id to display with dungeonDisplayFlags
+        for(var i= 0; i < raids.length; i++){
+            var dungeonID = indexMap.get(raids[i]);
+            document.getElementById(dungeonID).style.display = dungeonDisplayFlags.get(dungeonID);
+        }
+    }
 }
