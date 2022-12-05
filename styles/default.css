@@ -19,6 +19,7 @@ h2{
     background-color: #373a3c99;
     display: grid;
     margin-top:1em;
+    border-radius: 1em;
 }
 
 .boss {
