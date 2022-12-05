@@ -167,6 +167,7 @@ $(document).ready(function () {
                 });
                 //console.log([...indexMap.entries()]);
             });
+            styleAllItems('block'); //show all items as "block"
         }
     });
 });
