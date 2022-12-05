@@ -259,6 +259,7 @@ function slotUpdate() {
             }
         }
     }
+    dungeonHider();
 }
 
 //Reads statPanel and hides & shows items based on the input
@@ -858,8 +859,8 @@ function dungeonHider() {
         var bossElementID = bossElement.id;
 
         //check if item.style.display is "block"
-        //iterate and check id and add to map
-        if (document.getElementById(itemArray[i].id).style.display == "block") {
+        //if item is showing and slot the item is in is not hidden
+        if (document.getElementById(itemArray[i].id).style.display == "block" && trElement.style.display != "none") {
             if (itemsShownPerBoss.has(bossElementID)) {
                 var currentCount = itemsShownPerBoss.get(bossElementID) + 1;
                 itemsShownPerBoss.set(bossElementID, currentCount);
