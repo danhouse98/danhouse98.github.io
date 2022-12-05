@@ -260,6 +260,7 @@ function slotUpdate() {
             }
         }
     }
+
     dungeonHider();
 }
 
@@ -927,26 +928,26 @@ function dungeonHider() {
 
 function dungeonHiderRadioCheck(){
     hideAllDungeons();
-    if($('#all').is(checked)){ //Show all if true
+    if($('#all').is(':checked')){ //Show all if true
         //for each dungeonDisplayFlags show dungeon if value == block
         dungeonDisplayFlags.forEach((value, key) =>{ //Key: dungeonID value: "block" or "none"
-            document.getElementById(value).style.display = key;
+            document.getElementById(key).style.display = value;
         })
 
-    }else if($('#mythic0').is(checked)){//show m0 dungeons if true
+    }else if($('#mythic0').is(':checked')){//show m0 dungeons if true
         //for each dungeon in mythic 0, get id from indexMap and use this id to display with dungeonDisplayFlags
         for(var i= 0; i < mythic0.length; i++){
             var dungeonID = indexMap.get(mythic0[i]);
             document.getElementById(dungeonID).style.display = dungeonDisplayFlags.get(dungeonID);
         }
 
-    }else if($('#season1').is(checked)){//show season1 dungeons if true
+    }else if($('#season1').is(':checked')){//show season1 dungeons if true
         //for each dungeon in season1MythicPlus, get id from indexMap and use this id to display with dungeonDisplayFlags
         for(var i= 0; i < mythic0.length; i++){
             var dungeonID = indexMap.get(season1MythicPlus[i]);
             document.getElementById(dungeonID).style.display = dungeonDisplayFlags.get(dungeonID);
         }
-    }else if($('#raid1').is(checked)){ //show raid1 if true
+    }else if($('#raid1').is(':checked')){ //show raid1 if true
         //for each dungeon in raids, get id from indexMap and use this id to display with dungeonDisplayFlags
         for(var i= 0; i < raids.length; i++){
             var dungeonID = indexMap.get(raids[i]);
