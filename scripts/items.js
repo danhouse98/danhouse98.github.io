@@ -175,7 +175,7 @@ $(document).ready(function () {
 
     //builds class dropboxes
     $.each(classes.classList, function (i, elementText) {
-        classHTML += "<option value ='" + elementText.class + "' data-class-tag='class" + classCounter + "'>" + elementText.class + "</option>";
+        classHTML += "<option value ='" + elementText.class + "' data-tag='class" + classCounter + "'>" + elementText.class + "</option>";
         var subclassHTML = "<select name='" + elementText.class + "' id = 'class" + classCounter + "'>" +
             "<option value='none'>Select Subclass</option>";
 
@@ -217,7 +217,7 @@ $(document).ready(function () {
 window.addEventListener("DOMContentLoaded", function () {
     document.getElementById("classDropdown").addEventListener("change", function () {
         //returns value of the selected class
-        var classElementValue = document.getElementById("classDropdown").class-tag;
+        var classElementValue = document.getElementById("classDropdown").tag;
 
 
         for (var i = 0; i < classCounter; i++) {
