@@ -583,3 +583,282 @@ function showFilteredItems() {
 }
 
 //TODO Fill out switches
+//fills filteredItemArray based on selected class
+$("a.subclass").on('change', function () {
+    //empties array
+    filteredItemArray.length = 0;
+    currentTags.length = 0;
+    //retrieves selected class
+    var selectedClass = document.getElementById("classDropdown").value;
+    //retrieves selected subclass
+    var selectedSubclass = $(this).attr('value');
+
+    //if subclass is selected
+    if (selectedSubclass != "none") {
+        switch (selectedSubclass) {
+            //Shamman 
+            case "Elemental":
+                var tags = ['all', 'mail', 'int', 'intagi', 'intdamage', 'rangeddps', 'int1hmace', 'intdagger', 'int2hstaff', 'intoffhand', 'shield']; //tags for subclass
+                for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                    currentTags.push(tags[i]);
+                }
+                break; //end case
+            case "Enhancement":
+                var tags = ['all', 'mail', 'agi', 'intagi', 'agistr', 'agistrdps', 'agidps', 'meleedps', 'agi1haxe', 'agifist', 'agi1hmace']; //tags for subclass
+                for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                    currentTags.push(tags[i]);
+                }
+                break; //end case
+            case "Restoration": //Shaman and Druid Check
+                if (selectedClass === "class0") { //Resto Shamman
+                    var tags = ['all', 'mail', 'int', 'intagi', 'healer', 'int1hmace', 'intdagger', 'int2hstaff', 'intoffhand', 'shield']; //tags for subclass
+                    for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                        currentTags.push(tags[i]);
+                    }
+                } else if (selectedClass === "class7") { //Resto Druid
+                    var tags = ['all', 'leather', 'int', 'intagi', 'healer', 'int1hmace', 'int2hmace', 'int2hstaff', 'intoffhand', 'shield']; //tags for subclass
+                    for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                        currentTags.push(tags[i]);
+                    }
+                }
+                break;
+
+            //Death Knight
+            case "Blood":
+                var tags = ['all', 'plate', 'str', 'agistr', 'tank', 'str2hsword', 'str2haxe', 'str2hmace', 'str2hpolearm']; //tags for subclass
+                for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                    currentTags.push(tags[i]);
+                }
+                break;
+            case "Frost": //dk and mage case
+                if (selectedClass === "class1") { //dk case
+                    var tags = ['all', 'plate', 'str', 'agistr', 'strdps', 'meleedps', 'str2hsword', 'str2haxe', 'str2hmace', 'str2hpolearm', 'str1haxe', 'str1hmace', 'str1hsword']; //tags for subclass
+                    for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                        currentTags.push(tags[i]);
+                    }
+                } else if (selectedClass === "class5") { //mage case
+                    var tags = ['all', 'cloth', 'int', 'intagi', 'intdamage', 'rangeddps', 'intdagger', 'int1hsword', 'int2hstaff', 'intoffhand', 'intwand'];
+                    for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                        currentTags.push(tags[i]);
+                    }
+                }
+                break;
+            case "Unholy":
+                var tags = ['all', 'plate', 'str', 'agistr', 'strdps', 'meleedps', 'str2hsword', 'str2haxe', 'str2hmace', 'str2hpolearm']; //tags for subclass
+                for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                    currentTags.push(tags[i]);
+                }
+                break;
+
+            //Monk
+            case "Mistweaver":
+                var tags = ['all', 'leather', 'int', 'intagi', 'healer', 'int2hstaff', 'int2hpolearm', 'intoffhand', 'int1hmace']; //tags for subclass
+                for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                    currentTags.push(tags[i]);
+                }
+                break;
+            case "Brewmaster":
+                var tags = ['all', 'leather', 'agi', 'intagi', 'tank', 'agi2hstaff', 'agi2hpolearm', 'agi1hmace', 'agi1haxe', 'agi1hsword']; //tags for subclass
+                for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                    currentTags.push(tags[i]);
+                }
+                break;
+            case "Windwalker":
+                var tags = ['all', 'leather', 'agi', 'intagi', 'agidps', 'agistrdps', 'meleedps', 'agi2hstaff', 'agi2hpolearm', 'agi1hmace', 'agi1haxe', 'agi1hsword']; //tags for subclass
+                for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                    currentTags.push(tags[i]);
+                }
+                break;
+
+
+            //Demon Hunter
+            case "Havoc":
+                var tags = ['all', 'leather', 'agi', 'intagi', 'agistr', 'agidps', 'agistrdps', 'meleedps', 'agi1haxe', 'agifist', 'agi1hsword', 'warglaive']; //tags for subclass
+                for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                    currentTags.push(tags[i]);
+                }
+                break;
+            case "Vengence":
+                var tags = ['all', 'leather', 'agi', 'intagi', 'agistr', 'tank', 'agi1haxe', 'agifist', 'agi1hsword', 'warglaive']; //tags for subclass
+                for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                    currentTags.push(tags[i]);
+                }
+                break;
+
+
+            //Warrior
+            case "Protection": //warrior and paladin case
+                //1hsword 1haxe 2hsword 2haxe 1hmace 1hsword polearms
+                if (selectedClass === "class4") { //warrior case
+                    var tags = ['all', 'plate', 'str', 'agistr', 'tank', 'str1haxe', 'str1hmace', 'str1hsword', 'shield']; //tags for subclass
+                    for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                        currentTags.push(tags[i]);
+                    }
+                } else if (selectedClass === "class10") { //paladin case
+                    var tags = ['all', 'plate', 'str', 'agistr', 'strdps', 'tank', 'str1haxe', 'str1hmace', 'str1hsword', 'shield']; //tags for subclass
+                    for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                        currentTags.push(tags[i]);
+                    }
+                }
+                break;
+            case "Arms":
+                var tags = ['all', 'plate', 'str', 'agistr', 'strdps', 'meleedps', 'str2hsword', 'str2haxe', 'str2hmace', 'str2hpolearm']; //tags for subclass
+                for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                    currentTags.push(tags[i]);
+                }
+                break;
+            case "Fury":
+                var tags = ['all', 'plate', 'str', 'agistr', 'strdps', 'meleedps', 'str2hsword', 'str2haxe', 'str2hmace', 'str2hpolearm', 'str1haxe', 'str1hmace', 'str1hsword']; //tags for subclass
+                for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                    currentTags.push(tags[i]);
+                }
+                break;
+
+            //Mage
+            //case "Frost": found under DK
+            case "Fire":
+            case "Arcane":
+                var tags = ['all', 'cloth', 'int', 'intagi', 'intdamage', 'rangeddps', 'intdagger', 'int1hsword', 'int2hstaff', 'intoffhand', 'intwand'];
+                for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                    currentTags.push(tags[i]);
+                }
+                break;
+            //daggers 1hswords offhand wands staffs
+
+            //Hunter
+            case "Survival":
+                var tags = ['all', 'mail', 'agi', 'intagi', 'agistrdps', 'agistr', 'meleedps', 'agi2haxe', 'agi2hstaff', 'agi2hpolearm'];
+                for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                    currentTags.push(tags[i]);
+                }
+                break;
+            case "Marksmanship":
+            case "Beast Mastery":
+                var tags = ['all', 'mail', 'agi', 'intagi', 'agistrdps', 'agistr', 'rangeddps', 'ranged'];
+                for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                    currentTags.push(tags[i]);
+                }
+                break;
+            //ranged
+
+            //Druid
+            case "Balance":
+                var tags = ['all', 'leather', 'int', 'intagi', 'intdamage', 'rangeddps', 'int1hmace', 'intdagger', 'int2hmace', 'int2hstaff', 'intoffhand'];
+                for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                    currentTags.push(tags[i]);
+                }
+                break;
+            case "Feral":
+                var tags = ['all', 'leather', 'agi', 'intagi', 'agistrdps', 'agidps', 'agistr', 'meleedps', 'agi2hstaff', 'agi2hpolearm'];
+                for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                    currentTags.push(tags[i]);
+                }
+                break;
+            case "Guardian":
+                var tags = ['all', 'leather', 'agi', 'intagi', 'agistr', 'tank', 'agi2hstaff', 'agi2hpolearm'];
+                for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                    currentTags.push(tags[i]);
+                }
+                break;
+            //resto case found under //Shaman
+
+            //Rouge
+            case "Outlaw":
+                var tags = ['all', 'leather', 'agi', 'intagi', 'agistrdps', 'agidps', 'agistr', 'meleedps', 'agifist', 'agi1hmace', 'agi1haxe', 'agi1hsword'];
+                for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                    currentTags.push(tags[i]);
+                }
+                break;
+            case "Assassination":
+            case "Subtlety":
+                var tags = ['all', 'leather', 'agi', 'intagi', 'agistrdps', 'agidps', 'agistr', 'meleedps', 'agidagger'];
+                for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                    currentTags.push(tags[i]);
+                }
+                break;
+
+            //Priest
+            case "Discipline":
+                var tags = ['all', 'cloth', 'int', 'intagi', 'intdamage', 'rangeddps', 'healer', 'int1hmace', 'intdagger', 'int2hstaff', 'intoffhand', 'intwand'];
+                for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                    currentTags.push(tags[i]);
+                }
+                break;
+            case "Holy": //priest and paladin case
+                if (selectedClass === "class9") {
+                    var tags = ['all', 'cloth', 'int', 'intagi', 'healer', 'int1hmace', 'intdagger', 'int2hstaff', 'intoffhand', 'intwand'];
+                    for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                        currentTags.push(tags[i]);
+                    }
+                } else if (selectedClass === "class10") {
+                    var tags = ['all', 'plate', 'int', 'intagi', 'healer', 'int1hmace', 'int1hsword', 'intshield'];
+                    for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                        currentTags.push(tags[i]);
+                    }
+                }
+                break;
+            case "Shadow":
+                var tags = ['all', 'cloth', 'int', 'intagi', 'intdamage', 'rangeddps', 'int1hmace', 'intdagger', 'int2hstaff', 'intoffhand', 'intwand'];
+                for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                    currentTags.push(tags[i]);
+                }
+                break;
+
+            //Paladin
+            //case"Holy": found under priest
+            //case"Protection": found under warrior
+            case "Retribution":
+                var tags = ['all', 'plate', 'str', 'agistr', 'strdps', 'agistrdps', 'meleedps', 'str2hsword', 'str2haxe', 'str2hmace', 'str2hpolearm']; //tags for subclass
+                    for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                        currentTags.push(tags[i]);
+                    }
+                break;
+
+            //Warlock
+            //daggers 1hswords offhand wands staffs
+            case "Affliction":
+            case "Demonology":
+            case "Destruction":
+                var tags = ['all', 'cloth', 'int', 'intagi', 'intdamage', 'rangeddps', 'intdagger', 'int1hsword', 'int2hstaff', 'intoffhand', 'intwand'];
+                for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                    currentTags.push(tags[i]);
+                }
+                break;
+
+            //Evoker
+            case "Devastation":
+                var tags = ['all', 'mail', 'int', 'intagi', 'intdamage', 'rangeddps', 'int1hsword', 'intmace', 'int2hstaff', 'intoffhand', 'evoker'];
+                for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                    currentTags.push(tags[i]);
+                }
+                break;
+            case "Preservation":
+                var tags = ['all', 'mail', 'int', 'intagi', 'healer', 'int1hsword', 'intdagger','intmace', 'int2hstaff', 'intoffhand', 'evoker'];
+                for (var i = 0; i < tags.length; i++) { //pushing tags to currentTags for use later
+                    currentTags.push(tags[i]);
+                }
+                break;
+            default:
+        }
+
+        //Go through itemArray and check currentTags against item.type
+        //Add appropriate items to filteredItemArray
+        for (var i = 0; i < itemArray.length; i++) {
+            if (currentTags.includes(itemArray[i].type)) {
+                filteredItemArray.push(itemArray[i]);
+            }
+        }
+
+        //(TEST) Print currentTags to see if they are updating correctly
+        console.log(currentTags);
+        for (var i = 0; i < filteredItemArray.length; i++) {
+            console.log(filteredItemArray[i].id + ":" + filteredItemArray[i].type);
+        }
+        //(TESTEND)
+
+        //show only filtered items
+        showFilteredItems();
+    } else { //if no subclass is selected show all items
+        styleAllItems('block');
+    }
+});
