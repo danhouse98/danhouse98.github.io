@@ -862,8 +862,8 @@ function dungeonHider() {
         if (document.getElementById(itemArray[i].id).style.display == "block") {
             if (itemsShownPerBoss.has(bossElementID)) {
                 var currentCount = itemsShownPerBoss.get(bossElementID) + 1;
-                itemsShownPerBoss.set
-            } else { //do this if shown and key does not yet exist
+                itemsShownPerBoss.set(bossElementID, currentCount);
+            } else { //do this if shown and key does not yet existg
                 itemsShownPerBoss.set(bossElementID, 1);
             }
         } else { //if display is "none"
