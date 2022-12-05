@@ -24,6 +24,7 @@ const itemArray = []; //Holds all Item objects
 const filteredItemArray = []; //Holds filted Item objects based on classPanel
 const currentTags = []; //Holds tags defined but currently selected subclass
 const indexMap = new Map(); //Key: Dungeon Name, Val: html ID for each dungeon <div>
+const itemsShownPerBoss = new Map(); //Key: bossHtmlId, Val: # of items being shown currently for boss
 var classCounter = 0; //Counts number of classes
 var dungeonCounter = 0; //Counts number of dungeons
 
@@ -93,7 +94,7 @@ $(document).ready(function () {
                         bossCounterString = bossCounter.toString();
                         var bossID = dungeonID + "." + bossCounterString;
                         //builds html element for each dungeon w/ internal table for each slot
-                        bossTableHTML = "<div class='boss' id='"+ bossID +"'><div class='imgbox'><img src='https://wow.zamimg.com/images/wow/journal/" + bossList.imglink + "' alt='" + bossList.name + "'><h3>" + bossList.name + "</h3></div><table>" +
+                        bossTableHTML = "<div class='boss' id='" + bossID + "'><div class='imgbox'><img src='https://wow.zamimg.com/images/wow/journal/" + bossList.imglink + "' alt='" + bossList.name + "'><h3>" + bossList.name + "</h3></div><table>" +
                             "<tr><th class ='head'>Head</th><th class='shoulder'>Shoulder</th><th class='chest'>Chest</th><th class='wrist'>Wrist</th><th class='hands'>Hands</th>" +
                             "<th class='waist'>Waist</th><th class='legs'>Legs</th><th class='feet'>Feet</th><th class='neck'>Neck</th><th class='back'>Back</th>" +
                             "<th class='ring'>Rings</th><th class='weapon'>Weapon</th><th class='off-hand'>Off-Hand</th><th class='trinket'>Trinket</th></tr><tr>";
@@ -548,6 +549,7 @@ function showFilteredItems() {
     for (var i = 0; i < filteredItemArray.length; i++) {
         document.getElementById(filteredItemArray[i].id).style.display = "block";
     }
+    dungeonHider();
 }
 
 //fills filteredItemArray based on selected class
@@ -842,18 +844,40 @@ function subclassBatch() {
 window.addEventListener("load", subclassBatch, false);
 
 //automatically shows and hides dungeons based on if there is currently something shown via filter
-function dungeonHider(){
+function dungeonHider() {
+    itemsShownPerBoss.clear();
     //get items via our arrays and get parent boss element with dom controls
-    for(int i = 0; i < itemArray.length; i++){
-        var tdElement = document.getElementById(itemArray[i]).parentElement;
-        var trElement = tdElement.parentElement;
-        var tbodyElement = trElement.parentElement;
-        var tableElement = tbodyElement.parentElement;
-        var bossElement = tableElement.parentElement; //this is the element we are going to check
-    }
-    //check if item.style.display is "block"
+    for (var i = 0; i < itemArray.length; i++) {
+        var tdElement = document.getElementById(itemArray[i]).parentElement; //td our item sits in
+        var trElement = tdElement.parentElement; //tr our td sits in
+        var tbodyElement = trElement.parentElement; //tbody our tr sits in
+        var tableElement = tbodyElement.parentElement; //table our tbody sits in
+        var bossElement = tableElement.parentElement; // our wanted boss element
+        var bossElementID = bossElement.id;
 
-    //iterate when id and add to map
+        //check if item.style.display is "block"
+        //iterate and check id and add to map
+        if (itemArray[i].style.display == "block") {
+            if (itemsShownPerBoss.containsKey(bossElementID)) {
+                var currentCount = itemsShownPerBoss.get(bossElementID) + 1;
+                itemsShownPerBoss.set
+            } else { //do this if shown and key does not yet exist
+                itemsShownPerBoss.set(bossElementID, 1);
+            }
+        } else { //if display is "none"
+            if (itemsShownPerBoss.containsKey(bossElementID)) { //do nothing if true
+            } else { //do this if hidden and key not yet exists
+                itemsShownPerBoss.set(bossElementID, 0);
+            }
+        }
+    }
 
     //check map at end and hide all bosses where value == 0;
+    itemsShownPerBoss.forEach((value, key) => {
+        if (key == 0) {
+            document.getElementById(value).style.display = "none";
+        } else {
+            document.getElementById(value).style.display = "block";
+        }
+    })
 }
