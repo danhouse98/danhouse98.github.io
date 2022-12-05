@@ -905,8 +905,8 @@ function dungeonHider() {
         if (document.getElementById(key) != null) {
             if (value == 0) { //if we have no entries
                 document.getElementById(key).style.display = "none";
-                if(dungeonDisplayFlags.has(dungeonID)){ //if true check do nothing
-                } else{ //if no entry, Map(Key, "none")
+                if (dungeonDisplayFlags.has(dungeonID)) { //if true check do nothing
+                } else { //if no entry, Map(Key, "none")
                     dungeonDisplayFlags.set(dungeonID, "none");
                 }
             } else { //if this dungeon has entries
@@ -919,37 +919,37 @@ function dungeonHider() {
     });
 
     //Check each dungeon in map and show or hide
-    dungeonDisplayFlags.forEach((value, key)=>{ //Key: dungeonID, val: "none" or "block"
+    dungeonDisplayFlags.forEach((value, key) => { //Key: dungeonID, val: "none" or "block"
         document.getElementById(key).style.display = value;
     })
 
     dungeonHiderRadioCheck();
 }
 
-function dungeonHiderRadioCheck(){
+function dungeonHiderRadioCheck() {
     hideAllDungeons();
-    if($('#all').is(':checked')){ //Show all if true
+    if ($('#all').is(':checked')) { //Show all if true
         //for each dungeonDisplayFlags show dungeon if value == block
-        dungeonDisplayFlags.forEach((value, key) =>{ //Key: dungeonID value: "block" or "none"
+        dungeonDisplayFlags.forEach((value, key) => { //Key: dungeonID value: "block" or "none"
             document.getElementById(key).style.display = value;
         })
 
-    }else if($('#mythic0').is(':checked')){//show m0 dungeons if true
+    } else if ($('#mythic0').is(':checked')) {//show m0 dungeons if true
         //for each dungeon in mythic 0, get id from indexMap and use this id to display with dungeonDisplayFlags
-        for(var i= 0; i < mythic0.length; i++){
+        for (var i = 0; i < mythic0.length; i++) {
             var dungeonID = indexMap.get(mythic0[i]);
             document.getElementById(dungeonID).style.display = dungeonDisplayFlags.get(dungeonID);
         }
 
-    }else if($('#season1').is(':checked')){//show season1 dungeons if true
+    } else if ($('#season1').is(':checked')) {//show season1 dungeons if true
         //for each dungeon in season1MythicPlus, get id from indexMap and use this id to display with dungeonDisplayFlags
-        for(var i= 0; i < mythic0.length; i++){
+        for (var i = 0; i < mythic0.length; i++) {
             var dungeonID = indexMap.get(season1MythicPlus[i]);
             document.getElementById(dungeonID).style.display = dungeonDisplayFlags.get(dungeonID);
         }
-    }else if($('#raid1').is(':checked')){ //show raid1 if true
+    } else if ($('#raid1').is(':checked')) { //show raid1 if true
         //for each dungeon in raids, get id from indexMap and use this id to display with dungeonDisplayFlags
-        for(var i= 0; i < raids.length; i++){
+        for (var i = 0; i < raids.length; i++) {
             var dungeonID = indexMap.get(raids[i]);
             document.getElementById(dungeonID).style.display = dungeonDisplayFlags.get(dungeonID);
         }
@@ -957,7 +957,7 @@ function dungeonHiderRadioCheck(){
 }
 
 //execute functions needed for proper starting page state
-function startupProcedure(){
+function startupProcedure() {
     statUpdate();
     slotUpdate();
     clearStatFilter();
