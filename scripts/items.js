@@ -7,8 +7,6 @@ type - holds tag for item
     trinket - type of trinket
     weapon - type of weapon w/ stat modifier if applicable
 */
-//var [] Items;
-
 function Item() {
     this.id = 0;
     this.int = 0;
@@ -22,22 +20,44 @@ function Item() {
     this.type = "";
 }
 
-const itemArray = [];
-const filteredItemArray = [];
-const indexMap = new Map();
+const itemArray = []; //Holds all Item objects
+const filteredItemArray = []; //Holds filted Item objects based on classPanel
+const currentTags = []; //Holds tags defined but currently selected subclass
+const indexMap = new Map(); //Key: Dungeon Name, Val: html ID for each dungeon <div>
+var classCounter = 0; //Counts number of classes
+var dungeonCounter = 0; //Counts number of dungeons
 
-var dungeonCounter = 0;
-
-
+//Lists each available slot, used to build slotPanel
 var slots = ['head', 'shoulder', 'chest', 'wrist', 'hands', 'waist', 'legs', 'feet', 'neck', 'back', 'ring', 'weapon', 'off-hand', 'trinket'];
 
+//Lists for each filter for each button in seasonPanel
 var mythic0 = ["Ruby Life Pools", "Brackenhide Hollow", "The Nokhud Offensive", "Uldaman: Legacy of Tyr", "Algeth'ar Academy", "The Azure Vault", "Halls of Infusion", "Neltharus"];
 var season1MythicPlus = ["Ruby Life Pools", "The Nokhud Offensive", "The Azure Vault", "Algeth'ar Academy", "Halls of Valor", "Court of Stars", "Shadowmoon Burial Grounds", "Temple of the Jade Serpent"];
-var raids = ["Vault of The Incarnates"]
+var raids = ["Vault of The Incarnates"];
+
+//Holds class list with all relevant cooresponding subclasses, used to build classPanel
+var classes = {
+    "classList": [{ "class": "Shaman", "subclass": [{ "name": "Elemental" }, { "name": "Enhancement" }, { "name": "Restoration" }] },
+    { "class": "Death Knight", "subclass": [{ "name": "Blood" }, { "name": "Frost" }, { "name": "Unholy" }] },
+    { "class": "Monk", "subclass": [{ "name": "Mistweaver" }, { "name": "Brewmaster" }, { "name": "Windwalker" }] },
+    { "class": "Demon Hunter", "subclass": [{ "name": "Havoc" }, { "name": "Vengence" }] },
+    { "class": "Warrior", "subclass": [{ "name": "Protection" }, { "name": "Arms" }, { "name": "Fury" }] },
+    { "class": "Mage", "subclass": [{ "name": "Frost" }, { "name": "Fire" }, { "name": "Arcane" }] },
+    { "class": "Hunter", "subclass": [{ "name": "Survival" }, { "name": "Marksmanship" }, { "name": "Beast Mastery" }] },
+    { "class": "Druid", "subclass": [{ "name": "Balance" }, { "name": "Feral" }, { "name": "Guardian" }, { "name": "Restoration" }] },
+    { "class": "Rouge", "subclass": [{ "name": "Outlaw" }, { "name": "Assassination" }, { "name": "Subtlety" }] },
+    { "class": "Priest", "subclass": [{ "name": "Discipline" }, { "name": "Holy" }, { "name": "Shadow" }] },
+    { "class": "Paladin", "subclass": [{ "name": "Holy" }, { "name": "Protection" }, { "name": "Retribution" }] },
+    { "class": "Warlock", "subclass": [{ "name": "Affliction" }, { "name": "Demonology" }, { "name": "Destruction" }] },
+    { "class": "Evoker", "subclass": [{ "name": "Devastation" }, { "name": "Preservation" }] }]
+};
+
+
+
+
 
 //Reads JSON file and fills DOM with content
 $(document).ready(function () {
-
     $.ajax({
         type: "get",
         url: "json/items.json",
@@ -51,55 +71,61 @@ $(document).ready(function () {
         },
         dataType: "json",
         success: function (data) {
-            //TODO rename id tag
+            //Clears dungeonList before building page
             $("#dungeonList").html("");
             //TODO rename id tag
             //dungeon List
             $.each(data, function () {
-                var dungeonID = "";
-                var bossID = "";
-                var bossSlotID = "";
-                //dungeonList
+                var dungeonID = ""; //string representation of dungeonCounter
+                var bossID = ""; //string representation of bossCounter
+                var bossSlotID = ""; //id for each slot <div>
+                //each dungeon
                 $.each(this, function (key, dungeonList) {
-                    var bossCounter = 0;
-                    dungeonID = "dungeon" + dungeonCounter.toString();
-                    var bossTableHTML = "<div class= 'dungeon' id= '" + dungeonID + "'><h2>" + dungeonList.dungeon_name + "</h2>";
-                    $('#dungeonList').append(bossTableHTML);
+                    var bossCounter = 0; //counts number of bosses per dungeon
+                    dungeonID = "dungeon" + dungeonCounter.toString(); //builds ID for dungeon element
+                    var bossTableHTML = "<div class= 'dungeon' id= '" + dungeonID + "'><h2>" + dungeonList.dungeon_name + "</h2>"; //Creates <div> for each dungeon
+                    $('#dungeonList').append(bossTableHTML); //Append each dungeon entry
 
-                    indexMap.set(dungeonList.dungeon_name, dungeonID);
+                    indexMap.set(dungeonList.dungeon_name, dungeonID); //Map(name,htmlID) for each dungeon
 
-                    //boss list
+                    //each boss per dungeon
                     $.each(dungeonList.bosses, function (key2, bossList) {
                         bossID = bossCounter.toString();
 
+                        //builds html element for each dungeon w/ internal table for each slot
                         bossTableHTML = "<div class='boss'><div class='imgbox'><img src='https://wow.zamimg.com/images/wow/journal/" + bossList.imglink + "' alt='" + bossList.name + "'><h3>" + bossList.name + "</h3></div><table>" +
                             "<tr><th class ='head'>Head</th><th class='shoulder'>Shoulder</th><th class='chest'>Chest</th><th class='wrist'>Wrist</th><th class='hands'>Hands</th>" +
                             "<th class='waist'>Waist</th><th class='legs'>Legs</th><th class='feet'>Feet</th><th class='neck'>Neck</th><th class='back'>Back</th>" +
                             "<th class='ring'>Rings</th><th class='weapon'>Weapon</th><th class='off-hand'>Off-Hand</th><th class='trinket'>Trinket</th></tr><tr>";
 
+                        //builds table elements for each slot to hold items inside of
                         for (var k = 0; k < slots.length; k++) {
                             bossSlotID = dungeonCounter.toString() + "." + bossID + "." + slots[k];
                             bossTableHTML += "<td id='" + bossSlotID + "' class='" + slots[k] + "'></td>";
                         }
-
+                        //closes the table to complete the element
                         bossTableHTML += "</tr></table></div></div>";
+                        //gets appropriate id to add the table to
                         var appendID = "#" + dungeonID;
+                        //append to the correct boss element
                         $(appendID).append(bossTableHTML);
 
-                        //item List
+                        //each item per boss
                         $.each(bossList.drops, function (key3, itemList) {
+                            //html element = currentDungeonID . currentBossID . slotOfCurrentItemBeingAdded
                             bossSlotID = dungeonCounter.toString() + "." + bossID + "." + itemList.slot;
 
                             var elem = document.getElementById(bossSlotID);
 
+                            //builds html element for each item
                             var itemInfo = '<a id="' + itemList.id + '" href="https://www.wowhead.com/item=' + itemList.id +
                                 ' data-wh-icon-added="true" class="q3" data-wh-rename-link="false">' +
                                 '<span class="iconmedium" data-env="live" data-tree="live" data-game="wow" data-type="item">' +
                                 '<ins style="background-image: url(&quot;https://wow.zamimg.com/images/wow/icons/medium/' + itemList.imglink + '&quot");"></ins><del></del></span></a>';
 
-                            if (elem != null) {
+                            if (elem != null) { //adds item
                                 elem.insertAdjacentHTML('beforeend', itemInfo);
-                            } else {
+                            } else { //prints to console if ID is invalid
                                 console.log("Invalid entry - ID : " + itemList.id);
                             }
 
@@ -108,6 +134,7 @@ $(document).ready(function () {
                             currentItem.id = itemList.id;
                             currentItem.type = itemList.type;
 
+                            //sets stat flags for each item object
                             for (var i = 0; i < itemList.stats.length; i++) {
                                 switch (itemList.stats[i]) {
                                     case "mastery":
@@ -142,84 +169,26 @@ $(document).ready(function () {
     });
 });
 
-/*
-//dungeon list
-for (var i = 0; i < data.dungeon.length; i++) {
-    //sets dungeon id respective to amount of dungeons
-    dungeonID = i.toString();
-
-    //boss list
-    for (var j = 0; j < data.dungeon[i].bosses.length; j++) {
-        //sets dungeon id respective to amount of bosses
-        bossID = j.toString();
-        var bossTableHTML = "<div class= 'dungeon' id= 'dungeon" + i.toString() + "'><div class='boss'><table><tr><th>Head</th><th>Shoulder</th><th>Chest</th><th>Wrist</th><th>Hands</th><th>Waist</th><th>Legs</th><th>Feet</th><th>Neck</th><th>Back</th><th>Rings</th><th>Weapon</th><th>Trinket</th></tr><tr>";
-
-        for (var k = 0; k < slots.length; k++) {
-            bossSlotID = dungeonID + "." + bossID + "." + slots[k];
-            bossTableHTML += "<tr id='" + bossSlotID + "'></tr>";
-        }
-
-        bossTableHTML += "</tr></table></div></div>";
-        $('#dungeonList').append(bossTableHTML);
-
-        //item list
-        for (var k = 0; k < data.dungeon[i].bosses[j].drops.length; k++) {
-
-            bossSlotID = "#" + dungeonID + "." + bossID + "." + data.dungeon[i].bosses[j].drops[k].slot;
-            //build wowhead links
-            //TODO implement dynamic id values to append to the correct td element
-            $(bossSlotID).append(
-                '<a id="' + data.dungeon[i].bosses[j].drops[k].id + '" href="https://www.wowhead.com/item=' + data.dungeon[i].bosses[j].drops[k].id +
-                ' data-wh-icon-added="true" class="q3" data-wh-rename-link="false">' +
-                '<span class="iconmedium" data-env="live" data-tree="live" data-game="wow" data-type="item">' +
-                '<ins style="background-image: url(&quot;' + data.dungeon[i].bosses[j].drops[k].imglink + '&quot;);"></ins><del></del></span></a>'
-            );
-        }
-    }
-}
-});
-});
-},
-//On completeion, show the entry with index 0
-complete: function () {
-}
-}
-});*/
-
-//Holds class list with all relevant cooresponding subclasses
-var classes = {
-    "classList": [{ "class": "Shaman", "subclass": [{ "name": "Elemental" }, { "name": "Enhancement" }, { "name": "Restoration" }] },
-    { "class": "Death Knight", "subclass": [{ "name": "Blood" }, { "name": "Frost" }, { "name": "Unholy" }] }, { "class": "Monk", "subclass": [{ "name": "Mistweaver" }, { "name": "Brewmaster" }, { "name": "Windwalker" }] },
-    { "class": "Demon Hunter", "subclass": [{ "name": "Havoc" }, { "name": "Vengence" }] },
-    { "class": "Warrior", "subclass": [{ "name": "Protection" }, { "name": "Arms" }, { "name": "Fury" }] },
-    { "class": "Mage", "subclass": [{ "name": "Frost", "name": "Fire" }, { "name": "Arcane" }] },
-    { "class": "Hunter", "subclass": [{ "name": "Survival" }, { "name": "Marksmanship" }, { "name": "Beast Mastery" }] },
-    { "class": "Druid", "subclass": [{ "name": "Balance" }, { "name": "Feral" }, { "name": "Guardian" }, { "name": "Restoration" }] },
-    { "class": "Rouge", "subclass": [{ "name": "Outlaw" }, { "name": "Assassination" }, { "name": "Subtlety" }] },
-    { "class": "Priest", "subclass": [{ "name": "Discipline" }, { "name": "Holy" }, { "name": "Shadow" }] },
-    { "class": "Paladin", "subclass": [{ "name": "Holy" }, { "name": "Protection" }, { "name": "Retribution" }] },
-    { "class": "Warlock", "subclass": [{ "name": "Affliction" }, { "name": "Demonology" }, { "name": "Destruction" }] },
-    { "class": "Evoker", "subclass": [{ "name": "Devastation" }, { "name": "Preservation" }] }]
-};
-
-var classCounter = 0;
-
 //manages control panel
 $(document).ready(function () {
     var classHTML = "";
 
+    //builds class dropboxes
     $.each(classes.classList, function (i, elementText) {
-        classHTML += "<option value ='class" + classCounter + "'>" + elementText.class + "</option>";
-        var subclassHTML = "<select name='" + elementText.class + "' id = 'class" + classCounter + "'>";
+        classHTML += "<option value ='" + elementText.class + "' id='class" + classCounter + "'>" + elementText.class + "</option>";
+        var subclassHTML = "<select name='" + elementText.class + "' id = 'class" + classCounter + "'>" +
+            "<option value='none'>Select Subclass</option>";
+
+        //builds subclass dropboxes, one dropbox for each class
         $.each(elementText.subclass, function (j, subElementText) {
             subclassHTML += "<option value='" + subElementText.name + "'>" + subElementText.name + "</option>";
         });
-        subclassHTML += "</select>"
+        subclassHTML += "</select>";
         $("#subclassDropdown").append(subclassHTML);
         if (classCounter != 0) {
             var id = "class" + classCounter;
             var e = document.getElementById(id);
-            e.style.display = "none"
+            e.style.display = "none";
         }
         classCounter++;
 
@@ -244,12 +213,11 @@ $(document).ready(function () {
     $("#classDropdown").append(classHTML);
 });
 
-//manages dynamic dropdown box
+//manages dynamic dropdown boxes for subclassDropdown
 window.addEventListener("DOMContentLoaded", function () {
     document.getElementById("classDropdown").addEventListener("change", function () {
-        var e = document.getElementById("classDropdown");
-        var value = e.value;
-
+        //returns value of the selected class
+        var classElementValue = document.getElementById("classDropdown").value;
 
 
         for (var i = 0; i < classCounter; i++) {
@@ -257,8 +225,14 @@ window.addEventListener("DOMContentLoaded", function () {
             //console.log(id);
             var element = document.getElementById(id);
 
-            if (value === id) {
+            if (classElementValue === id) {
                 element.style.display = "block";
+                //change id for change handler
+                id = "#" + id;
+
+                //changes selected subclass value to "none" whenever a new dropdown in shown
+                $(id).val("none");
+                $(id).change();
             } else {
                 element.style.display = "none";
             }
@@ -266,14 +240,13 @@ window.addEventListener("DOMContentLoaded", function () {
     })
 });
 
+//Manages the hiding and showing of each "slot" based on slotPanel
 function slotUpdate() {
     var checkboxValue = "";
     var inputElements = document.getElementsByClassName('slotCheckbox');
     var changedElements;
     for (var i = 0; i < inputElements.length; i++) {
         checkboxValue = inputElements[i].value;
-
-        //console.log(checkboxValue + " : " + inputElements[i].checked);
 
         changedElements = document.getElementsByClassName(checkboxValue);
         if (inputElements[i].checked) {
@@ -320,88 +293,173 @@ function statUpdate() {
         }
     }
 
+    //TODO update to account of filteredItemArray
     //Loop through itemArray, hide all items then show all relevent items
-    for (var i = 0; i < itemArray.length; i++) {
-        var id = itemArray[i].id;
+    if (filteredItemArray.length = 0) {
+        for (var i = 0; i < itemArray.length; i++) {
+            var id = itemArray[i].id;
 
-        //TODO make sure id & vals are working properly
-        console.log(id + " m: " + itemArray[i].mastery + " v: " + itemArray[i].verse + ' c: ' + itemArray[i].crit + ' h: ' + itemArray[i].haste);
+            /*(TEST)make sure id & vals are working properly
+            console.log(id + " m: " + itemArray[i].mastery + " v: " + itemArray[i].verse + ' c: ' + itemArray[i].crit + ' h: ' + itemArray[i].haste);
+            */
 
-        var element = document.getElementById(id);
-        //hide each entry
-        element.style.display = 'none';
+            var element = document.getElementById(id);
+            //hide each entry
+            element.style.display = 'none';
 
-        //only needs to check 1 at a time
-        if (flag === "or") {
+            //only needs to check 1 at a time
+            if (flag === "or") {
 
-            var orChecker = "";
-            for (var j = 0; j < statArray.length && orChecker !== 'passed'; j++) {
-                //check if stat is stored properly
-                console.log(statArray[j]);
-                switch (statArray[j]) {
-                    case 'mastery':
-                        if (itemArray[i].mastery == 1) {
-                            orChecker = 'passed';
-                            element.style.display = 'block';
-                        }
-                        break;
-                    case 'haste':
-                        if (itemArray[i].haste == 1) {
-                            orChecker = 'passed';
-                            element.style.display = 'block';
-                        }
-                        break;
-                    case 'verse':
-                        if (itemArray[i].verse == 1) {
-                            orChecker = 'passed';
-                            element.style.display = 'block';
-                        }
-                        break;
-                    case 'crit':
-                        if (itemArray[i].crit == 1) {
-                            orChecker = 'passed';
-                            element.style.display = 'block';
-                        }
-                        break;
-                }
-            }
-
-            //else check all stats before changing
-        } else {
-
-            var andChecker = "";
-            for (var j = 0; j < statArray.length && andChecker !== 'failed'; j++) {
-                switch (statArray[j]) {
-                    case 'mastery':
-                        if (itemArray[i].mastery != 1) {
-                            andChecker = 'failed';
-                        }
-                        break;
-                    case 'haste':
-                        if (itemArray[i].haste != 1) {
-                            andChecker = 'failed';
-                        }
-                        break;
-                    case 'verse':
-                        if (itemArray[i].verse != 1) {
-                            andChecker = 'failed';
-                        }
-                        break;
-                    case 'crit':
-                        if (itemArray[i].crit != 1) {
-                            andChecker = 'failed';
-                        }
-                        break;
+                var orChecker = "";
+                for (var j = 0; j < statArray.length && orChecker !== 'passed'; j++) {
+                    //check if stat is stored properly
+                    console.log(statArray[j]);
+                    switch (statArray[j]) {
+                        case 'mastery':
+                            if (itemArray[i].mastery == 1) {
+                                orChecker = 'passed';
+                                element.style.display = 'block';
+                            }
+                            break;
+                        case 'haste':
+                            if (itemArray[i].haste == 1) {
+                                orChecker = 'passed';
+                                element.style.display = 'block';
+                            }
+                            break;
+                        case 'verse':
+                            if (itemArray[i].verse == 1) {
+                                orChecker = 'passed';
+                                element.style.display = 'block';
+                            }
+                            break;
+                        case 'crit':
+                            if (itemArray[i].crit == 1) {
+                                orChecker = 'passed';
+                                element.style.display = 'block';
+                            }
+                            break;
+                    }
                 }
 
-                if (j == statArray.length - 1 && andChecker !== 'failed') {
-                    element.style.display = 'block';
+                //else check all stats before changing
+            } else {
+
+                var andChecker = "";
+                for (var j = 0; j < statArray.length && andChecker !== 'failed'; j++) {
+                    switch (statArray[j]) {
+                        case 'mastery':
+                            if (itemArray[i].mastery != 1) {
+                                andChecker = 'failed';
+                            }
+                            break;
+                        case 'haste':
+                            if (itemArray[i].haste != 1) {
+                                andChecker = 'failed';
+                            }
+                            break;
+                        case 'verse':
+                            if (itemArray[i].verse != 1) {
+                                andChecker = 'failed';
+                            }
+                            break;
+                        case 'crit':
+                            if (itemArray[i].crit != 1) {
+                                andChecker = 'failed';
+                            }
+                            break;
+                    }
+
+                    if (j == statArray.length - 1 && andChecker !== 'failed') {
+                        element.style.display = 'block';
+                    }
                 }
             }
         }
+    } else { //use filteredItemArray
+        for (var i = 0; i < filteredItemArray.length; i++) {
+            var id = filteredItemArray[i].id;
 
+            /*(TEST)make sure id & vals are working properly
+            console.log(id + " m: " + filteredItemArray[i].mastery + " v: " + filteredItemArray[i].verse + ' c: ' + filteredItemArray[i].crit + ' h: ' + filteredItemArray[i].haste);
+            */
+
+            var element = document.getElementById(id);
+            //hide each entry
+            element.style.display = 'none';
+
+            //only needs to check 1 at a time
+            if (flag === "or") {
+
+                var orChecker = "";
+                for (var j = 0; j < statArray.length && orChecker !== 'passed'; j++) {
+                    //check if stat is stored properly
+                    console.log(statArray[j]);
+                    switch (statArray[j]) {
+                        case 'mastery':
+                            if (filteredItemArray[i].mastery == 1) {
+                                orChecker = 'passed';
+                                element.style.display = 'block';
+                            }
+                            break;
+                        case 'haste':
+                            if (filteredItemArray[i].haste == 1) {
+                                orChecker = 'passed';
+                                element.style.display = 'block';
+                            }
+                            break;
+                        case 'verse':
+                            if (filteredItemArray[i].verse == 1) {
+                                orChecker = 'passed';
+                                element.style.display = 'block';
+                            }
+                            break;
+                        case 'crit':
+                            if (filteredItemArray[i].crit == 1) {
+                                orChecker = 'passed';
+                                element.style.display = 'block';
+                            }
+                            break;
+                    }
+                }
+
+                //else check all stats before changing
+            } else {
+
+                var andChecker = "";
+                for (var j = 0; j < statArray.length && andChecker !== 'failed'; j++) {
+                    switch (statArray[j]) {
+                        case 'mastery':
+                            if (filteredItemArray[i].mastery != 1) {
+                                andChecker = 'failed';
+                            }
+                            break;
+                        case 'haste':
+                            if (filteredItemArray[i].haste != 1) {
+                                andChecker = 'failed';
+                            }
+                            break;
+                        case 'verse':
+                            if (filteredItemArray[i].verse != 1) {
+                                andChecker = 'failed';
+                            }
+                            break;
+                        case 'crit':
+                            if (filteredItemArray[i].crit != 1) {
+                                andChecker = 'failed';
+                            }
+                            break;
+                    }
+
+                    if (j == statArray.length - 1 && andChecker !== 'failed') {
+                        element.style.display = 'block';
+                    }
+                }
+            }
+        }
     }
 }
+
 /*
 //Handler for drop table selector
 function handleTableSelection() {
@@ -436,6 +494,7 @@ dropTableButtons.forEach(radio => {
 });
 */
 
+//Function for Mythic 0 radio button
 function showMythic0() {
     hideAllDungeons();
     for (var i = 0; i < mythic0.length; i++) {
@@ -445,6 +504,7 @@ function showMythic0() {
     }
 }
 
+//Funciton for Season 1 radio button
 function showSeason1() {
     hideAllDungeons();
     for (var i = 0; i < season1MythicPlus.length; i++) {
@@ -454,6 +514,7 @@ function showSeason1() {
     }
 }
 
+//Function for Raid 1 radio button
 function showRaid1() {
     hideAllDungeons();
     var id = indexMap.get(raids[0]);
@@ -461,6 +522,7 @@ function showRaid1() {
     element.style.display = "block";
 }
 
+//Hides all dungeon elements
 function hideAllDungeons() {
     for (var i = 0; i < dungeonCounter; i++) {
         var id = 'dungeon' + i
@@ -469,10 +531,56 @@ function hideAllDungeons() {
     }
 }
 
-function showAllDungeons(){
+//Shows all dungeon elements
+function showAllDungeons() {
     for (var i = 0; i < dungeonCounter; i++) {
         var id = 'dungeon' + i
         var element = document.getElementById(id);
         element.style.display = "block";
     }
 }
+
+//Resets stat filtering
+function resetStatFilter() {
+    //clear stat selectors
+    var statElements = document.getElementsByClassName('statCheckbox');
+    for (var i = 0; i < statElements.length; i++) {
+        statElements[i].checked = true;
+    }
+
+    document.getElementById('or').checked = true
+
+    styleAllItems("block");
+}
+
+/*Shows or hides all items in itemArray
+* String flag - either "block" or "none"
+ */
+function styleAllItems(flag) {
+    for (var i = 0; i < itemArray.length; i++) {
+        document.getElementById(itemArray[i].id).style.display = flag;
+    }
+}
+
+//TODO clearFilter(){} to show all items based on filteredItems()
+function clearStatFilter() {
+    document.getElementById("stat0").checked = true;
+    document.getElementById("stat1").checked = true;
+    document.getElementById("stat2").checked = true;
+    document.getElementById("stat3").checked = true;
+    if (filteredItemArray.length == 0) {
+        showFilteredItems();
+    } else {
+        styleAllItems('block');
+    }
+}
+
+//swap from showing all items to showing filtered items only
+function showFilteredItems() {
+    styleAllItems("none");
+    for (var i = 0; i < filteredItemArray.length; i++) {
+        document.getElementById(filteredItemArray[i].id).style.display = "block";
+    }
+}
+
+//TODO Fill out switches
