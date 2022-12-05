@@ -848,8 +848,8 @@ window.addEventListener("load", subclassBatch, false);
 function dungeonHider() {
     itemsShownPerBoss.clear();
     //get items via our arrays and get parent boss element with dom controls
-    for (var i = 0; i < itemArray.length; i++) {
-        var tdElement = document.getElementById(itemArray[i]).parentElement; //td our item sits in
+    for (var i = 0; i < itemArray.length; i++){
+        var tdElement = document.getElementById(itemArray[i].id).parentElement; //td our item sits in
         var trElement = tdElement.parentElement; //tr our td sits in
         var tbodyElement = trElement.parentElement; //tbody our tr sits in
         var tableElement = tbodyElement.parentElement; //table our tbody sits in
