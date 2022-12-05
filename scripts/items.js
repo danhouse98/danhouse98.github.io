@@ -164,7 +164,7 @@ $(document).ready(function () {
                     $("#dungeonList").append(bossTableHTML);
                     dungeonCounter++;
                 });
-                console.log([...indexMap.entries()]);
+                //console.log([...indexMap.entries()]);
             });
         }
     });
@@ -277,14 +277,14 @@ function statUpdate() {
         }
     }
 
-    console.log(flag);
+    //console.log(flag);
 
     var statArray = [];
 
     //stat filter handler
     for (var i = 0; i < inputElements.length; i++) {
         checkboxValue = inputElements[i].value;
-        console.log(checkboxValue + " : " + inputElements[i].checked);
+        //console.log(checkboxValue + " : " + inputElements[i].checked);
         changedElements = document.getElementsByClassName(checkboxValue);
 
         //gets all wanted stats
@@ -313,7 +313,7 @@ function statUpdate() {
                 var orChecker = "";
                 for (var j = 0; j < statArray.length && orChecker !== 'passed'; j++) {
                     //check if stat is stored properly
-                    console.log(statArray[j]);
+                    //console.log(statArray[j]);
                     switch (statArray[j]) {
                         case 'mastery':
                             if (itemArray[i].mastery == 1) {
@@ -394,7 +394,7 @@ function statUpdate() {
                 var orChecker = "";
                 for (var j = 0; j < statArray.length && orChecker !== 'passed'; j++) {
                     //check if stat is stored properly
-                    console.log(statArray[j]);
+                    //console.log(statArray[j]);
                     switch (statArray[j]) {
                         case 'mastery':
                             if (filteredItemArray[i].mastery == 1) {
@@ -818,13 +818,14 @@ function subclassListener() {
             }
         }
 
-        //(TEST) Print currentTags to see if they are updating correctly
+        /*(TEST) Print currentTags to see if they are updating correctly
         console.log(currentTags);
         for (var i = 0; i < filteredItemArray.length; i++) {
             console.log(filteredItemArray[i].id + ":" + filteredItemArray[i].type);
         }
-        //(TESTEND)
-
+        (TESTEND)
+        */
+       
         //show only filtered items
         showFilteredItems();
     } else { //if no subclass is selected show all items
