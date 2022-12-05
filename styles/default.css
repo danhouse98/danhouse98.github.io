@@ -21,7 +21,7 @@ h2{
 }
 
 .boss {
-    background-color: #08404f;
+    background-color: #010708;
     display: grid;
     grid-template-columns: fit-content(1em) auto;
     text-align: center;
