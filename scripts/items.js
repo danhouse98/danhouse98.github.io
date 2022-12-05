@@ -524,7 +524,8 @@ function resetStatFilter() {
  */
 function styleAllItems(flag) {
     for (var i = 0; i < itemArray.length; i++) {
-        document.getElementById(itemArray[i].id).style.display = flag;
+        element = document.getElementById(itemArray[i].id);
+        element.style.display = flag;
     }
 }
 
