@@ -458,6 +458,7 @@ function statUpdate() {
             }
         }
     }
+    dungeonHider();
 }
 
 
@@ -879,6 +880,7 @@ function dungeonHider() {
             if (value == 0) {
                 document.getElementById(key).style.display = "none";
             } else {
+                console.log(key + " : " + value)
                 document.getElementById(key).style.display = "block";
             }
         } else {
