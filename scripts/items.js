@@ -863,7 +863,7 @@ function dungeonHider() {
             if (itemsShownPerBoss.has(bossElementID)) {
                 var currentCount = itemsShownPerBoss.get(bossElementID) + 1;
                 itemsShownPerBoss.set(bossElementID, currentCount);
-            } else { //do this if shown and key does not yet existg
+            } else { //do this if shown and key does not yet exist
                 itemsShownPerBoss.set(bossElementID, 1);
             }
         } else { //if display is "none"
@@ -881,7 +881,7 @@ function dungeonHider() {
                 document.getElementById(key).style.display = "none";
             } else {
                 console.log(key + " : " + value)
-                document.getElementById(key).style.display = "block";
+                document.getElementById(key).style.display = "grid"; //display as grid to keep integrity of layout
             }
         } else {
             console.log("Invalid ID:" + key);
