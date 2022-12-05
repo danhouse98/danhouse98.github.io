@@ -955,3 +955,13 @@ function dungeonHiderRadioCheck(){
         }
     }
 }
+
+//execute functions needed for proper starting page state
+function startupProcedure(){
+    statUpdate();
+    slotUpdate();
+    clearStatFilter();
+}
+
+//listener for startupProcedure()
+window.addEventListener("load", startupProcedure, false);
