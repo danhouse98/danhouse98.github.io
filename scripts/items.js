@@ -175,7 +175,7 @@ $(document).ready(function () {
 
     //builds class dropboxes
     $.each(classes.classList, function (i, elementText) {
-        classHTML += "<option value ='" + elementText.class + "' id='class" + classCounter + "'>" + elementText.class + "</option>";
+        classHTML += "<option value ='" + elementText.class + "' value='class" + classCounter + "'>" + elementText.class + "</option>";
         var subclassHTML = "<select name='" + elementText.class + "' id = 'class" + classCounter + "'>" +
             "<option value='none'>Select Subclass</option>";
 
