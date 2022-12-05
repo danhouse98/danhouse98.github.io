@@ -149,7 +149,7 @@ $(document).ready(function () {
                                         break;
                                     case "haste":
                                         currentItem.haste = 1;
-  adds                                      break;
+                                        break;
                                 }
                             }
 
