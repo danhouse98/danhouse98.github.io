@@ -25,6 +25,7 @@ const filteredItemArray = []; //Holds filted Item objects based on classPanel
 const currentTags = []; //Holds tags defined but currently selected subclass
 const indexMap = new Map(); //Key: Dungeon Name, Val: html ID for each dungeon <div>
 const itemsShownPerBoss = new Map(); //Key: bossHtmlId, Val: # of items being shown currently for boss
+const showDungeonFlags = new Map(); //Key: dungeonHtmlId, Val: "none" or "block" depending on display status
 var classCounter = 0; //Counts number of classes
 var dungeonCounter = 0; //Counts number of dungeons
 
@@ -849,6 +850,7 @@ window.addEventListener("load", subclassBatch, false);
 //automatically shows and hides dungeons based on if there is currently something shown via filter
 function dungeonHider() {
     itemsShownPerBoss.clear();
+    showDungeonFlags.clear();
     //get items via our arrays and get parent boss element with dom controls
     for (var i = 0; i < itemArray.length; i++) {
         var tdElement = document.getElementById(itemArray[i].id).parentElement; //td our item sits in
@@ -857,6 +859,7 @@ function dungeonHider() {
         var tableElement = tbodyElement.parentElement; //table our tbody sits in
         var bossElement = tableElement.parentElement; // our wanted boss element
         var bossElementID = bossElement.id;
+
 
         //check if item.style.display is "block"
         //if item is showing and slot the item is in is not hidden
@@ -876,16 +879,36 @@ function dungeonHider() {
     }
 
     //check map at end and hide all bosses where value == 0;
+    //then add up the total to map showDungeonFlags
     itemsShownPerBoss.forEach((value, key) => {
+
+        //add up itemsShownPerBoss into showDungeonFlags
+        var lastCharOfElementID = "";
+        var dungeonID = key; //dungeonID, yet to be extracted
+        for (var i = -1; lastCharOfElementID !== "."; i--) {
+            lastCharOfElementID = dungeonID.slice(i);
+            dungeonID = dungeonID.slice(0, i);
+        }// we now have the properDungeonID
+
+        //complete check for if to display or hide boss <div>
         if (document.getElementById(key) != null) {
-            if (value == 0) {
+            if (value == 0) { //if we have no entries
                 document.getElementById(key).style.display = "none";
-            } else {
-                console.log(key + " : " + value)
+                if(showDungeonFlags.has(dungeonID)){ //if true check do nothing
+                } else{ //if no entry, Map(Key, "none")
+                    showDungeonFlags.set(dungeonID, "none");
+                }
+            } else { //if this dungeon has entries
                 document.getElementById(key).style.display = "grid"; //display as grid to keep integrity of layout
+                showDungeonFlags.set(dungeonID, "block");
             }
         } else {
             console.log("Invalid ID:" + key);
         }
+    });
+
+    //Check each dungeon in map and show or hide
+    showDungeonFlags.forEach((value, key)=>{ //Key: dungeonID, val: "none" or "block"
+        document.getElementById(key).style.display = value;
     })
 }
