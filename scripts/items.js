@@ -294,7 +294,7 @@ function statUpdate() {
 
     //TODO update to account of filteredItemArray
     //Loop through itemArray, hide all items then show all relevent items
-    if (filteredItemArray.length = 0) {
+    if (filteredItemArray.length == 0) {
         for (var i = 0; i < itemArray.length; i++) {
             var id = itemArray[i].id;
 
@@ -548,10 +548,6 @@ function showFilteredItems() {
         document.getElementById(filteredItemArray[i].id).style.display = "block";
     }
 }
-
-//get all subclass dropdown elements to add listeners to
-var subclassSet = document.getElementsByClassName("subclassBox");
-
 
 //fills filteredItemArray based on selected class
 function subclassListener() {
@@ -834,6 +830,11 @@ function subclassListener() {
     }
 };
 
-for(var i = 0; i < subclassSet.length; i++){
+//get all subclass dropdown elements to add listeners to
+function subclassBatch(){
+var subclassSet = document.getElementsByClassName("subclassBox");
+for (var i = 0; i < subclassSet.length; i++) {
     subclassSet[i].addEventListener('change', subclassListener, false);
-}
+}}
+
+window.addEventListener("load", subclassBatch, false);
