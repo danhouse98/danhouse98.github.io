@@ -459,39 +459,6 @@ function statUpdate() {
     }
 }
 
-/*
-//Handler for drop table selector
-function handleTableSelection() {
-    for (var i = 0; i < dungeonCounter; i++) {
-        var id = 'dungeon' + i
-        var element = document.getElementById(id);
-        element.style.display = "none";
-    }
-
-    if (document.getElementById('mythic0').checked) {
-        for (var i = 0; i < mythic0.length; i++) {
-            var id = indexMap.get(mythic0[i]);
-            var element = document.getElementById(id);
-            element.style.display = "block";
-        }
-    } else if (document.getElementById('season1').checked) {
-        for (var i = 0; i < season1.length; i++) {
-            var id = indexMap.get(season1[i]);
-            var element = document.getElementById(id);
-            element.style.display = "block";
-        }
-    } else if (document.getElementById('raid1').checked) {
-        var id = indexMap.get(raids[1]);
-        var element = document.getElementById(id);
-        element.style.display = "block";
-    }
-}
-
-const dropTableButtons = document.querySelectorAll('input[name="tableSelector"]');
-dropTableButtons.forEach(radio => {
-    radio.addEventListener('click', handleTableSelection);
-});
-*/
 
 //Function for Mythic 0 radio button
 function showMythic0() {
