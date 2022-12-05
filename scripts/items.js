@@ -825,7 +825,7 @@ function subclassListener() {
         }
         (TESTEND)
         */
-       
+
         //show only filtered items
         showFilteredItems();
     } else { //if no subclass is selected show all items
@@ -848,7 +848,7 @@ window.addEventListener("load", subclassBatch, false);
 function dungeonHider() {
     itemsShownPerBoss.clear();
     //get items via our arrays and get parent boss element with dom controls
-    for (var i = 0; i < itemArray.length; i++){
+    for (var i = 0; i < itemArray.length; i++) {
         var tdElement = document.getElementById(itemArray[i].id).parentElement; //td our item sits in
         var trElement = tdElement.parentElement; //tr our td sits in
         var tbodyElement = trElement.parentElement; //tbody our tr sits in
@@ -859,14 +859,14 @@ function dungeonHider() {
         //check if item.style.display is "block"
         //iterate and check id and add to map
         if (document.getElementById(itemArray[i].id).style.display == "block") {
-            if (itemsShownPerBoss.containsKey(bossElementID)) {
+            if (itemsShownPerBoss.has(bossElementID)) {
                 var currentCount = itemsShownPerBoss.get(bossElementID) + 1;
                 itemsShownPerBoss.set
             } else { //do this if shown and key does not yet exist
                 itemsShownPerBoss.set(bossElementID, 1);
             }
         } else { //if display is "none"
-            if (itemsShownPerBoss.containsKey(bossElementID)) { //do nothing if true
+            if (itemsShownPerBoss.has(bossElementID)) { //do nothing if true
             } else { //do this if hidden and key not yet exists
                 itemsShownPerBoss.set(bossElementID, 0);
             }
