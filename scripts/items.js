@@ -77,7 +77,7 @@ $(document).ready(function () {
             //dungeon List
             $.each(data, function () {
                 var dungeonID = ""; //string representation of dungeonCounter
-                var bossID = ""; //string representation of bossCounter
+                var bossCounterString = ""; //string representation of bossCounter
                 var bossSlotID = ""; //id for each slot <div>
                 //each dungeon
                 $.each(this, function (key, dungeonList) {
@@ -90,17 +90,17 @@ $(document).ready(function () {
 
                     //each boss per dungeon
                     $.each(dungeonList.bosses, function (key2, bossList) {
-                        bossID = bossCounter.toString();
-
+                        bossCounterString = bossCounter.toString();
+                        var bossID = dungeonID + "." + bossCounterString;
                         //builds html element for each dungeon w/ internal table for each slot
-                        bossTableHTML = "<div class='boss'><div class='imgbox'><img src='https://wow.zamimg.com/images/wow/journal/" + bossList.imglink + "' alt='" + bossList.name + "'><h3>" + bossList.name + "</h3></div><table>" +
+                        bossTableHTML = "<div class='boss' id='"+ bossID +"'><div class='imgbox'><img src='https://wow.zamimg.com/images/wow/journal/" + bossList.imglink + "' alt='" + bossList.name + "'><h3>" + bossList.name + "</h3></div><table>" +
                             "<tr><th class ='head'>Head</th><th class='shoulder'>Shoulder</th><th class='chest'>Chest</th><th class='wrist'>Wrist</th><th class='hands'>Hands</th>" +
                             "<th class='waist'>Waist</th><th class='legs'>Legs</th><th class='feet'>Feet</th><th class='neck'>Neck</th><th class='back'>Back</th>" +
                             "<th class='ring'>Rings</th><th class='weapon'>Weapon</th><th class='off-hand'>Off-Hand</th><th class='trinket'>Trinket</th></tr><tr>";
 
                         //builds table elements for each slot to hold items inside of
                         for (var k = 0; k < slots.length; k++) {
-                            bossSlotID = dungeonCounter.toString() + "." + bossID + "." + slots[k];
+                            bossSlotID = dungeonCounter.toString() + "." + bossCounterString + "." + slots[k];
                             bossTableHTML += "<td id='" + bossSlotID + "' class='" + slots[k] + "'></td>";
                         }
                         //closes the table to complete the element
@@ -112,8 +112,8 @@ $(document).ready(function () {
 
                         //each item per boss
                         $.each(bossList.drops, function (key3, itemList) {
-                            //html element = currentDungeonID . currentBossID . slotOfCurrentItemBeingAdded
-                            bossSlotID = dungeonCounter.toString() + "." + bossID + "." + itemList.slot;
+                            //html element = currentDungeonID . currentbossCounterString . slotOfCurrentItemBeingAdded
+                            bossSlotID = dungeonCounter.toString() + "." + bossCounterString + "." + itemList.slot;
 
                             var elem = document.getElementById(bossSlotID);
 
@@ -840,3 +840,20 @@ function subclassBatch() {
 }
 
 window.addEventListener("load", subclassBatch, false);
+
+//automatically shows and hides dungeons based on if there is currently something shown via filter
+function dungeonHider(){
+    //get items via our arrays and get parent boss element with dom controls
+    for(int i = 0; i < itemArray.length; i++){
+        var tdElement = document.getElementById(itemArray[i]).parentElement;
+        var trElement = tdElement.parentElement;
+        var tbodyElement = trElement.parentElement;
+        var tableElement = tbodyElement.parentElement;
+        var bossElement = tableElement.parentElement; //this is the element we are going to check
+    }
+    //check if item.style.display is "block"
+
+    //iterate when id and add to map
+
+    //check map at end and hide all bosses where value == 0;
+}
