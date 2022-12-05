@@ -568,7 +568,7 @@ function clearStatFilter() {
     document.getElementById("stat1").checked = true;
     document.getElementById("stat2").checked = true;
     document.getElementById("stat3").checked = true;
-    if (filteredItemArray.length == 0) {
+    if (filteredItemArray.length != 0) {
         showFilteredItems();
     } else {
         styleAllItems('block');
