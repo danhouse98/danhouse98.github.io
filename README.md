@@ -11,4 +11,7 @@ Current implementation allows for sorting by class/subclass, slot and stats.
 
 ·Stat Filter: has a menu allowing for "and" and "or" sorting, to find items with ANY of the selected stats use "and"; to find items with ONLY the selected stats use "or". (Note trinkets with no secondary stat will not be shown with stat filtering, use Clear Filter to see these trinkets!)
 
-This version is what is currently running, Vault of the Incarnates icons will be updated as soon as the Zamimg links are active.
+This version is what is currently running.
+
+**(Known Issues):
+·Vault of the Incarnates icons will be updated as soon as the Zamimg links are active. 
