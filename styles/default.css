@@ -10,7 +10,8 @@ h1 {
     text-align: center;
     width: 15%;
 }
-h2{
+
+h2 {
     margin-left: 1em;
     padding-top: .5em;
 }
@@ -18,9 +19,10 @@ h2{
 .dungeon {
     background-color: #373a3c99;
     display: grid;
-    margin-top:1em;
+    margin-top: 1em;
     border-radius: 1em;
 }
+
 .boss {
     background-color: #010708;
     display: grid;
@@ -36,7 +38,7 @@ h2{
     flex-basis: auto;
 }
 
-#seasonPanel{
+#seasonPanel {
     text-align: center;
     padding-top: 1em;
     padding-bottom: 1em;
@@ -80,18 +82,21 @@ img {
 #controlPanel div {
     padding-right: 1em;
 }
-#statPanel{
+
+#statPanel {
     display: grid;
     grid-template-columns: auto auto;
 }
 
 footer {
-	background-color: #373a3c99;
-	margin-top: 1em;
+    background-color: #373a3c99;
+    margin-top: 1em;
     padding-bottom: 1em;
-	padding-left: 1em;
+    padding-left: 1em;
 }
 
-#andOrBox{
+#andOrBox {
     margin-left: 1em;
+}
+
 }
