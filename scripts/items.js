@@ -556,6 +556,7 @@ function selectSlotFilter(flag) {
             document.getElementById(slotId).checked = false;
         }
     }
+    slotUpdate();
 }
 
 //TODO clearFilter(){} to show all items based on filteredItems()
