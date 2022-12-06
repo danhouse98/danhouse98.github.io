@@ -21,7 +21,6 @@ h2{
     margin-top:1em;
     border-radius: 1em;
 }
-
 .boss {
     background-color: #010708;
     display: grid;
@@ -84,4 +83,15 @@ img {
 #statPanel{
     display: grid;
     grid-template-columns: auto auto;
+}
+
+footer {
+	background-color: #373a3c99;
+	margin-top: 1em;
+    padding-bottom: 1em;
+	padding-left: 1em;
+}
+
+#andOrBox{
+    margin-left: 1em;
 }
