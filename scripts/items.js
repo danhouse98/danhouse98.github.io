@@ -210,9 +210,9 @@ $(document).ready(function () {
             slotHTML += '</div><div>';
         }
     }
-    slotHTML += "<br><button type='button' onclick='slotUpdate()' value='Filter Slots'>Filter Slots</button>" +
+    slotHTML += "</form><br><button type='button' onclick='slotUpdate()' value='Filter Slots'>Filter Slots</button>" +
         "<br><button type='button' onclick='selectSlotFilter(&quot;true&quot;)' value='selectAll'>Select All Slots</button>" +
-        "<button type='button' onclick='selectSlotFilter(&quot;false&quot;)' value='clearAll'>Clear All Slots</button></form>";
+        "<button type='button' onclick='selectSlotFilter(&quot;false&quot;)' value='clearAll'>Clear All Slots</button>";
 
     $('#slotPanel').append(slotHTML);
     $("#classDropdown").append(classHTML);
@@ -550,10 +550,10 @@ function styleAllItems(flag) {
 function selectSlotFilter(flag) {
     for (var i = 0; i <= 13; i++) {
         var slotId = "slot" + i.toString()
-        if (flag = true) {
+        if (flag === 'true') {
             document.getElementById(slotId).checked = 'true';
         } else {
-            document.getElementById(slotId).checked = 'false';
+            document.getElementById(slotId).checked = false;
         }
     }
 }
