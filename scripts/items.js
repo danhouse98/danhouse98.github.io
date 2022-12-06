@@ -123,7 +123,7 @@ $(document).ready(function () {
                             var itemInfo = '<a id="' + itemList.id + '" href="https://www.wowhead.com/item=' + itemList.id +
                                 ' data-wh-icon-added="true" class="q3" data-wh-rename-link="false">' +
                                 '<span class="iconmedium" data-env="live" data-tree="live" data-game="wow" data-type="item">' +
-                                '<ins style="background-image: url(&quot;https://wow.zamimg.com/images/wow/icons/medium/' + itemList.imglink + '&quot");"></ins><del></del></span></a>';
+                                '<ins style="background-image: url(&quot;https://wow.zamimg.com/images/wow/icons/medium/' + itemList.imglink + '&quot;);"></ins><del></del></span></a>';
 
                             if (elem != null) { //adds item
                                 elem.insertAdjacentHTML('beforeend', itemInfo);
@@ -210,7 +210,9 @@ $(document).ready(function () {
             slotHTML += '</div><div>';
         }
     }
-    slotHTML += "<br><button type='button' onclick='slotUpdate()' value='Filter Slots'>Filter Slots</button></form>";
+    slotHTML += "<br><button type='button' onclick='slotUpdate()' value='Filter Slots'>Filter Slots</button>" +
+        "<br><button type='button' onclick='selectSlotFilter(&quot;true&quot;)' value='selectAll'>Select All Slots</button>" +
+        "<button type='button' onclick='selectSlotFilter(&quot;false&quot;)' value='clearAll'>Clear All Slots</button></form>";
 
     $('#slotPanel').append(slotHTML);
     $("#classDropdown").append(classHTML);
@@ -543,12 +545,26 @@ function styleAllItems(flag) {
     }
 }
 
+//Sets all slots to either checked or unchecked
+//flag- either true or false
+function selectSlotFilter(flag) {
+    for (var i = 0; i <= 13; i++) {
+        var slotId = "slot" + i.toString()
+        if (flag = true) {
+            document.getElementById(slotId).checked = 'true';
+        } else {
+            document.getElementById(slotId).checked = 'false';
+        }
+    }
+}
+
 //TODO clearFilter(){} to show all items based on filteredItems()
 function clearStatFilter() {
     document.getElementById("stat0").checked = true;
     document.getElementById("stat1").checked = true;
     document.getElementById("stat2").checked = true;
     document.getElementById("stat3").checked = true;
+    document.getElementById("or").checked = true;
     if (filteredItemArray.length != 0) {
         showFilteredItems();
     } else {
